@@ -1,0 +1,4 @@
+@mixin transition
+	@for $i from 1 through 12
+		&:nth-child(#{$i})
+			transition-delay: (#{$i*0.3s})

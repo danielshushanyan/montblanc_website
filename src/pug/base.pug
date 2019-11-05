@@ -1,0 +1,72 @@
+include mixins/svg
+include mixins/blocks
+
+block vars
+	-
+		var title = title || ''
+		var description = description || ''
+		var image = image || ''
+	-
+		var html = {
+			attrs: {
+				lang: 'ru'
+			},
+			classList: []
+		}
+	-
+		var body = {
+			attrs: {},
+			classList: []
+		}
+	-
+		var meta = {
+			charset: 'utf-8',
+			description: description,
+			keywords: [],
+			ogTitle: title,
+			viewport: 'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1',
+			XUACompatible: 'IE=edge'
+		}
+	-
+		var link = {
+			icon: '',
+			icon16x16: '',
+			icon32x32: '',
+		}
+
+doctype html
+html(class=html.classList)&attributes(html.attrs)
+	head
+		block head-start
+		block meta
+			if meta.charset
+				meta(charset=meta.charset)
+			if meta.XUACompatible
+				meta(http-equiv="X-UA-Compatible" content=meta.XUACompatible)
+			if meta.viewport
+				meta(name="viewport" content=meta.viewport)
+			if meta.description
+				meta(name="description" content=meta.description)
+		title
+			= title
+		block links
+			if link.icon
+				link(rel="icon" href=link.icon)
+			if link.icon16x16
+				link(rel="icon" href=link.icon16x16 sizes="16x16")
+			link(rel="stylesheet" href="css/main.css?v=" + Date.now())
+		block head-end
+	body(class=body.classList)&attributes(body.attrs)
+		.page
+			block header 
+				include template/header
+			main.main#main
+				block content
+			block footer 
+				include template/footer
+			block popup 
+				include particles/popups
+			block scripts
+				script(src="js/vendor.js?v=" + Date.now())
+				script(src="js/main.js?v=" + Date.now())
+			block body-end
