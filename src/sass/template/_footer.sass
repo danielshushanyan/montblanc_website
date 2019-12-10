@@ -1,0 +1,190 @@
+.footer
+	@include size(100%, auto)
+	display: flex
+	padding: 0 50px 40px
+	position: fixed
+	align-items: baseline
+	bottom: 0
+	left: 0
+	z-index: 3
+	
+	@include bp($point-4)
+		justify-content: center
+	
+	&__pointer
+		position: absolute
+		left: 50%
+		top: calc(50% - 23px)
+		transform: translate(-50%, -50%)
+	
+	&__lang
+		display: flex
+		
+		&-item
+			@include size(40px)
+			display: flex
+			align-items: center
+			justify-content: center
+			font-family: $baseScndFont
+			font-size: 14px
+			line-height: 13px
+			color: $white
+			position: relative
+			opacity: 0.6
+			transition: all .3s ease-in-out
+			cursor: none
+			
+			@include bp($point-4)
+				max-width: 500
+			
+			&:after
+				transition: all .3s ease-in-out
+				position: absolute
+				content: ''
+				left: 0
+				right: 0
+				bottom: 9px
+				margin: 0 auto
+				@include size(60%, 1px)
+				background-color: $white
+				opacity: 0
+				
+			&:hover
+				opacity: 1
+				
+				&:after
+					opacity: 0
+			
+			&--active
+				opacity: 1
+				
+				&:after
+					opacity: 1
+					
+					
+					
+	&__development
+		margin-left: auto
+		
+		@include bp($point-4)
+			display: none
+		
+		&-text
+			opacity: 0.7
+			font-family: $baseScndFont
+			font-size: 11px
+			line-height: 140%
+			letter-spacing: 0.02em
+			font-feature-settings: 'salt' on
+			
+		&-link
+			margin: 0 29px 0 0
+			font-size: 11px
+			line-height: 140%
+			letter-spacing: 0.02em
+			font-feature-settings: 'salt' on
+			
+	&__sound
+		@include size(50px)
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: none
+		position: relative
+		top: 5px
+		
+		@include bp($point-4)
+			display: none
+			
+		&:hover
+			rect
+				&:first-child
+					animation: rectOne 1.3s infinite ease-in-out forwards
+				
+				&:nth-child(2)
+					animation: rectTwo 1.3s infinite ease-in-out forwards
+					animation-delay: .1s
+				
+				&:nth-child(3)
+					animation: rectThree 1.3s infinite ease-in-out forwards
+					animation-delay: .3s
+				
+				&:last-child
+					animation: rectFour 1.3s infinite ease-in-out forwards
+					animation-delay: .1s
+			
+		&-icon
+			rect
+				transition: all .3s linear
+		
+@keyframes rectOne
+	25%
+		height: 30px
+		y: 13
+	75%
+		height: 30px
+		y: 5
+		
+@keyframes rectTwo
+	25%
+		height: 30px
+		y: 5
+	75%
+		height: 30px
+		y: 19
+		
+@keyframes rectThree
+	25%
+		height: 30px
+		y: 16
+	75%
+		height: 30px
+		y: 7
+		
+@keyframes rectFour
+	25%
+		height: 30px
+		y: 19
+	75%
+		height: 30px
+		y: 7
+
+		
+.pointer
+	display: flex
+	align-items: center
+	
+	@include bp($point-4)
+		display: none
+	
+	&__container
+		display: flex
+		flex-direction: column
+		position: relative
+		
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			@include size(100%, 1px)
+			background-color: rgba(255, 255, 255, 0.5)
+		
+	&__arr
+		cursor: pointer
+		transition: opacity .3s ease-in-out
+		
+		&:first-child
+			margin: 0 0 32px
+			opacity: 0.2
+			
+			
+	&__text
+		margin: 0 0 0 21px
+		font-size: 11px
+		opacity: 0.7
+		line-height: 140%
+		letter-spacing: 0.02em
+		font-feature-settings: 'salt' on
+

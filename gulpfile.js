@@ -34,6 +34,7 @@ let $ = gulpLoadPlugins({
 		'rollup-plugin-babel',
 		'rollup-plugin-commonjs',
 		'rollup-plugin-node-resolve',
+		'rollup-plugin-node-builtins',
 		'rollup-plugin-uglify',
 		'stylelint',
 		'vinyl-buffer',
@@ -90,6 +91,7 @@ function rollup(inputFile, outputFile) {
 	let rollupPromise = $.rollup.rollup({
 		input: inputFile,
 		plugins: [
+			$.rollupPluginNodeBuiltins(),
 			$.rollupPluginNodeResolve({
 				jsnext: true,
 			}),

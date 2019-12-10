@@ -1,6 +1,318 @@
-.header 
-  display: block
-  
-  //пример медиазапроса
-  // @include bp($point-4)
-  //   padding: 0 20px
+.header
+	@include size(100%, auto)
+	position: fixed
+	top: 0
+	left: 0
+	display: flex
+	align-items: center
+	justify-content: space-between
+	transform: translate(0, 109px)
+	padding: 0 55px
+	transition: all 0.3s ease-in-out
+	z-index: 100
+	
+	@include bp($point-4)
+		transform: translate(0, 60px)
+		
+	@include bp($point-3-low)
+		padding: 0 21px
+		
+	&--loader
+		top: 35%
+		transform: translate(0, -50%)
+		
+		.header__logo-icon
+			@include size(212px,151px)
+			max-height: unset
+		.vodka
+			fill: #005FAB
+		.logo
+			fill: #000
+			
+	
+	&--top
+		transform: translate(0, 29px)
+		
+		@include bp($point-3-low)
+			transform: translate(0, 22px)
+		
+		.header__logo-icon
+			@include size(106px, 69px)
+			
+			@include bp($point-3-low)
+				@include size(62px, 41px)
+	
+	&__menu
+		display: flex
+		align-items: center
+		cursor: pointer
+		
+		@include bp($point-3-low)
+			flex-direction: column
+			
+		&-icon
+			cursor: none
+			@include bp($point-3-low)
+				@include size(49px, 29px)
+				
+			&:hover
+				& + .header__menu-text
+					opacity: 0
+					transform: translate(10px)
+		
+		&-text
+			font-size: 12px
+			line-height: 100%
+			letter-spacing: 0.05em
+			font-feature-settings: 'salt' on
+			opacity: 0.7
+			transition: all .3s ease-in-out
+			will-change: transform
+			
+			@include bp($point-3-low)
+				font-size: 10px
+	
+	&__logo
+		
+		&-icon
+			height: 14vh
+			max-height: 133px
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			
+			@include bp($point-4)
+				@include size(110px, 71px)
+				
+			@include bp($point-3-low)
+				top: 10px
+				
+			
+			
+	&__nav
+		z-index: 100
+		position: fixed
+		left: 0
+		top: 0
+		@include size(100%, 100vh)
+		transform: translateX(-100%)
+		display: flex
+		
+		@include bp(800px)
+			max-width: 800px
+		
+		.action__line:nth-child(2)
+			@include bp($point-3-low)
+				display: none
+		
+		&-blur
+			position: absolute
+			left: 0
+			top: 0
+			@include size(100%, 100%)
+			backdrop-filter: blur(0)
+		
+		&-list
+			padding: 0
+			margin: 0 0 0 22px
+			position: relative
+			z-index: 3
+			list-style: none
+			display: flex
+			flex-direction: column
+			justify-content: center
+			height: 100%
+			
+			@include bp($point-3-low)
+				margin: 0 0 0 48px
+		
+		&-item
+			overflow: hidden
+			display: flex
+			align-items: center
+		
+		&-num
+			color: #005FAB
+			font-size: 24px
+			line-height: 150%
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			font-feature-settings: 'pnum' on, 'lnum' on, 'salt' on
+			margin: 0 60px 0 0
+			
+			@include bp($point-3-low)
+				font-size: 14px
+				margin: 0 20px 0 0
+			
+		&-link
+			font-size: 24px
+			line-height: 150%
+			font-weight: 300
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			font-feature-settings: 'salt' on
+			position: relative
+			display: inline-block
+			overflow: hidden
+			padding: 22px 0
+			cursor: pointer
+			
+			@include bp($point-3-low)
+				padding: 13px
+			
+			&--active
+				opacity: 0.4
+			
+			&:before,&:after
+				@include size(100%, 1px)
+				position: absolute
+				bottom: 22px
+				left: 0
+				right: 0
+				content: ''
+				background-color: #005FAB
+				will-change: transform
+		
+			&:after
+				transition: transform .8s cubic-bezier(.165,.84,.44,1)
+				transform: translate3d(102%,0,0)
+				opacity: 1
+			
+			&:before
+				transform: translate3d(-102%,0,0)
+				opacity: 0
+			
+			&:hover
+				&:before
+					transition: transform .6s cubic-bezier(.165,.84,.44,1)
+					transform: translateZ(0)
+					opacity: 1
+				
+				&:after
+					transform: translateZ(0)
+					opacity: 0
+					transition: none
+			
+			@include bp($point-3-low)
+				font-size: 14px
+			
+		&-bg
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 2
+			@include size(100%, 100%)
+			background: $menuBg
+			
+	&__counter
+		@include size(263px, 56px)
+		display: flex
+		justify-content: space-between
+		
+		@include bp($point-3-low)
+			flex-direction: column
+			justify-content: flex-end
+			align-items: flex-end
+		
+		&-log
+			@include bp($point-3-low)
+				@include size(55px, 23px)
+	
+	&__nav-blur
+		display: flex
+		
+	&__empty
+		flex: 0 0 800px
+		
+		
+.hide
+	opacity: 0
+	
+.count
+	position: relative
+	display: flex
+	
+	&__height
+		font-weight: normal
+		position: absolute
+		right: 0
+		bottom: 15px
+		font-size: 13px
+		line-height: 140%
+		letter-spacing: 0.02em
+		font-feature-settings: 'salt' on
+		
+		@include bp($point-3-low)
+			font-size: 9px
+			bottom: 9px
+	
+	&__stats
+		align-self: flex-end
+		font-size: 24px
+		font-weight: 500
+		line-height: 100%
+		letter-spacing: -0.03em
+		font-feature-settings: 'salt' on
+		
+		@include bp($point-3-low)
+			font-size: 12px
+		
+		span
+			font-size: 18px
+			
+			@include bp($point-3-low)
+				font-size: 9px
+		
+.action
+	position: relative
+	z-index: 3
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	padding: 41px 30px 20px 30px
+	
+	@include bp($point-3-low)
+		position: absolute
+		padding: 20px 23px
+		flex-direction: row
+		width: 100%
+		
+	&__path
+		opacity: 0
+	
+	&__line
+		height: 40%
+		opacity: 0.3
+		border: 1px solid #005FAB
+		
+		&:nth-child(2)
+			height: 34%
+			
+			@include bp($point-3-low)
+				@include size(calc(100% - 113px) , 1px)
+			
+		&:last-child
+			height: 45%
+			
+			@include bp($point-3-low)
+				display: none
+	
+	&__icon
+		@include size(95px, 63px)
+		
+		@include bp($point-3-low)
+			@include size(56px, 36px)
+		
+	&__close
+		@include size(60px)
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		
+		@include bp($point-3-low)
+			@include size(17px, 15px)
+	

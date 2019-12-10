@@ -1,8 +1,9 @@
 .idea/
-build/
 node_modules/
 zip/
+build/*
 .DS_Store
 aero-debug.log
 aero-deploy.tar.gz
 package-lock.json
+yarn.lock

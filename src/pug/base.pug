@@ -36,6 +36,13 @@ block vars
 
 doctype html
 html(class=html.classList)&attributes(html.attrs)
+	.circle-cursor.circle-cursor--inner
+	.circle-cursor.circle-cursor--outer
+	svg(width='0', height='0', viewBox='0 0 0 0', fill='none', xmlns='http://www.w3.org/2000/svg' style='position: absolute')
+		defs
+			lineargradient#paint0_linear(x1='30', y1='0', x2='30', y2='60', gradientUnits='userSpaceOnUse')
+				stop(stop-color='white')
+				stop(offset='1', stop-color='white', stop-opacity='0.3')
 	head
 		block head-start
 		block meta
@@ -58,13 +65,13 @@ html(class=html.classList)&attributes(html.attrs)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
 		.page
-			block header 
+			block header
 				include template/header
 			main.main#main
 				block content
-			block footer 
+			block footer
 				include template/footer
-			block popup 
+			block popup
 				include particles/popups
 			block scripts
 				script(src="js/vendor.js?v=" + Date.now())

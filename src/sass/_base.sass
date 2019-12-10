@@ -1,48 +1,121 @@
 *
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-  -moz-tap-highlight-color: rgba(0, 0, 0, 0)
-  box-sizing: border-box
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0)
+	box-sizing: border-box
 
 *::before,
-*::after 
+*::after
 	box-sizing: inherit
 
 html, :root
-  font-size: $baseRem
-  overflow-x: hidden
+	font-size: $baseRem
+	overflow: hidden
+	cursor: none
+	
+	.js-link,
+	.js-square
+		cursor: pointer
+	
+	@include bp($point-3)
+		overflow-x: hidden
+		overflow-y: auto
 
 body
-  font-family: $baseFont
-  font-size: $baseRem
-  color: $baseTxt
-  min-width: 320px
-  padding: 0
-  margin: 0
-  overflow-x: hidden
+	font-family: $baseFont
+	font-size: $baseRem
+	color: $baseTxt
+	min-width: 320px
+	padding: 0
+	margin: 0
+	overflow-x: hidden
 
 .page
-  display: flex
-  flex-direction: column
-  min-height: 100vh
-  width: 100% 
-  overflow: hidden
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	width: 100%
+	overflow: hidden
 
 .main
-  flex-grow: 1
+	flex-grow: 1
+	
+	canvas
+		@include size(100%, 100vh)
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		z-index: 1
+		
+	.main-slide
+		opacity: 0
+		
+	.swiper-container
+		z-index: 2
+		
+		.swiper-slide
+			opacity: 0!important
+			transition: opacity 300ms linear
+			
+		.swiper-slide-active
+			opacity: 1!important
 
 img
-  max-width: 100%
+	max-width: 100%
 
-a 
-  text-decoration: none 
-  outline: none 
-  color: inherit
+a
+	text-decoration: none
+	outline: none
+	color: inherit
 
 input,
-button, 
-select 
-  border: none 
-  background-color: transparent 
-  outline: none 
-  cursor: pointer 
+button,
+select
+	border: none
+	background-color: transparent
+	outline: none
+	cursor: pointer
+	
+section
+	overflow: hidden
+	
+.circle-cursor
+	position: fixed
+	left: 0
+	top: 0
+	pointer-events: none
+	border-radius: 50%
+	z-index: 1
+	will-change: transform
+	
+	@media screen and (max-device-width: 1024px)
+		display: none
+	
+	&--outer
+		width: 50px
+		height: 50px
+		border: 2px solid $white
+		z-index: 1
+		opacity: 0
+		transform: scale(0.5)
+	
+	&--inner
+		width: 30px
+		height: 30px
+		left: -15px
+		top: -15px
+		z-index: 1
+		border: 2px solid $white
 
+.menu-slide
+	.swiper-slide
+		padding: 0 153px 0 133px
+		height: auto
+		transform: scale(0.8)
+		transition: all 0.3s ease-out
+		will-change: transition
+		opacity: 0.5
+		
+		&-active
+			transform: scale(1)
+			opacity: 1
