@@ -38,51 +38,51 @@ $(function () {
 		});
 
 		app.loader
-			.add('../images/design/sky.jpg') // Design nature // index 0
-			.add('../images/design/mont.png')
-			.add('../images/design/midl.png')
-			.add('../images/design/tree.png')
-			.add('../images/design/bott.png') // Design nature END // index 4
-			.add('../images/wheat/wsky.png') // Wheat  // index 5
-			.add('../images/wheat/wwheat.png')
-			.add('../images/wheat/wwheat_front.png')
-			.add('../images/wheat/wbottle_back.png')
-			.add('../images/wheat/wbottle.png')
-			.add('../images/wheat/wbottle_front.png')
-			.add('../images/wheat/wfront_left_b.png')
-			.add('../images/wheat/wfront_left_f.png')
-			.add('../images/wheat/wfront_right_b.png')
-			.add('../images/wheat/wfront_right_f.png')
-			.add('../images/wheat/wfog.png') // Wheat END // index 15
-			.add('../images/spring/ssky.jpg') // Spring // index 16
-			.add('../images/spring/smont.png')
-			.add('../images/spring/sbirds.png')
-			.add('../images/spring/shill.png')
-			.add('../images/spring/swater.png')
-			.add('../images/spring/sbott.png')
-			.add('../images/spring/sfog.png') // Spring END // index 22
-			.add('../images/note/nsky.jpg') // Note // index 23
-			.add('../images/note/nmont.png')
-			.add('../images/note/nhill.png')
-			.add('../images/note/nbott.png') // Note END // index 26
-			.add('../images/vertex/vsky.jpg') // Vertex // index 27
-			.add('../images/vertex/vmont.png')
-			.add('../images/vertex/vbott.png')
-			.add('../images/vertex/vfog.png')
-			.add('../images/vertex/vsnow.png')
-			.add('../images/vertex/vfrozen.png') // Vertex // index 32
-			.add('../images/home/hmont.jpg') // Home // index 33
-			.add('../images/home/hcity.png')
-			.add('../images/home/hbird.png')
-			.add('../images/home/hfog.png')
-			.add('../images/home/hmanson.png')
-			.add('../images/home/hbott.png')
-			.add('../images/home/hlight.png')
-			.add('../images/home/hsun.png')
-			.add('../images/home/hgrass.png') // Home End // index 41
-			.add('../images/filter.png') // DMap // index 31
-			.add('../images/end/end.jpg') // End // index 33
-			.add('../images/wave_d.png') // DMapWave // index 34
+			.add(`${__app.TEMPLATE_URI}/images/design/sky.jpg`) // Design nature // index 0
+			.add(`${__app.TEMPLATE_URI}/images/design/mont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/midl.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/tree.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/bott.png`) // Design nature END // index 4
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wsky.png`) // Wheat  // index 5
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wwheat.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wwheat_front.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle_back.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle_front.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront_left_b.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront_left_f.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront_right_b.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront_right_f.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wfog.png`) // Wheat END // index 15
+			.add(`${__app.TEMPLATE_URI}/images/spring/ssky.jpg`) // Spring // index 16
+			.add(`${__app.TEMPLATE_URI}/images/spring/smont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/sbirds.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/shill.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/swater.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/sbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/sfog.png`) // Spring END // index 22
+			.add(`${__app.TEMPLATE_URI}/images/note/nsky.jpg`) // Note // index 23
+			.add(`${__app.TEMPLATE_URI}/images/note/nmont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/note/nhill.png`)
+			.add(`${__app.TEMPLATE_URI}/images/note/nbott.png`) // Note END // index 26
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vsky.jpg`) // Vertex // index 27
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vmont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vfog.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vsnow.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vfrozen.png`) // Vertex // index 32
+			.add(`${__app.TEMPLATE_URI}/images/home/hmont.jpg`) // Home // index 33
+			.add(`${__app.TEMPLATE_URI}/images/home/hcity.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hbird.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hfog.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hmanson.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hlight.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hsun.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hgrass.png`) // Home End // index 41
+			.add(`${__app.TEMPLATE_URI}/images/filter.png`) // DMap // index 31
+			.add(`${__app.TEMPLATE_URI}/images/end/end.jpg`) // End // index 33
+			.add(`${__app.TEMPLATE_URI}/images/wave_d.png`) // DMapWave // index 34
 			.load(handleLoadComplete);
 	});
 });
@@ -546,54 +546,6 @@ function parallaxHome(w, h, e) {
 	TweenMax.to(locationHomeItems[5], 0.3, {
 		x: (w - e.clientX) / (amplitude + 80),
 		y: (h - e.clientY) / (amplitude + 80),
-		ease: Circ.easeOut
-	});
-}
-
-function parallaxWheat(w, h, e) {
-	TweenMax.to(locationWheatItems[0], 0.3, {
-		x: (w - e.clientX) / (amplitude + 15),
-		y: (h - e.clientY) / (amplitude + 15),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[1], 0.3, {
-		x: (w - e.clientX) / (amplitude + 20),
-		y: (h - e.clientY) / (amplitude + 20),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[2], 0.3, {
-		x: (w - e.clientX) / (amplitude + 20),
-		y: (h - e.clientY) / (amplitude + 20),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[3], 0.3, {
-		x: (w - e.clientX) / (amplitude + 35),
-		y: (h - e.clientY) / (amplitude + 35),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[4], 0.3, {
-		x: (w - e.clientX) / (amplitude + 40),
-		y: (h - e.clientY) / (amplitude + 40),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[5], 0.3, {
-		x: (w - e.clientX) / (amplitude + 80),
-		y: (h - e.clientY) / (amplitude + 80),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[6], 0.3, {
-		x: (w - e.clientX) / (amplitude + 90),
-		y: (h - e.clientY) / (amplitude + 90),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[7], 0.3, {
-		x: (w - e.clientX) / (amplitude + 90),
-		y: (h - e.clientY) / (amplitude + 90),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[8], 0.3, {
-		x: (w - e.clientX) / (amplitude + 90),
-		y: (h - e.clientY) / (amplitude + 90),
 		ease: Circ.easeOut
 	});
 }
