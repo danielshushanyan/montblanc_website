@@ -31,13 +31,18 @@ block vars
 		var link = {
 			icon: '',
 			icon16x16: '',
-			icon32x32: '',
+			icon32x32: ''
 		}
 
 doctype html
 html(class=html.classList)&attributes(html.attrs)
 	.circle-cursor.circle-cursor--inner
 	.circle-cursor.circle-cursor--outer
+	svg.circle-cursor.circle-cursor--drag(width='85' height='50' viewbox='0 0 85 50' fill='none' xmlns='http://www.w3.org/2000/svg')
+		circle(cx='42.5' cy='25' r='24' stroke='white' stroke-width='2')
+		path(d='M7.5 20L2 25.5L7.5 31' stroke='white' stroke-width='2' stroke-linecap='round')
+		path(d='M77.5 20L83 25.5L77.5 31' stroke='white' stroke-width='2' stroke-linecap='round')
+
 	svg(width='0', height='0', viewBox='0 0 0 0', fill='none', xmlns='http://www.w3.org/2000/svg' style='position: absolute')
 		defs
 			lineargradient#paint0_linear(x1='30', y1='0', x2='30', y2='60', gradientUnits='userSpaceOnUse')

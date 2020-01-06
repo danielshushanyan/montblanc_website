@@ -1,9 +1,9 @@
 import 'babel-polyfill';
 import Swiper from 'swiper';
 import * as PIXI from 'pixi.js'
+import { Emitter } from 'pixi-particles';
+import { Howl, Howler } from 'howler';
 import {TweenMax, TimelineMax, Power1, Power4, Expo, Back, Circ, Draggable, CSSPlugin, Bounce} from "gsap/all";
-// import ScrollMagic from 'scrollmagic';
-// import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js';
 import './vendor/MorphSVGPlugin.min';
 import './vendor/DrawSVGPlugin.min';
 import './vendor/ScrambleTextPlugin.min';
@@ -17,9 +17,11 @@ window.$ = $;
 window.jQuery = $;
 window.Swiper = Swiper;
 window.PIXI = PIXI;
+window.Emitter = Emitter;
+window.Howl = Howl;
+window.Howler = Howler;
 window.TweenMax = TweenMax;
 window.TimelineMax = TimelineMax;
-// window.ScrollMagic = ScrollMagic;
 window.Expo = Expo;
 window.Power1 = Power1;
 window.Power4 = Power4;
@@ -31,7 +33,6 @@ window.MorphSVGPlugin = MorphSVGPlugin;
 window.SplitText = SplitText;
 window.Draggable = Draggable;
 window.plugins = plugins;
-
 
 window.$W = $(window);
 window.$D = $(document);

@@ -1,6 +1,6 @@
 header.header.header--loader#header
-	.header__menu.hide
-		svg.header__menu-icon.js-square(width='76', height='76', viewBox='0 0 76 46', fill='none', xmlns='http://www.w3.org/2000/svg')
+	.header__menu.hide.js-catch.hover-s
+		svg.header__menu-icon.js-square.js-follower(width='76', height='76', viewBox='0 0 76 46', fill='none', xmlns='http://www.w3.org/2000/svg')
 			g(filter='url(#filter0_d)')
 				path.js-menu-line-one(d='M12 27C12.6181 26.4787 34.2526 6.36629 40.3566 10.5799C46.4606 14.7935 46.2255 18.3283 52.7931 17.2857C58.0472 16.4517 61.5532 22.4678 64 25.4796', stroke='white', stroke-width='4', stroke-linecap='round')
 				path.js-menu-line-two(d='M23 32C23.3658 31.7019 35.3077 21.3076 37.2308 22.0366C39.3426 22.8372 42.5754 26.7639 46.4615 26.1678C49.6911 25.6724 53 30.785 53 30.785', stroke='white', stroke-width='4', stroke-linecap='round')
@@ -70,10 +70,12 @@ nav.header__nav
 			path.action__path(fill-rule='evenodd', clip-rule='evenodd', d='M183.677 84.1355C180.901 86.2857 178.332 88.4359 173.126 87.7423C164.171 86.5632 160.978 73.1764 167.642 66.9338C171.529 63.3271 179.721 63.4658 183.4 67.9743L188.12 62.4254C184.58 59.2347 180.554 56.7377 174.029 56.9458C163.894 57.2926 156.952 64.9917 156.258 74.2168C155.425 85.4534 163.061 94.401 173.334 95.164C178.818 95.5801 184.094 93.9848 188.12 89.6844L183.677 84.1355Z', fill='#fff')
 			path.action__path(fill-rule='evenodd', clip-rule='evenodd', d='M195.548 11.6527C193.951 11.6527 192.702 10.4042 192.702 8.87827C192.702 7.35232 193.951 6.10381 195.548 6.10381C197.145 6.10381 198.394 7.28296 198.394 8.87827C198.394 10.4736 197.145 11.6527 195.548 11.6527ZM195.548 6.58934C194.299 6.58934 193.327 7.62977 193.327 8.94763C193.327 10.2655 194.298 11.3059 195.617 11.3059C196.242 11.3059 196.798 11.0285 197.214 10.6123C197.631 10.1961 197.839 9.57189 197.839 8.94763C197.769 7.62977 196.798 6.58934 195.548 6.58934ZM194.437 10.3349L194.993 10.4042L195.062 9.22508H195.34C195.756 9.22508 195.965 9.3638 196.034 9.71061L196.103 9.84933C196.173 10.0574 196.242 10.2655 196.242 10.3349H196.798C196.728 10.1961 196.728 10.0574 196.659 9.71061C196.589 9.3638 196.45 9.15572 196.173 9.08636V8.87827C196.52 8.80891 196.728 8.53147 196.728 8.25402C196.728 8.04593 196.659 7.83785 196.52 7.69913C196.312 7.5604 196.103 7.49104 195.548 7.49104C195.201 7.49104 194.923 7.49104 194.646 7.49104H194.576L194.437 10.3349ZM195.479 7.83785C195.27 7.83785 195.201 7.83785 195.132 7.90721L195.062 8.80891L195.479 8.87827C195.965 8.87827 196.242 8.67019 196.242 8.39274C196.173 8.25402 196.103 7.83785 195.479 7.83785Z', fill='#fff')
 		.action__line
-		.action__close.js-close.js-square
-			svg(width='31', height='31', viewBox='0 0 31 31', fill='none', xmlns='http://www.w3.org/2000/svg')
-				line.action__close-line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
-				line.action__close-line(x1='2', y1='-2', x2='37.598', y2='-2', transform='matrix(-0.707107 -0.707107 -0.707107 0.707107 28 31)', stroke='white', stroke-width='4', stroke-linecap='round')
+		.action__close.js-close.js-square.js-catch.hover-s
+			.js-follower
+				svg(width='30', height='30', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+					g
+						line.action__close-line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
+						line.action__close-line(x1='2', y1='-2', x2='37.598', y2='-2', transform='rotate(45) translate(2, 2)', stroke='white', stroke-width='4', stroke-linecap='round')
 		.action__line
 
 	.header__nav-blur
@@ -99,22 +101,22 @@ nav.header__nav
 	ul.header__nav-list
 		li.header__nav-item
 			span.header__nav-num 1. —
-			a.header__nav-link.js-link(href='#' data-index='0') родина шедевра
+			a.header__nav-link.js-link.hover-s(href='#' data-index='0') родина шедевра
 		li.header__nav-item
 			span.header__nav-num 2. —
-			a.header__nav-link.js-link(href='#' data-index='1') французская пшеница
+			a.header__nav-link.js-link.hover-s(href='#' data-index='1') французская пшеница
 		li.header__nav-item
 			span.header__nav-num 3. —
-			a.header__nav-link.js-link(href='#' data-index='2') родниковая вода
+			a.header__nav-link.js-link.hover-s(href='#' data-index='2') родниковая вода
 		li.header__nav-item
 			span.header__nav-num 4. —
-			a.header__nav-link.js-link(href='#' data-index='3') дистилляция
+			a.header__nav-link.js-link.hover-s(href='#' data-index='3') дистилляция
 		li.header__nav-item
 			span.header__nav-num 5. —
-			a.header__nav-link.js-link(href='#' data-index='4') дизайн
+			a.header__nav-link.js-link.hover-s(href='#' data-index='4') дизайн
 		li.header__nav-item
 			span.header__nav-num 6. —
-			a.header__nav-link.js-link(href='#' data-index='5') вершина совершенства
+			a.header__nav-link.js-link.hover-s(href='#' data-index='5') вершина совершенства
 		li.header__nav-item
 			span.header__nav-num 7. —
-			a.header__nav-link.js-link(href='#' data-index='6') конкурс
+			a.header__nav-link.js-link.hover-s(href='#' data-index='6') конкурс

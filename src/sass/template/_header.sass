@@ -46,6 +46,7 @@
 		display: flex
 		align-items: center
 		cursor: pointer
+		position: relative
 		
 		@include bp($point-3-low)
 			flex-direction: column
@@ -61,6 +62,9 @@
 					transform: translate(10px)
 		
 		&-text
+			position: absolute
+			right: -36px
+			pointer-events: none
 			font-size: 12px
 			line-height: 100%
 			letter-spacing: 0.05em
@@ -308,10 +312,40 @@
 		
 	&__close
 		@include size(60px)
-		display: flex
-		align-items: center
-		justify-content: center
 		cursor: pointer
+		position: relative
+		
+		.js-follower
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			margin: auto
+		
+		svg
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			margin: auto
+			@include size(60px)
+			
+			g
+				transform: scale(0.2763) translate(40px, 36px)
+		
+		&:hover
+			line
+				&:first-child
+					transform: rotate(45deg)
+					transform-origin: center
+
+				&:last-child
+					transform-origin: center
+					transform: translate(-5px, 18px)
+		
+		
 		
 		@include bp($point-3-low)
 			@include size(17px, 15px)

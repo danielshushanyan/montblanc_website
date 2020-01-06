@@ -1,14 +1,19 @@
+import snowStorm from './particles-data/snow-storm';
+import snow from './particles-data/snow';
+import randomeParticles from './particles-data/randome-particles';
+
 const canvas = document.getElementById('view');
 let _w = window.innerWidth;
 let _h = window.innerHeight + 4;
 const amplitude = 20;
 const allImagesArray = [];
-window.locationsAlphaArray = [];
 let displacementFilter = null;
 let displacementSprite = null;
 let frameCondition = false;
 let displacementFrame = null;
 let app;
+window.activeLocation = 0;
+window.locationsAlphaArray = [];
 
 // Arrays of Location
 const locationDesignItems = [];
@@ -38,25 +43,35 @@ $(function () {
 			.add('../images/design/midl.png')
 			.add('../images/design/tree.png')
 			.add('../images/design/bott.png') // Design nature END // index 4
-			.add('../images/wheat/bg.jpg') // Wheat END // index 5
-			.add('../images/spring/ssky.jpg') // Spring // index 6
+			.add('../images/wheat/wsky.png') // Wheat  // index 5
+			.add('../images/wheat/wwheat.png')
+			.add('../images/wheat/wwheat_front.png')
+			.add('../images/wheat/wbottle_back.png')
+			.add('../images/wheat/wbottle.png')
+			.add('../images/wheat/wbottle_front.png')
+			.add('../images/wheat/wfront_left_b.png')
+			.add('../images/wheat/wfront_left_f.png')
+			.add('../images/wheat/wfront_right_b.png')
+			.add('../images/wheat/wfront_right_f.png')
+			.add('../images/wheat/wfog.png') // Wheat END // index 15
+			.add('../images/spring/ssky.jpg') // Spring // index 16
 			.add('../images/spring/smont.png')
 			.add('../images/spring/sbirds.png')
 			.add('../images/spring/shill.png')
 			.add('../images/spring/swater.png')
 			.add('../images/spring/sbott.png')
-			.add('../images/spring/sfog.png') // Spring END // index 12
-			.add('../images/note/nsky.jpg') // Note // index 13
+			.add('../images/spring/sfog.png') // Spring END // index 22
+			.add('../images/note/nsky.jpg') // Note // index 23
 			.add('../images/note/nmont.png')
 			.add('../images/note/nhill.png')
-			.add('../images/note/nbott.png') // Note END // index 16
-			.add('../images/vertex/vsky.jpg') // Vertex // index 17
+			.add('../images/note/nbott.png') // Note END // index 26
+			.add('../images/vertex/vsky.jpg') // Vertex // index 27
 			.add('../images/vertex/vmont.png')
 			.add('../images/vertex/vbott.png')
 			.add('../images/vertex/vfog.png')
 			.add('../images/vertex/vsnow.png')
-			.add('../images/vertex/vfrozen.png') // Vertex // index 22
-			.add('../images/home/hmont.jpg') // Home // index 23
+			.add('../images/vertex/vfrozen.png') // Vertex // index 32
+			.add('../images/home/hmont.jpg') // Home // index 33
 			.add('../images/home/hcity.png')
 			.add('../images/home/hbird.png')
 			.add('../images/home/hfog.png')
@@ -64,9 +79,10 @@ $(function () {
 			.add('../images/home/hbott.png')
 			.add('../images/home/hlight.png')
 			.add('../images/home/hsun.png')
-			.add('../images/home/hgrass.png') // Home End // index 31
+			.add('../images/home/hgrass.png') // Home End // index 41
 			.add('../images/filter.png') // DMap // index 31
-			.add('../images/end/end.jpg') // DMap // index 33
+			.add('../images/end/end.jpg') // End // index 33
+			.add('../images/wave_d.png') // DMapWave // index 34
 			.load(handleLoadComplete);
 	});
 });
@@ -111,27 +127,21 @@ function handleLoadComplete(loader, resources) {
 	];
 
 	let wheat = [
-		new PIXI.Sprite(resources[resKeys[5]].texture)
-	];
-
-	let spring = [
+		new PIXI.Sprite(resources[resKeys[5]].texture),
 		new PIXI.Sprite(resources[resKeys[6]].texture),
 		new PIXI.Sprite(resources[resKeys[7]].texture),
 		new PIXI.Sprite(resources[resKeys[8]].texture),
 		new PIXI.Sprite(resources[resKeys[9]].texture),
 		new PIXI.Sprite(resources[resKeys[10]].texture),
 		new PIXI.Sprite(resources[resKeys[11]].texture),
-		new PIXI.Sprite(resources[resKeys[12]].texture)
-	];
-
-	let note = [
+		new PIXI.Sprite(resources[resKeys[12]].texture),
 		new PIXI.Sprite(resources[resKeys[13]].texture),
 		new PIXI.Sprite(resources[resKeys[14]].texture),
 		new PIXI.Sprite(resources[resKeys[15]].texture),
-		new PIXI.Sprite(resources[resKeys[16]].texture)
 	];
 
-	let vertex = [
+	let spring = [
+		new PIXI.Sprite(resources[resKeys[16]].texture),
 		new PIXI.Sprite(resources[resKeys[17]].texture),
 		new PIXI.Sprite(resources[resKeys[18]].texture),
 		new PIXI.Sprite(resources[resKeys[19]].texture),
@@ -140,20 +150,36 @@ function handleLoadComplete(loader, resources) {
 		new PIXI.Sprite(resources[resKeys[22]].texture)
 	];
 
-	let home = [
+	let note = [
 		new PIXI.Sprite(resources[resKeys[23]].texture),
 		new PIXI.Sprite(resources[resKeys[24]].texture),
 		new PIXI.Sprite(resources[resKeys[25]].texture),
-		new PIXI.Sprite(resources[resKeys[26]].texture),
+		new PIXI.Sprite(resources[resKeys[26]].texture)
+	];
+
+	let vertex = [
 		new PIXI.Sprite(resources[resKeys[27]].texture),
 		new PIXI.Sprite(resources[resKeys[28]].texture),
 		new PIXI.Sprite(resources[resKeys[29]].texture),
 		new PIXI.Sprite(resources[resKeys[30]].texture),
-		new PIXI.Sprite(resources[resKeys[31]].texture)
+		new PIXI.Sprite(resources[resKeys[31]].texture),
+		new PIXI.Sprite(resources[resKeys[32]].texture)
+	];
+
+	let home = [
+		new PIXI.Sprite(resources[resKeys[33]].texture),
+		new PIXI.Sprite(resources[resKeys[34]].texture),
+		new PIXI.Sprite(resources[resKeys[35]].texture),
+		new PIXI.Sprite(resources[resKeys[36]].texture),
+		new PIXI.Sprite(resources[resKeys[37]].texture),
+		new PIXI.Sprite(resources[resKeys[38]].texture),
+		new PIXI.Sprite(resources[resKeys[39]].texture),
+		new PIXI.Sprite(resources[resKeys[40]].texture),
+		new PIXI.Sprite(resources[resKeys[41]].texture)
 	];
 
 	let end = [
-		new PIXI.Sprite(resources[resKeys[33]].texture)
+		new PIXI.Sprite(resources[resKeys[43]].texture)
 	];
 
 	createLoaction(home, locationHomeItems, app, locationsAlphaArray); // Location Home
@@ -172,7 +198,7 @@ function handleLoadComplete(loader, resources) {
 	home = null;
 	end = null;
 
-	displacementSprite = PIXI.Sprite.from(resources[resKeys[32]].texture);
+	displacementSprite = PIXI.Sprite.from(resources[resKeys[42]].texture);
 	displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
 	displacementSprite.anchor.set(0.5);
 	displacementSprite.position.set(app.renderer.screen.width/2, app.renderer.screen.height/2);
@@ -185,6 +211,79 @@ function handleLoadComplete(loader, resources) {
 
 	app.stage.filters = [displacementFilter];
 	app.stage.addChild(displacementSprite);
+
+	let snowOne = PIXI.Texture.from('../images/snow_blured.png');
+	let snowTwo = PIXI.Texture.from('../images/snow_blured-2.png');
+	let smoke = PIXI.Texture.from('../images/smoke.png');
+
+	let emitterDesign = new Emitter(
+		locationsAlphaArray[4],
+		[snowOne],
+		snow
+	);
+
+	let emitterVertex = new Emitter(
+		locationsAlphaArray[5],
+		[snowTwo,smoke],
+		snowStorm
+	);
+
+	let emitterWheat = new Emitter(
+		locationsAlphaArray[1],
+		[smoke],
+		randomeParticles
+	);
+
+	const effectsArray = [false ,emitterWheat, false, false,emitterDesign, emitterVertex, false];
+
+	const waveDisplacement = PIXI.Sprite.from(resources[resKeys[44]].texture);
+	const waveDisplacementFilter = new PIXI.filters.DisplacementFilter(waveDisplacement);
+	waveDisplacement.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
+	waveDisplacement.scale.set(0.8);
+	waveDisplacementFilter.autoFit = true;
+	waveDisplacementFilter.scale.set(20);
+
+	locationSpringItems[4].addChild(waveDisplacement);
+	locationSpringItems[4].filters = [waveDisplacementFilter];
+
+	class Vec2d {
+		constructor(x, y) {
+			this.x = x || 0;
+			this.y = y || 0;
+		}
+
+		rotate(radians) {
+			let ca = Math.cos(radians);
+			let sa = Math.sin(radians);
+			return new Vec2d(ca * this.x - sa * this.y, sa * this.x + ca * this.y);
+		}
+	}
+
+	let wind = new Vec2d(0.2, 0.2);
+
+	setInterval(() => {
+		let direction = Math.random() / 50;
+		wind = wind.rotate(direction);
+	}, 500);
+
+	app.ticker.add(function () {
+		waveDisplacement.x += wind.x;
+		waveDisplacement.y += wind.y;
+	});
+
+	let elapsed = Date.now();
+	const update = function(){
+
+		requestAnimationFrame(update);
+
+		let now = Date.now();
+		effectsArray[activeLocation] ? effectsArray[activeLocation].update((now - elapsed) * 0.001): effectsArray[activeLocation];
+		elapsed = now;
+	};
+	emitterDesign.emit = true;
+	emitterWheat.emit = true;
+	emitterVertex.emit = true;
+	update();
 
 	// adding event listener for mouse move
 	window.addEventListener('mousemove',(e) => {
@@ -203,6 +302,7 @@ function handleLoadComplete(loader, resources) {
 			parallaxSpring(w, h, e);
 			parallaxNote(w, h, e);
 			parallaxVertex(w, h, e);
+			parallaxWheat(w, h, e);
 
 		})
 	});
@@ -220,6 +320,7 @@ function requestFrame() {
 }
 
 window.changeLocationContainer = function (activeLocationIndex) {
+	activeLocation = activeLocationIndex;
 	filterReverce();
 	const displacementAnim = {
 		x: 0,
@@ -445,6 +546,54 @@ function parallaxHome(w, h, e) {
 	TweenMax.to(locationHomeItems[5], 0.3, {
 		x: (w - e.clientX) / (amplitude + 80),
 		y: (h - e.clientY) / (amplitude + 80),
+		ease: Circ.easeOut
+	});
+}
+
+function parallaxWheat(w, h, e) {
+	TweenMax.to(locationWheatItems[0], 0.3, {
+		x: (w - e.clientX) / (amplitude + 15),
+		y: (h - e.clientY) / (amplitude + 15),
+		ease: Circ.easeOut
+	});
+	TweenMax.to(locationWheatItems[1], 0.3, {
+		x: (w - e.clientX) / (amplitude + 20),
+		y: (h - e.clientY) / (amplitude + 20),
+		ease: Circ.easeOut
+	});
+	TweenMax.to(locationWheatItems[2], 0.3, {
+		x: (w - e.clientX) / (amplitude + 20),
+		y: (h - e.clientY) / (amplitude + 20),
+		ease: Circ.easeOut
+	});
+	TweenMax.to(locationWheatItems[3], 0.3, {
+		x: (w - e.clientX) / (amplitude + 35),
+		y: (h - e.clientY) / (amplitude + 35),
+		ease: Circ.easeOut
+	});
+	TweenMax.to(locationWheatItems[4], 0.3, {
+		x: (w - e.clientX) / (amplitude + 40),
+		y: (h - e.clientY) / (amplitude + 40),
+		ease: Circ.easeOut
+	});
+	TweenMax.to(locationWheatItems[5], 0.3, {
+		x: (w - e.clientX) / (amplitude + 80),
+		y: (h - e.clientY) / (amplitude + 80),
+		ease: Circ.easeOut
+	});
+	TweenMax.to(locationWheatItems[6], 0.3, {
+		x: (w - e.clientX) / (amplitude + 90),
+		y: (h - e.clientY) / (amplitude + 90),
+		ease: Circ.easeOut
+	});
+	TweenMax.to(locationWheatItems[7], 0.3, {
+		x: (w - e.clientX) / (amplitude + 90),
+		y: (h - e.clientY) / (amplitude + 90),
+		ease: Circ.easeOut
+	});
+	TweenMax.to(locationWheatItems[8], 0.3, {
+		x: (w - e.clientX) / (amplitude + 90),
+		y: (h - e.clientY) / (amplitude + 90),
 		ease: Circ.easeOut
 	});
 }

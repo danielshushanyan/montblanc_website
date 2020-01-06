@@ -33,7 +33,7 @@ $(function () {
 
 	$('.header__menu').on('click', function () {
 		timeLineMenu.play();
-		menuSlide.slideTo(prevIndex, 300);
+		menuSlide.slideTo(prevIndex, 0);
 	});
 
 	$('.js-close').on('click', function () {
@@ -53,13 +53,14 @@ $(function () {
 		const index = $(this).data('index');
 
 		if(locker) {
-			menuSlide.slideTo(index, 500);
+			menuSlide.slideTo(index, 300);
 		}
 	}).on('click',function (e) {
 		selectFromMenu = true;
 		locker = false;
 		e.preventDefault();
 		index = $(this).data('index');
+		activeLocation = index;
 
 		selectItem
 			.to('.menu-slide-item img',1,{opacity: 0, ease: Power4.easeInOut})

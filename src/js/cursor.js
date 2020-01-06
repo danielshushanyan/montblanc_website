@@ -8,12 +8,14 @@ class Cursor {
 		const { Back } = window;
 		this.outerCursor = document.querySelector(".circle-cursor--outer");
 		this.innerCursor = document.querySelector(".circle-cursor--inner");
-		this.outerCursorBox = this.outerCursor.getBoundingClientRect();
+		this.innerDrug = document.querySelector(".circle-cursor--drag");
+		this.outerCursorBox = this.innerDrug.getBoundingClientRect();
 		this.outerCursorSpeed = 0;
 		this.easing = Back.easeOut.config(1.7);
 		this.clientX = -100;
 		this.clientY = -100;
 		this.showCursor = false;
+		this.lastTarget = null;
 
 		const unveilCursor = () => {
 			TweenMax.set(this.innerCursor, {
@@ -21,8 +23,12 @@ class Cursor {
 				y: this.clientY
 			});
 			TweenMax.set(this.outerCursor, {
-				x: this.clientX - this.outerCursorBox.width / 2,
-				y: this.clientY - this.outerCursorBox.height / 2
+				x: this.clientX - (this.outerCursor.offsetLeft + this.outerCursor.offsetWidth) / 2,
+				y: this.clientY - (this.outerCursor.offsetTop + this.outerCursor.offsetHeight) / 2
+			});
+			TweenMax.set(this.innerDrug, {
+				x: this.clientX - (this.outerCursor.offsetLeft + this.outerCursor.offsetWidth) / 2,
+				y: this.clientY - (this.outerCursor.offsetTop + this.outerCursor.offsetHeight) / 2
 			});
 			setTimeout(() => {
 				this.outerCursorSpeed = 0.5;
@@ -43,10 +49,14 @@ class Cursor {
 			});
 			if (!this.isStuck) {
 				TweenMax.to(this.outerCursor, this.outerCursorSpeed, {
-					x: this.clientX - this.outerCursorBox.width / 2,
-					y: this.clientY - this.outerCursorBox.height / 2
+					x: this.clientX - (this.outerCursor.offsetLeft + this.outerCursor.offsetWidth) / 2,
+					y: this.clientY - (this.outerCursor.offsetTop + this.outerCursor.offsetHeight) / 2
 				});
 			}
+			TweenMax.to(this.innerDrug, this.outerCursorSpeed,{
+				x: this.clientX - this.outerCursorBox.width / 2,
+				y: this.clientY - this.outerCursorBox.height / 2
+			});
 			if (this.showCursor) {
 				document.removeEventListener("mousemove", unveilCursor);
 			}
@@ -59,13 +69,18 @@ class Cursor {
 
 		const handleMouseEnter = e => {
 			this.outerCursorSpeed = 0;
-			this.isStuck = true;
 			const target = e.currentTarget;
+			this.isStuck = target.classList.contains('js-stack');
+			const circle = target.querySelector('.circle');
+			this.lastTarget = circle;
+
+			if (circle) {
+				TweenMax.to(this.lastTarget, 0.2,{
+					opacity: 0
+				});
+			}
+
 			const box = target.getBoundingClientRect();
-			this.outerCursorOriginals = {
-				width: this.outerCursorBox.width,
-				height: this.outerCursorBox.height
-			};
 
 			TweenMax.to(this.outerCursor, 0.2, {
 				x: box.left,
@@ -77,25 +92,32 @@ class Cursor {
 				borderColor: "#fff"
 			});
 
-			TweenMax.set(this.innerCursor, {
+			TweenMax.to(this.innerCursor, 0.2,{
 				scale: 0
 			});
 
 		};
 
-		const handleMouseLeave = () => {
+		const handleMouseLeave = (e) => {
 			this.outerCursorSpeed = 0.2;
 			this.isStuck = false;
 			TweenMax.to(this.outerCursor, 0.2, {
-				width: this.outerCursorOriginals.width,
-				height: this.outerCursorOriginals.height,
+				width: 10,
+				height: 10,
 				opacity: 0,
 				borderColor: "#ffffff"
 			});
 
-			TweenMax.set(this.innerCursor, {
+			TweenMax.to(this.innerCursor, 0.2,{
 				scale: 1
 			});
+
+			if (this.lastTarget) {
+				TweenMax.to(this.lastTarget, 0.2,{
+					opacity: 1
+				});
+				this.lastTarget = null;
+			}
 		};
 
 		const linkItems = document.querySelectorAll(".js-square");
@@ -103,6 +125,8 @@ class Cursor {
 			item.addEventListener("mouseenter", handleMouseEnter);
 			item.addEventListener("mouseleave", handleMouseLeave);
 		});
+
+		//
 
 		const mainNavMouseEnter = () => {
 			this.outerCursorSpeed = 0.2;
@@ -129,21 +153,17 @@ class Cursor {
 		//	white
 		//
 
-		const hoverWhite = TweenMax.to(this.outerCursor, 0.3, {
-			backgroundColor: "#fff",
+		const hoverWhite = TweenMax.to(this.innerDrug, 0.3, {
 			ease: this.easing,
 			paused: true,
-			opacity: 0.5,
-			borderColor: '#fff',
-			xPercent: -50 - 15,
-			yPercent: -50 - 15
+			opacity: 1,
 		});
 
 		const hoverWhiteEnter = () => {
 			this.outerCursorSpeed = 0;
 			TweenMax.to(this.innerCursor, 0.3,{
 				opacity: 0,
-				scale: 0.5
+				scale: 0
 			});
 			hoverWhite.play();
 		};
@@ -151,19 +171,16 @@ class Cursor {
 		const hoverWhiteLeave = () => {
 			this.outerCursorSpeed = 0.2;
 			hoverWhite.reverse();
-			const self = this;
-			hoverWhite.eventCallback('onReverseComplete',function () {
-				TweenMax.to(self.innerCursor, 0.4,{
-					opacity: 1,
-					scale: 1
-				});
+			TweenMax.to(this.innerCursor, 0.2,{
+				opacity: 1,
+				scale: 1
 			});
 		};
 
-		const hoverWhiteLinks = $(".js-link-white");
+		const hoverWhiteLinks = $(".js-drag");
 		hoverWhiteLinks.each(function () {
-			$(document).on("mouseenter", '.js-link-white', hoverWhiteEnter);
-			$(document).on("mouseleave", '.js-link-white', hoverWhiteLeave);
+			$(document).on("mouseenter", '.js-drag', hoverWhiteEnter);
+			$(document).on("mouseleave", '.js-drag', hoverWhiteLeave);
 		});
 
 		//

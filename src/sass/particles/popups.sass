@@ -7,16 +7,62 @@
 	flex-wrap: wrap
 	background-color: $menuBg
 	z-index: 500
+	transform: translateY(-100%)
+	transition: all .5s ease-in-out
+	overflow: hidden
+	user-select: none
 	
 	&__action
 		flex: 0 0 154px
+		
+		.action__line
+			opacity: 0.3 !important
 	
 	&__container
 		flex: 0 0 calc(100% - 155px)
 		
+	&__nav
+		position: absolute
+		background-color: $white
+		bottom: 0
+		right: 0
+		@include size(50%, auto)
+		border-top: 1px solid #F2F2F2
+		display: flex
+		
+		@include bp($point-3-low)
+			right: unset
+			left: 0
+			@include size(100vw, auto)
+		
+		&-item
+			cursor: pointer
+			padding: 41px 0
+			text-align: center
+			flex: 0 0 50%
+			font-size: 14px
+			line-height: 130%
+			letter-spacing: 0.02em
+			text-transform: uppercase
+			font-feature-settings: 'salt' on
+			color: #C4C4C4
+			transition: all .3s ease-in-out
+			
+			@include bp($point-3-low)
+				font-size: 12px
+				padding: 23px 0
+				
+			&--active
+				color: #005FAB
+				
+			&--prev
+				border-right: 1px solid #F2F2F2
+				
+		
+	&.js-popup-opened
+		transform: translateY(0)
+		
 #video
-	display: none
-
 	&.popup
 		@include bp($point-3-low)
 			height: auto
@@ -27,7 +73,6 @@
 			flex: 0 0 100%
 	
 #blend
-	display: none
 	.popup__action
 		position: absolute
 		left: 0
@@ -44,12 +89,11 @@
 			flex-direction: column
 		
 	.action__line
-		border-color: #fff
+		border-color: $white
 		
 #bottle
 	background: url("../images/bg_popup.jpg") center no-repeat
 	background-size: cover
-	display: none
 	
 	.popup__action
 		position: absolute
@@ -63,11 +107,18 @@
 	.popup__container
 		flex: 0 0 100%
 	.action__line
-		border-color: #fff
+		border-color: $white
 		
 #cocktail
-	display: none
+	background-color: $white
 	
+	.content
+		position: absolute
+		left: 0
+		top: 0
+	
+	.js-link
+		cursor: default
 	.popup__action
 		position: absolute
 		left: 0
@@ -80,11 +131,11 @@
 	.popup__container
 		flex: 0 0 100%
 	.action__line
-		border-color: #fff
+		border-color: $white
 
 .content
-	position: relative
 	display: flex
+	@include size(100%)
 	
 	@include bp($point-3-low)
 		flex-direction: column
@@ -172,11 +223,22 @@
 			z-index: 1
 			position: absolute
 			left: 0
-			right: 0
 			top: 0
+			right: 0
 			bottom: 0
 			margin: auto
 			height: 80vh
+			width: 100%
+			display: flex
+			justify-content: center
+			
+			img
+				height: 80vh
+				max-width: 184px
+				position: absolute
+				transition: opacity 0.5s ease-in-out
+				pointer-events: none
+			
 		&-descr
 			display: flex
 			flex-direction: column
@@ -198,13 +260,30 @@
 				.content__bottle-title
 					text-align: right
 					margin: 0 0 21px auto
-					
+	
+			&--left-two
+				display: none
+				left: 26.7%
+				top: 49.5%
+				
+				.content__bottle-title
+					max-width: 373px
+				
+				.content__bottle-line--left
+					width: 4vw
+					right: -110px
+				
 			&--right
 				left: 76.3%
 				top: 57.1%
 				
+				
 				.content__bottle-title
 					margin: 0 0 35px 0
+			
+			&--right-two
+				display: none
+				top: 76.1%
 		
 		&-title
 			margin: 0 0 21px 0
@@ -268,7 +347,27 @@
 				@include bp(1880px)
 					left: -6vw
 					width: 5vw
-				
+	&__grapic
+		display: flex
+		flex-direction: column
+		align-items: center
+		position: absolute
+		top: 50px
+		right: 65px
+		
+		&-text
+			margin-top: 25px
+			font-size: 14px
+			line-height: 130%
+			text-align: center
+			letter-spacing: 0.02em
+			font-feature-settings: 'salt' on
+			opacity: 0.5
+			max-width: 144px
+		
+		svg
+			@include size(63px,41px)
+			
 .cocktail
 	padding: 0 37px 0 0
 	position: relative
@@ -422,42 +521,6 @@
 				
 				@include bp($point-3-low)
 					margin-left: 0
-				
-	&__nav
-		position: absolute
-		background-color: $white
-		bottom: 0
-		right: 0
-		@include size(100%, auto)
-		border-top: 1px solid #F2F2F2
-		display: flex
-		
-		@include bp($point-3-low)
-			right: unset
-			left: 0
-			@include size(100vw, auto)
-		
-		&-item
-			cursor: pointer
-			padding: 41px 0
-			text-align: center
-			flex: 0 0 50%
-			font-size: 14px
-			line-height: 130%
-			letter-spacing: 0.02em
-			text-transform: uppercase
-			font-feature-settings: 'salt' on
-			color: #C4C4C4
-			
-			@include bp($point-3-low)
-				font-size: 12px
-				padding: 23px 0
-			
-			&--prev
-				border-right: 1px solid #F2F2F2
-				
-			&--next
-				color: #005FAB
 		
 .blend
 	&__title

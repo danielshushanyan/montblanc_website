@@ -115,10 +115,43 @@
 		z-index: 12
 		position: relative
 		
+		&:hover
+			.age__btn-circle
+				transform: translateX(-20px)
+				opacity: 0
+				
+			.age__btn-text,.age__btn-square
+				transform: translateX(-30px)
+		
 		&-circle
 			@include size(36px)
 			border-radius: 50%
 			border: 2px solid $white
+			transition: all .3s ease-in-out
+			
+		.js-follower
+			position: relative
+			
+		&-square
+			@include size(76px)
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			margin: auto
+			z-index: 3
+			
+			&:before
+				content: ''
+				@include size(160px, 70px)
+				position: absolute
+				left: -30px
+				top: 0
+				right: 0
+				bottom: 0
+				margin: auto
+				
 			
 		&-text
 			font-family: $baseScndFont
@@ -129,6 +162,7 @@
 			letter-spacing: 0.16em
 			text-transform: uppercase
 			font-feature-settings: 'salt' on
+			transition: all .3s ease-in-out
 .one
 	@include size(100%, 100vh)
 	background-size: cover
@@ -224,9 +258,40 @@
 		z-index: 12
 		position: relative
 		
+		&:hover
+			.one__btn-circle
+				transform: translateX(-20px)
+				opacity: 0
+			
+			.one__btn-text,.one__btn-square
+				transform: translateX(-30px)
+		
 		@include bp($point-3-low)
 			margin: 30px 0 0
 			align-self: flex-start
+			
+		.js-follower
+			position: relative
+		
+		&-square
+			@include size(76px)
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			margin: auto
+			z-index: 3
+			
+			&:before
+				content: ''
+				@include size(160px, 70px)
+				position: absolute
+				left: -30px
+				top: 0
+				right: 0
+				bottom: 0
+				margin: auto
 		
 		&-circle
 			@include size(60px)
@@ -235,6 +300,7 @@
 			display: flex
 			align-items: center
 			justify-content: center
+			transition: all .3s linear
 			
 			svg
 				@include size(10px,11px)
@@ -247,6 +313,7 @@
 			line-height: 130%
 			letter-spacing: 0.02em
 			font-feature-settings: 'salt' on
+			transition: all .3s linear
 .two
 	@include size(100%, 100vh)
 	background-size: cover
@@ -365,9 +432,13 @@
 		
 	&__btn
 		position: absolute
-		right: -21%
+		right: -23%
 		top: 14%
 		cursor: pointer
+		@include size(80px)
+		display: flex
+		align-items: center
+		justify-content: center
 		
 		@include bp($point-4)
 			right: -7%
@@ -531,6 +602,10 @@
 		bottom: 0
 		cursor: pointer
 		z-index: 2
+		@include size(80px)
+		display: flex
+		align-items: center
+		justify-content: center
 		
 		@include bp($point-3-low)
 			position: unset
@@ -555,6 +630,7 @@
 	
 	&__container
 		position: absolute
+		z-index: 3
 		left: 72%
 		top: 41.1%
 		transform: translate(-50%,-50%)
@@ -666,6 +742,10 @@
 		bottom: 38%
 		cursor: pointer
 		z-index: 2
+		@include size(80px)
+		display: flex
+		align-items: center
+		justify-content: center
 		
 		@include bp($point-7)
 			right: -3vw
@@ -682,6 +762,54 @@
 		@include bp($point-3-low)
 			position: unset
 			margin: 30px 0 0
+			
+	&__fog
+		@include size(100%)
+		position: absolute
+		z-index: 1
+		left: 0
+		top: 0
+		
+		&::before, &::after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			background-size: cover
+			background-position: center
+			background-repeat: repeat-x
+		
+		&-second
+			&::before, &::after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				height: 100%
+				width: 100%
+				background-size: cover
+				background-position: center
+				background-repeat: repeat-x
+			
+			&::before, &::after
+				left: 100%
+		
+		&::before, &-second::before
+			background-image: url('../images/fog-1.png')
+			animation: fogmove 25s linear 0s infinite
+		
+		&::after, &-second::after
+			background-image: url('../images/fog-2.png')
+			animation: fogmove 15s linear 0s infinite
+
+@keyframes fogmove
+	from
+		transform: translate3d(0, 0, 0)
+	
+	to
+		transform: translate3d(-100%, 0, 0)
 
 .five
 	@include size(100%, 100vh)
@@ -736,6 +864,11 @@
 		top: 23%
 		transform: translate(-50%, -50%)
 		cursor: pointer
+		@include size(80px)
+		display: flex
+		align-items: center
+		justify-content: center
+		
 		
 		@include bp($point-6)
 			left: 61vw
@@ -820,6 +953,10 @@
 		bottom: 26%
 		cursor: pointer
 		z-index: 2
+		@include size(80px)
+		display: flex
+		align-items: center
+		justify-content: center
 		
 		@include bp($point-3)
 			right: 0
@@ -963,6 +1100,10 @@
 		bottom: 1%
 		cursor: pointer
 		z-index: 2
+		@include size(80px)
+		display: flex
+		align-items: center
+		justify-content: center
 		
 		@include bp($point-3)
 			right: 0
@@ -1105,6 +1246,37 @@
 				
 				svg
 					@include size(100%)
+				
+		&:hover
+			.end__btn-circle
+				transform: translateX(-10px)
+				opacity: 0
+			
+			.end__btn-text,.end__btn-square
+				transform: translateX(-10px)
+		
+		.js-follower
+			position: relative
+		
+		&-square
+			@include size(76px)
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			margin: auto
+			z-index: 3
+			
+			&:before
+				content: ''
+				@include size(160px, 70px)
+				position: absolute
+				left: -30px
+				top: 0
+				right: 0
+				bottom: 0
+				margin: auto
 		
 		&-text
 			margin: 0 0 0 15px
@@ -1119,7 +1291,7 @@
 
 
 .circle
-	transform-origin: 50%
+	transform-origin: center center 0
 	animation: iconMore 2s infinite backwards
 	
 	
@@ -1129,3 +1301,8 @@
 		
 	100%
 		transform: translateZ(0) rotate(1turn)
+
+		
+.cross
+	will-change: transform
+	transform-origin: 50% 50%

@@ -27,9 +27,12 @@ block content
 					h2.h1.one__title.js-title родина шедевра
 					p.one__text.js-fade Регион Коньяк известен своими собственными легендарными традициями выращивания культур и производством лучших блюд, вин и спиртных напитков. Не удивительно — почему это лучшее место для создания шедевра.
 					.one__btn.js-popup-btn.js-fade(data-href='#video')
-						.one__btn-circle.js-square
+						.one__btn-circle
 							+svg('play')
-						.one__btn-text.js-link Смотреть видео
+						.js-catch.hover-s
+							.js-follower
+								.one__btn-square.js-square
+								.one__btn-text.js-link Смотреть видео
 			section.two.swiper-slide.section
 				.two__container
 					p.two__text.js-title основа
@@ -38,10 +41,10 @@ block content
 						p.two__dropdown-text Один из важных компонентов в водке MONT BLANC — это использование чистой родниковой воды из природного источника&nbsp;
 							b Gensac.
 							| Чистейшая вода из подземного источника придает водке прозрачность бриллианта. Водка приобретает мягкий, округлый и слегка бархатистый вкус.
-					.two__btn.js-dropdown.js-fade
-						svg.js-square(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
+					.two__btn.js-dropdown.js-fade.js-catch.hover-s
+						svg.js-square.js-follower(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
 							circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
-							path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
+							path.cross(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
 			section.three.swiper-slide.section
 				.three__top.three__top--left
 				.three__top.three__top--mid
@@ -53,11 +56,13 @@ block content
 						p.three__dropdown-text Один из важных компонентов в водке MONT BLANC — это использование чистой родниковой воды из природного источника&nbsp;
 							b Gensac.
 							| Чистейшая вода из подземного источника придает водке прозрачность бриллианта. Водка приобретает мягкий, округлый и слегка бархатистый вкус.
-					.three__btn.js-dropdown.js-fade
-						svg.js-square(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
+					.three__btn.js-dropdown.js-fade.js-catch.hover-s
+						svg.js-square.js-follower(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
 							circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
-							path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
+							path.cross(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
 			section.four.swiper-slide.section
+				.four__fog
+					.four__fog-second
 				.four__container
 					p.four__text.js-title 5-кратная дистилляция
 					h2.h2.four__title.js-title нота альпийской свежести
@@ -65,27 +70,26 @@ block content
 						p.four__dropdown-text Один из важных компонентов в водке MONT BLANC — это использование чистой родниковой воды из природного источника&nbsp;
 							b Gensac.
 							| Чистейшая вода из подземного источника придает водке прозрачность бриллианта. Водка приобретает мягкий, округлый и слегка бархатистый вкус.
-					.four__btn.js-popup-btn.js-fade(data-href='#blend')
-						svg.js-square(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
+					.four__btn.js-popup-btn.js-fade.js-catch.hover-s(data-href='#blend')
+						svg.js-square.js-follower(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
 							circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
-							path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
+							path.cross(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
 			section.five.swiper-slide.section
-				.five__btn-3d.js-popup-btn.js-paralax(data-href='#bottle')
-					svg.js-fade.js-square(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
+				.five__btn-3d.js-popup-btn.js-catch.hover-s(data-href='#bottle')
+					svg.js-fade.js-square.js-follower(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
 						circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
-						path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
+						path.cross(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
 				.five__container
-					.js-paralax
-						p.five__text.js-title упаковка
-						h2.h2.five__title.js-title дизайн, подсказанный природой
-						.five__dropdown.js-dropdown-box
-							p.five__dropdown-text Один из важных компонентов в водке MONT BLANC — это использование чистой родниковой воды из природного источника&nbsp;
-								b Gensac.
-								| Чистейшая вода из подземного источника придает водке прозрачность бриллианта. Водка приобретает мягкий, округлый и слегка бархатистый вкус.
-						.five__btn.js-dropdown.js-fade
-							svg.js-square(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
-								circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
-								path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
+					p.five__text.js-title упаковка
+					h2.h2.five__title.js-title дизайн, подсказанный природой
+					.five__dropdown.js-dropdown-box
+						p.five__dropdown-text Один из важных компонентов в водке MONT BLANC — это использование чистой родниковой воды из природного источника&nbsp;
+							b Gensac.
+							| Чистейшая вода из подземного источника придает водке прозрачность бриллианта. Водка приобретает мягкий, округлый и слегка бархатистый вкус.
+					.five__btn.js-dropdown.js-fade.js-catch.hover-s
+						svg.js-square.js-follower(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
+							circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
+							path.cross(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
 			section.six.swiper-slide.section
 				.six__top
 				.six__container
@@ -95,11 +99,11 @@ block content
 						p.six__dropdown-text Один из важных компонентов в водке MONT BLANC — это использование чистой родниковой воды из природного источника&nbsp;
 							b Gensac.
 							| Чистейшая вода из подземного источника придает водке прозрачность бриллианта. Водка приобретает мягкий, округлый и слегка бархатистый вкус.
-					.six__btn.js-dropdown.js-fade
-						svg.js-square(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
+					.six__btn.js-dropdown.js-fade.js-catch.hover-s
+						svg.js-square.js-follower(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
 							circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
-							path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
-				.six__cocktail.js-popup-btn.js-fade(data-href='#cocktail')
+							path.cross(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
+				.six__cocktail.js-popup-btn.js-fade(data-href='#cocktail' data-url='new-cocktail.html')
 					img.six__cocktail-img(src='./images/cocktail.png', alt='montblanc vodka image')
 					.six__cocktail-text Авторские коктейли
 					svg.six__cocktail-svg(width='11', height='18', viewBox='0 0 11 18', fill='none', xmlns='http://www.w3.org/2000/svg')
@@ -109,9 +113,12 @@ block content
 					h2.h1.end__title.js-title  РАССКАЖИ СВОЮ ИСТОРИЮ ВОСХОЖДЕНИЯ
 					p.end__text.js-fade Авторизуйся и напиши нам короткую историю своего восхождения в жизни (карьера, семья, успех). Опубликуй в фейсбуке под хэштегом и выиграй ценный приз!
 					.end__btn.js-fade
-						.end__btn-circle.js-square
-							svg(width='51', height='51', viewBox='0 0 51 51', fill='none', xmlns='http://www.w3.org/2000/svg')
-								rect(opacity='0.5', x='1.39746', y='1.22464', width='47.7728', height='47.7728', rx='23.8864', stroke='white', stroke-width='2')
+						.end__btn-circle.js-catch.hover-s
+							svg.js-square.js-follower(width='51', height='51', viewBox='0 0 51 51', fill='none', xmlns='http://www.w3.org/2000/svg')
+								rect.circle(opacity='0.5', x='1.39746', y='1.22464', width='47.7728', height='47.7728', rx='23.8864', stroke='white', stroke-width='2')
 								path(d='M26.1126 36.4827L26.1126 25.7926H29.7008L30.2381 21.6265H26.1126V18.9665C26.1126 17.7604 26.4476 16.9383 28.1774 16.9383L30.3835 16.9373V13.2112C30.0018 13.1606 28.6923 13.0472 27.1688 13.0472C23.988 13.0472 21.8104 14.9886 21.8104 18.5541V21.6266H18.2129L18.2129 25.7927H21.8103V36.4829L26.1126 36.4827Z', fill='white')
-						.end__btn-text.js-link Войти через Facebook
+						.js-catch.hover-s
+							.js-follower
+								.end__btn-square.js-square
+								.end__btn-text.js-link Войти через Facebook
 

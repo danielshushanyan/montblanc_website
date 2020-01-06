@@ -20,15 +20,17 @@
 			path(fill-rule='evenodd', clip-rule='evenodd', d='M183.677 84.1355C180.901 86.2857 178.332 88.4359 173.126 87.7423C164.171 86.5632 160.978 73.1764 167.642 66.9338C171.529 63.3271 179.721 63.4658 183.4 67.9743L188.12 62.4254C184.58 59.2347 180.554 56.7377 174.029 56.9458C163.894 57.2926 156.952 64.9917 156.258 74.2168C155.425 85.4534 163.061 94.401 173.334 95.164C178.818 95.5801 184.094 93.9848 188.12 89.6844L183.677 84.1355Z', fill='#fff')
 			path(fill-rule='evenodd', clip-rule='evenodd', d='M195.548 11.6527C193.951 11.6527 192.702 10.4042 192.702 8.87827C192.702 7.35232 193.951 6.10381 195.548 6.10381C197.145 6.10381 198.394 7.28296 198.394 8.87827C198.394 10.4736 197.145 11.6527 195.548 11.6527ZM195.548 6.58934C194.299 6.58934 193.327 7.62977 193.327 8.94763C193.327 10.2655 194.298 11.3059 195.617 11.3059C196.242 11.3059 196.798 11.0285 197.214 10.6123C197.631 10.1961 197.839 9.57189 197.839 8.94763C197.769 7.62977 196.798 6.58934 195.548 6.58934ZM194.437 10.3349L194.993 10.4042L195.062 9.22508H195.34C195.756 9.22508 195.965 9.3638 196.034 9.71061L196.103 9.84933C196.173 10.0574 196.242 10.2655 196.242 10.3349H196.798C196.728 10.1961 196.728 10.0574 196.659 9.71061C196.589 9.3638 196.45 9.15572 196.173 9.08636V8.87827C196.52 8.80891 196.728 8.53147 196.728 8.25402C196.728 8.04593 196.659 7.83785 196.52 7.69913C196.312 7.5604 196.103 7.49104 195.548 7.49104C195.201 7.49104 194.923 7.49104 194.646 7.49104H194.576L194.437 10.3349ZM195.479 7.83785C195.27 7.83785 195.201 7.83785 195.132 7.90721L195.062 8.80891L195.479 8.87827C195.965 8.87827 196.242 8.67019 196.242 8.39274C196.173 8.25402 196.103 7.83785 195.479 7.83785Z', fill='#fff')
 		.action__line
-		.action__close.js-popup-close.js-square
-			svg(width='31', height='31', viewBox='0 0 31 31', fill='none', xmlns='http://www.w3.org/2000/svg')
-				line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
-				line(x1='2', y1='-2', x2='37.598', y2='-2', transform='matrix(-0.707107 -0.707107 -0.707107 0.707107 28 31)', stroke='white', stroke-width='4', stroke-linecap='round')
+		.action__close.js-popup-close.js-square.js-catch.hover-s
+			.js-follower
+				svg(width='30', height='30', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+					g
+						line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
+						line(x1='2', y1='-2', x2='37.598', y2='-2', transform='rotate(45) translate(2, 2)', stroke='white', stroke-width='4', stroke-linecap='round')
 		.action__line
 	.popup__container.content
 		video.content__video(muted, loop, width="1920" height="1080")
 			source(src='./video/montblanc.mp4', type='video/mp4')
-		svg.content__icon.js-square(width='150', height='150', viewBox='0 0 150 150', fill='none', xmlns='http://www.w3.org/2000/svg')
+		svg.content__icon.js-square.js-stack(width='150', height='150', viewBox='0 0 150 150', fill='none', xmlns='http://www.w3.org/2000/svg')
 			circle(opacity='0.3', cx='75', cy='75', r='73', stroke='white', stroke-width='4')
 			path(d='M66.9107 64.7278L89.7867 75.0002L66.9107 85.2727L66.9107 64.7278Z', fill='white', stroke='white', stroke-width='6.32')
 		.content__video-bar
@@ -57,10 +59,12 @@
 			path(fill-rule='evenodd', clip-rule='evenodd', d='M183.677 84.1355C180.901 86.2857 178.332 88.4359 173.126 87.7423C164.171 86.5632 160.978 73.1764 167.642 66.9338C171.529 63.3271 179.721 63.4658 183.4 67.9743L188.12 62.4254C184.58 59.2347 180.554 56.7377 174.029 56.9458C163.894 57.2926 156.952 64.9917 156.258 74.2168C155.425 85.4534 163.061 94.401 173.334 95.164C178.818 95.5801 184.094 93.9848 188.12 89.6844L183.677 84.1355Z', fill='#fff')
 			path(fill-rule='evenodd', clip-rule='evenodd', d='M195.548 11.6527C193.951 11.6527 192.702 10.4042 192.702 8.87827C192.702 7.35232 193.951 6.10381 195.548 6.10381C197.145 6.10381 198.394 7.28296 198.394 8.87827C198.394 10.4736 197.145 11.6527 195.548 11.6527ZM195.548 6.58934C194.299 6.58934 193.327 7.62977 193.327 8.94763C193.327 10.2655 194.298 11.3059 195.617 11.3059C196.242 11.3059 196.798 11.0285 197.214 10.6123C197.631 10.1961 197.839 9.57189 197.839 8.94763C197.769 7.62977 196.798 6.58934 195.548 6.58934ZM194.437 10.3349L194.993 10.4042L195.062 9.22508H195.34C195.756 9.22508 195.965 9.3638 196.034 9.71061L196.103 9.84933C196.173 10.0574 196.242 10.2655 196.242 10.3349H196.798C196.728 10.1961 196.728 10.0574 196.659 9.71061C196.589 9.3638 196.45 9.15572 196.173 9.08636V8.87827C196.52 8.80891 196.728 8.53147 196.728 8.25402C196.728 8.04593 196.659 7.83785 196.52 7.69913C196.312 7.5604 196.103 7.49104 195.548 7.49104C195.201 7.49104 194.923 7.49104 194.646 7.49104H194.576L194.437 10.3349ZM195.479 7.83785C195.27 7.83785 195.201 7.83785 195.132 7.90721L195.062 8.80891L195.479 8.87827C195.965 8.87827 196.242 8.67019 196.242 8.39274C196.173 8.25402 196.103 7.83785 195.479 7.83785Z', fill='#fff')
 		.action__line
-		.action__close.js-popup-close.js-square
-			svg(width='31', height='31', viewBox='0 0 31 31', fill='none', xmlns='http://www.w3.org/2000/svg')
-				line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
-				line(x1='2', y1='-2', x2='37.598', y2='-2', transform='matrix(-0.707107 -0.707107 -0.707107 0.707107 28 31)', stroke='white', stroke-width='4', stroke-linecap='round')
+		.action__close.js-popup-close.js-square.js-catch.hover-s
+			.js-follower
+				svg(width='30', height='30', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+					g
+						line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
+						line(x1='2', y1='-2', x2='37.598', y2='-2', transform='rotate(45) translate(2, 2)', stroke='white', stroke-width='4', stroke-linecap='round')
 		.action__line
 	.popup__container.content
 		.content__item.content__item--left(style='background-image: url(./images/temp_bg/bg.jpg)')
@@ -101,21 +105,37 @@
 			path(fill-rule='evenodd', clip-rule='evenodd', d='M183.677 84.1355C180.901 86.2857 178.332 88.4359 173.126 87.7423C164.171 86.5632 160.978 73.1764 167.642 66.9338C171.529 63.3271 179.721 63.4658 183.4 67.9743L188.12 62.4254C184.58 59.2347 180.554 56.7377 174.029 56.9458C163.894 57.2926 156.952 64.9917 156.258 74.2168C155.425 85.4534 163.061 94.401 173.334 95.164C178.818 95.5801 184.094 93.9848 188.12 89.6844L183.677 84.1355Z', fill='#fff')
 			path(fill-rule='evenodd', clip-rule='evenodd', d='M195.548 11.6527C193.951 11.6527 192.702 10.4042 192.702 8.87827C192.702 7.35232 193.951 6.10381 195.548 6.10381C197.145 6.10381 198.394 7.28296 198.394 8.87827C198.394 10.4736 197.145 11.6527 195.548 11.6527ZM195.548 6.58934C194.299 6.58934 193.327 7.62977 193.327 8.94763C193.327 10.2655 194.298 11.3059 195.617 11.3059C196.242 11.3059 196.798 11.0285 197.214 10.6123C197.631 10.1961 197.839 9.57189 197.839 8.94763C197.769 7.62977 196.798 6.58934 195.548 6.58934ZM194.437 10.3349L194.993 10.4042L195.062 9.22508H195.34C195.756 9.22508 195.965 9.3638 196.034 9.71061L196.103 9.84933C196.173 10.0574 196.242 10.2655 196.242 10.3349H196.798C196.728 10.1961 196.728 10.0574 196.659 9.71061C196.589 9.3638 196.45 9.15572 196.173 9.08636V8.87827C196.52 8.80891 196.728 8.53147 196.728 8.25402C196.728 8.04593 196.659 7.83785 196.52 7.69913C196.312 7.5604 196.103 7.49104 195.548 7.49104C195.201 7.49104 194.923 7.49104 194.646 7.49104H194.576L194.437 10.3349ZM195.479 7.83785C195.27 7.83785 195.201 7.83785 195.132 7.90721L195.062 8.80891L195.479 8.87827C195.965 8.87827 196.242 8.67019 196.242 8.39274C196.173 8.25402 196.103 7.83785 195.479 7.83785Z', fill='#fff')
 		.action__line
-		.action__close.js-popup-close.js-square
-			svg(width='31', height='31', viewBox='0 0 31 31', fill='none', xmlns='http://www.w3.org/2000/svg')
-				line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
-				line(x1='2', y1='-2', x2='37.598', y2='-2', transform='matrix(-0.707107 -0.707107 -0.707107 0.707107 28 31)', stroke='white', stroke-width='4', stroke-linecap='round')
+		.action__close.js-popup-close.js-square.js-catch.hover-s
+			.js-follower
+				svg(width='30', height='30', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+					g
+						line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
+						line(x1='2', y1='-2', x2='37.598', y2='-2', transform='rotate(45) translate(2, 2)', stroke='white', stroke-width='4', stroke-linecap='round')
 		.action__line
-	.popup__container.content
-		.content__bottle-descr.content__bottle-descr--left
+	.popup__container.content.js-drag
+		.content__grapic
+			+svg('360')
+			span.content__grapic-text Вращайте курсором для просмотра
+		.content__bottle-descr.content__bottle-descr--left(data-slide-text='1')
 			svg.content__bottle-icon.content__bottle-icon--left(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
 				circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
 				path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
 			.content__bottle-line.content__bottle-line--left
 			h2.content__bottle-title Стеклянная пробка
 			p.content__bottle-text Надежная герметичность с правильным коэффициентом пропускания кислорода
-		img.content__bottle-img(src='./images/bottle.png')
-		.content__bottle-descr.content__bottle-descr--right
+		.content__bottle-descr.content__bottle-descr--left.content__bottle-descr--left-two(data-slide-text='3')
+			svg.content__bottle-icon.content__bottle-icon--left(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
+				circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
+				path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
+			.content__bottle-line.content__bottle-line--left
+			h2.content__bottle-title Декорация на задней стороне бутылки
+			p.content__bottle-text Декорация «ГОРЫ» на задней стороне бутылки, выполненная шелкографией
+		.content__bottle-img( data-count='4')
+			img(src='./images/bottle/bottle_0.png' data-slide-index='1')
+			img(src='./images/bottle/bottle_1.png' data-slide-index='2')
+			img(src='./images/bottle/bottle_2.png' data-slide-index='3')
+			img(src='./images/bottle/bottle_3.png' data-slide-index='4')
+		.content__bottle-descr.content__bottle-descr--right(data-slide-text='1')
 			svg.content__bottle-icon.content__bottle-icon--right(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
 				circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
 				path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
@@ -123,6 +143,13 @@
 			h2.content__bottle-title бутылка
 			p.content__bottle-text.content__bottle-text--strong Оригинальный дебоссинг окна на лицевой стороне бутылки в виде филигранно выточенной горы МОНБЛАН
 			p.content__bottle-text Матированная бутылка, изготовленная путем технологии «сатинации стекла» - эффект запотевшего стекла. Стекло приобретает приятный мягкий оттенок, что делает её элегантной и приятной на ощупь​
+		.content__bottle-descr.content__bottle-descr--right.content__bottle-descr--right-two(data-slide-text='3')
+			svg.content__bottle-icon.content__bottle-icon--right(width='60', height='60', viewBox='0 0 60 60', fill='none', xmlns='http://www.w3.org/2000/svg')
+				circle.circle(cx='30', cy='30', r='29', stroke='url(#paint0_linear)', stroke-width='2')
+				path(d='M29.9429 37H32.0571V31.0413H38V28.9587H32.0571V23H29.9429V28.9587H24V31.0413H29.9429V37Z', fill='white')
+			.content__bottle-line.content__bottle-line--right
+			h2.content__bottle-title Шелкография
+			p.content__bottle-text Маркетинговый междунородный текст и шк выполнен на стекле путем шелкографии
 
 .popup#cocktail
 	.popup__action.action
@@ -146,35 +173,14 @@
 			path(fill-rule='evenodd', clip-rule='evenodd', d='M183.677 84.1355C180.901 86.2857 178.332 88.4359 173.126 87.7423C164.171 86.5632 160.978 73.1764 167.642 66.9338C171.529 63.3271 179.721 63.4658 183.4 67.9743L188.12 62.4254C184.58 59.2347 180.554 56.7377 174.029 56.9458C163.894 57.2926 156.952 64.9917 156.258 74.2168C155.425 85.4534 163.061 94.401 173.334 95.164C178.818 95.5801 184.094 93.9848 188.12 89.6844L183.677 84.1355Z', fill='#fff')
 			path(fill-rule='evenodd', clip-rule='evenodd', d='M195.548 11.6527C193.951 11.6527 192.702 10.4042 192.702 8.87827C192.702 7.35232 193.951 6.10381 195.548 6.10381C197.145 6.10381 198.394 7.28296 198.394 8.87827C198.394 10.4736 197.145 11.6527 195.548 11.6527ZM195.548 6.58934C194.299 6.58934 193.327 7.62977 193.327 8.94763C193.327 10.2655 194.298 11.3059 195.617 11.3059C196.242 11.3059 196.798 11.0285 197.214 10.6123C197.631 10.1961 197.839 9.57189 197.839 8.94763C197.769 7.62977 196.798 6.58934 195.548 6.58934ZM194.437 10.3349L194.993 10.4042L195.062 9.22508H195.34C195.756 9.22508 195.965 9.3638 196.034 9.71061L196.103 9.84933C196.173 10.0574 196.242 10.2655 196.242 10.3349H196.798C196.728 10.1961 196.728 10.0574 196.659 9.71061C196.589 9.3638 196.45 9.15572 196.173 9.08636V8.87827C196.52 8.80891 196.728 8.53147 196.728 8.25402C196.728 8.04593 196.659 7.83785 196.52 7.69913C196.312 7.5604 196.103 7.49104 195.548 7.49104C195.201 7.49104 194.923 7.49104 194.646 7.49104H194.576L194.437 10.3349ZM195.479 7.83785C195.27 7.83785 195.201 7.83785 195.132 7.90721L195.062 8.80891L195.479 8.87827C195.965 8.87827 196.242 8.67019 196.242 8.39274C196.173 8.25402 196.103 7.83785 195.479 7.83785Z', fill='#fff')
 		.action__line
-		.action__close.js-popup-close.js-square
-			svg(width='31', height='31', viewBox='0 0 31 31', fill='none', xmlns='http://www.w3.org/2000/svg')
-				line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
-				line(x1='2', y1='-2', x2='37.598', y2='-2', transform='matrix(-0.707107 -0.707107 -0.707107 0.707107 28 31)', stroke='white', stroke-width='4', stroke-linecap='round')
+		.action__close.js-popup-close.js-square.js-catch.hover-s
+			.js-follower
+				svg(width='30', height='30', viewBox='0 0 30 30', fill='none', xmlns='http://www.w3.org/2000/svg')
+					g
+						line(x1='3', y1='28.1716', x2='28.1716', y2='3', stroke='white', stroke-width='4', stroke-linecap='round')
+						line(x1='2', y1='-2', x2='37.598', y2='-2', transform='rotate(45) translate(2, 2)', stroke='white', stroke-width='4', stroke-linecap='round')
 		.action__line
-	.popup__container.content
-		.content__item.content__item--left(style='background-image: url(./images/cocktail_bg.jpg)')
-		.content__item.content__item--right.cocktail
-			.cocktail__wrapper
-				h2.h2.cocktail__title французский связной
-				h3.h3.cocktail__text Напиток, вся прелесть которого заключается в декоре и ритуале употребления.
-				h2.h2.cocktail__ingredinets Ингридиенты
-				ul.cocktail__recipe-list
-					li.cocktail__recipe-item Водка «Mont Blanc» - 50 мл
-					li.cocktail__recipe-item Клубника - 1 шт
-					li.cocktail__recipe-item Цедра апельсина
-					li.cocktail__recipe-item Веточка базилика
-				.cocktail__images
-					.cocktail__images-item
-						img(src='./images/cocktail/vodka.png')
-					.cocktail__images-item
-						img(src='./images/cocktail/berry.png')
-					.cocktail__images-item
-						img(src='./images/cocktail/orange.png')
-					.cocktail__images-item
-						img(src='./images/cocktail/basil.png')
-				p.cocktail__text-descr Подается в рюмке-шоте, с клубникой и базиликом, надетыми на шпажку, которая в свою очередь кладется поверх рюмки. Выпив Mont Blanc, необходимо тут же закусить клубникой и базиликом.
-				p.cocktail__text-descr Подается в рюмке-шоте, с клубникой и базиликом, надетыми на шпажку, которая в свою очередь кладется поверх рюмки. Выпив Mont Blanc, необходимо тут же закусить клубникой и базиликом.
-				p.cocktail__text-descr Подается в рюмке-шоте, с клубникой и базиликом, надетыми на шпажку, которая в свою очередь кладется поверх рюмки. Выпив Mont Blanc, необходимо тут же закусить клубникой и базиликом.
-			.cocktail__nav
-				.cocktail__nav-item.cocktail__nav-item--prev Предыдущий
-				.cocktail__nav-item.cocktail__nav-item--next Следующий
+	.popup__container.js-link.js-wrapper
+	.popup__nav
+		.popup__nav-item.popup__nav-item--prev Предыдущий
+		.popup__nav-item.popup__nav-item--next.popup__nav-item--active Следующий

@@ -4,9 +4,48 @@ $(function () {
 	const screenWidth = $(window).width();
 	const counterAnimation = new TimelineMax({paused: true});
 	const newChars = '123456789';
-	const infinityPath = 'M26.9856 0.959999C29.279 0.959999 31.239 1.77333 32.8656 3.4C34.4923 5 35.3056 6.93333 35.3056 9.2C35.3056 11.44 34.479 13.3867 32.8256 15.04C31.199 16.6667 29.2256 17.48 26.9056 17.48C25.3856 17.48 23.999 17.08 22.7456 16.28C21.519 15.48 19.9856 14.1467 18.1456 12.28C16.2256 14.2 14.6256 15.5467 13.3456 16.32C12.0123 17.0933 10.6256 17.48 9.18563 17.48C6.91896 17.48 4.97229 16.6667 3.34563 15.04C1.74563 13.3867 0.945625 11.4533 0.945625 9.24C0.945625 6.97333 1.75896 5.02667 3.38563 3.4C5.01229 1.77333 6.98563 0.959999 9.30563 0.959999C10.6656 0.959999 11.999 1.33333 13.3056 2.08C14.639 2.8 16.2523 4.09333 18.1456 5.96C20.039 4.12 21.639 2.82667 22.9456 2.08C24.2523 1.33333 25.599 0.959999 26.9856 0.959999ZM9.22563 12.92C9.99896 12.92 10.8123 12.64 11.6656 12.08C12.519 11.52 13.639 10.5467 15.0256 9.16C13.6123 7.8 12.5056 6.86667 11.7056 6.36C10.9323 5.85333 10.1856 5.6 9.46563 5.6C8.42563 5.6 7.54563 5.97333 6.82563 6.72C6.10563 7.44 5.74563 8.30667 5.74563 9.32C5.74563 10.3333 6.07896 11.1867 6.74563 11.88C7.41229 12.5733 8.23896 12.92 9.22563 12.92ZM26.7056 12.92C27.7456 12.92 28.639 12.56 29.3856 11.84C30.1323 11.12 30.5056 10.24 30.5056 9.2C30.5056 8.18667 30.1456 7.33333 29.4256 6.64C28.7056 5.94667 27.8256 5.6 26.7856 5.6C25.9323 5.6 25.119 5.85333 24.3456 6.36C23.5723 6.86667 22.5323 7.77333 21.2256 9.08C22.799 10.7067 23.9056 11.7333 24.5456 12.16C25.2923 12.6667 26.0123 12.92 26.7056 12.92Z'
+	const infinityPath = 'M26.9856 0.959999C29.279 0.959999 31.239 1.77333 32.8656 3.4C34.4923 5 35.3056 6.93333 35.3056 9.2C35.3056 11.44 34.479 13.3867 32.8256 15.04C31.199 16.6667 29.2256 17.48 26.9056 17.48C25.3856 17.48 23.999 17.08 22.7456 16.28C21.519 15.48 19.9856 14.1467 18.1456 12.28C16.2256 14.2 14.6256 15.5467 13.3456 16.32C12.0123 17.0933 10.6256 17.48 9.18563 17.48C6.91896 17.48 4.97229 16.6667 3.34563 15.04C1.74563 13.3867 0.945625 11.4533 0.945625 9.24C0.945625 6.97333 1.75896 5.02667 3.38563 3.4C5.01229 1.77333 6.98563 0.959999 9.30563 0.959999C10.6656 0.959999 11.999 1.33333 13.3056 2.08C14.639 2.8 16.2523 4.09333 18.1456 5.96C20.039 4.12 21.639 2.82667 22.9456 2.08C24.2523 1.33333 25.599 0.959999 26.9856 0.959999ZM9.22563 12.92C9.99896 12.92 10.8123 12.64 11.6656 12.08C12.519 11.52 13.639 10.5467 15.0256 9.16C13.6123 7.8 12.5056 6.86667 11.7056 6.36C10.9323 5.85333 10.1856 5.6 9.46563 5.6C8.42563 5.6 7.54563 5.97333 6.82563 6.72C6.10563 7.44 5.74563 8.30667 5.74563 9.32C5.74563 10.3333 6.07896 11.1867 6.74563 11.88C7.41229 12.5733 8.23896 12.92 9.22563 12.92ZM26.7056 12.92C27.7456 12.92 28.639 12.56 29.3856 11.84C30.1323 11.12 30.5056 10.24 30.5056 9.2C30.5056 8.18667 30.1456 7.33333 29.4256 6.64C28.7056 5.94667 27.8256 5.6 26.7856 5.6C25.9323 5.6 25.119 5.85333 24.3456 6.36C23.5723 6.86667 22.5323 7.77333 21.2256 9.08C22.799 10.7067 23.9056 11.7333 24.5456 12.16C25.2923 12.6667 26.0123 12.92 26.7056 12.92Z';
+	window.lockLocationsTransition = true;
 	window.prevIndex = null;
 	MorphSVGPlugin.convertToPath("path");
+
+	const slideOne = new Howl({
+		src: ['../sounds/1_slide.mp3','../sounds/1_slide.webm'],
+		volume: 0,
+		loop: true
+	});
+
+	const slideTwo = new Howl({
+		src: ['../sounds/2_slide.mp3','../sounds/2_slide.webm'],
+		volume: 0,
+		loop: true
+	});
+
+	const slideThree = new Howl({
+		src: ['../sounds/3_slide.mp3','../sounds/3_slide.webm'],
+		volume: 0,
+		loop: true
+	});
+
+	const slideFour = new Howl({
+		src: ['../sounds/4-5_slide.mp3','../sounds/4-5_slide.webm'],
+		volume: 0,
+		loop: true
+	});
+
+	const slideFive = new Howl({
+		src: ['../sounds/4-5_slide.mp3','../sounds/4-5_slide.webm'],
+		volume: 0,
+		loop: true
+	});
+
+	const slideSix = new Howl({
+		src: ['../sounds/6_slide.mp3','../sounds/6_slide.webm'],
+		volume: 0,
+		loop: true
+	});
+
+	window.soundArray = [slideOne,slideTwo,slideThree,slideFour,slideFive,slideSix];
 
 	counterAnimation
 		.set('.counter-circle', {transformOrigin: 'center center'})
@@ -81,24 +120,26 @@ $(function () {
 
 	$('.main-slide').each(function () {
 		$(window).on('mousewheel DOMMouseScroll keydown', function(e){
-			if ((e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0 || e.keyCode === 40) && screenWidth >= 768) {
-				if(!locker) {
-					return false
+			if(lockLocationsTransition) {
+				if ((e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0 || e.keyCode === 40) && screenWidth >= 768) {
+					if(!locker) {
+						return false
+					}
+					if (swiper.slides.length > swiper.realIndex + 1) {
+						locker = false;
+						pageContentAnimation(swiper.realIndex, swiper.realIndex+1);
+						changeLocationContainer(swiper.realIndex + 1);
+					}
 				}
-				if (swiper.slides.length > swiper.realIndex + 1) {
-					locker = false;
-					pageContentAnimation(swiper.realIndex, swiper.realIndex+1);
-					changeLocationContainer(swiper.realIndex + 1);
-				}
-			}
-			else if (screenWidth >= 768 && (e.keyCode === 38 || e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0)) {
-				if(!locker) {
-					return false
-				}
-				if (swiper.realIndex > 0) {
-					locker = false;
-					pageContentAnimation(swiper.realIndex, swiper.realIndex-1);
-					changeLocationContainer(swiper.realIndex - 1);
+				else if (screenWidth >= 768 && (e.keyCode === 38 || e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0)) {
+					if(!locker) {
+						return false
+					}
+					if (swiper.realIndex > 0) {
+						locker = false;
+						pageContentAnimation(swiper.realIndex, swiper.realIndex-1);
+						changeLocationContainer(swiper.realIndex - 1);
+					}
 				}
 			}
 		});
@@ -145,6 +186,20 @@ $(function () {
 					},1500);
 					changePointerArrows(this.slides.length, this.realIndex);
 
+					if(soundIsMuted) {
+						for(let [index,sound] of soundArray.entries()) {
+							if (index === this.realIndex) {
+								sound.play();
+								sound.fade(0,0.25,500);
+							} else {
+								sound.fade(0.25,0,500);
+								setTimeout(function () {
+									sound.stop();
+								},500)
+							}
+						}
+
+					}
 					setLocation(this.realIndex);
 				},
 				init: function () {

@@ -1,3 +1,5 @@
+import clouds from "./particles-data/clouds";
+
 const canvas = document.getElementById('intro');
 let app;
 let _w = window.innerWidth;
@@ -12,6 +14,7 @@ let displacementFrame = null;
 
 $(function () {
 	$('.age').each(function () {
+		window.allImagesArray = [];
 		app = new PIXI.Application({
 			view: canvas,
 			width: _w,
@@ -24,7 +27,7 @@ $(function () {
 		});
 
 		app.loader
-			.add('../images/age/asky.jpg')
+			.add('../images/age/asky.png')
 			.add('../images/age/amont.png')
 			.add('../images/age/ahill.png')
 			.add('../images/age/agrass.png')
@@ -80,6 +83,29 @@ function handleLoadComplete(loader, resources) {
 
 	app.stage.filters = [displacementFilter];
 	app.stage.addChild(displacementSprite);
+
+	let cloud1 = PIXI.Texture.from('../images/age/cloud_1.png');
+	let cloud2 = PIXI.Texture.from('../images/age/cloud_2.png');
+	let cloud3 = PIXI.Texture.from('../images/age/cloud_3.png');
+
+	let emitterCloud = new Emitter(
+		locationAgeItems[0],
+		[cloud1,cloud2,cloud3],
+		clouds
+	);
+
+	let elapsed = Date.now();
+	const update = function(){
+
+		requestAnimationFrame(update);
+
+		let now = Date.now();
+
+		emitterCloud.update((now - elapsed) * 0.001);
+		elapsed = now;
+	};
+	emitterCloud.emit = true;
+	update();
 
 	window.addEventListener('mousemove',(e) => {
 		let RAF;
@@ -156,8 +182,8 @@ function filterReverce() {
 
 function parallaxAge(w, h, e) {
 	TweenMax.to(locationAgeItems[0], 0.3, {
-		x: (w - e.clientX) / (amplitude + 10),
-		y: (h - e.clientY) / (amplitude + 10),
+		x: (w - e.clientX) / (amplitude + 20),
+		y: (h - e.clientY) / (amplitude + 20),
 		ease: Circ.easeOut
 	});
 	TweenMax.to(locationAgeItems[1], 0.3, {
@@ -171,8 +197,8 @@ function parallaxAge(w, h, e) {
 		ease: Circ.easeOut
 	});
 	TweenMax.to(locationAgeItems[3], 0.3, {
-		x: (w - e.clientX) / (amplitude + 55),
-		y: (h - e.clientY) / (amplitude + 55),
+		x: (w - e.clientX) / (amplitude + 37),
+		y: (h - e.clientY) / (amplitude + 37),
 		ease: Circ.easeOut
 	});
 }
