@@ -24,11 +24,11 @@ $(function () {
 		});
 
 		app.loader
-			.add('../images/age/asky.jpg')
-			.add('../images/age/amont.png')
-			.add('../images/age/ahill.png')
-			.add('../images/age/agrass.png')
-			.add('../images/filter.png')
+			.add(`${__app.TEMPLATE_URI}/images/age/asky.jpg`)
+			.add(`${__app.TEMPLATE_URI}/images/age/amont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/age/ahill.png`)
+			.add(`${__app.TEMPLATE_URI}/images/age/agrass.png`)
+			.add(`${__app.TEMPLATE_URI}/images/filter.png`)
 			.load(handleLoadComplete);
 	});
 

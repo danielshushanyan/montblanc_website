@@ -33,40 +33,40 @@ $(function () {
 		});
 
 		app.loader
-			.add('../images/design/sky.jpg') // Design nature // index 0
-			.add('../images/design/mont.png')
-			.add('../images/design/midl.png')
-			.add('../images/design/tree.png')
-			.add('../images/design/bott.png') // Design nature END // index 4
-			.add('../images/wheat/bg.jpg') // Wheat END // index 5
-			.add('../images/spring/ssky.jpg') // Spring // index 6
-			.add('../images/spring/smont.png')
-			.add('../images/spring/sbirds.png')
-			.add('../images/spring/shill.png')
-			.add('../images/spring/swater.png')
-			.add('../images/spring/sbott.png')
-			.add('../images/spring/sfog.png') // Spring END // index 12
-			.add('../images/note/nsky.jpg') // Note // index 13
-			.add('../images/note/nmont.png')
-			.add('../images/note/nhill.png')
-			.add('../images/note/nbott.png') // Note END // index 16
-			.add('../images/vertex/vsky.jpg') // Vertex // index 17
-			.add('../images/vertex/vmont.png')
-			.add('../images/vertex/vbott.png')
-			.add('../images/vertex/vfog.png')
-			.add('../images/vertex/vsnow.png')
-			.add('../images/vertex/vfrozen.png') // Vertex // index 22
-			.add('../images/home/hmont.jpg') // Home // index 23
-			.add('../images/home/hcity.png')
-			.add('../images/home/hbird.png')
-			.add('../images/home/hfog.png')
-			.add('../images/home/hmanson.png')
-			.add('../images/home/hbott.png')
-			.add('../images/home/hlight.png')
-			.add('../images/home/hsun.png')
-			.add('../images/home/hgrass.png') // Home End // index 31
-			.add('../images/filter.png') // DMap // index 31
-			.add('../images/end/end.jpg') // DMap // index 33
+			.add(`${__app.TEMPLATE_URI}/images/design/sky.jpg`) // Design nature // index 0
+			.add(`${__app.TEMPLATE_URI}/images/design/mont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/midl.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/tree.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/bott.png`) // Design nature END // index 4
+			.add(`${__app.TEMPLATE_URI}/images/wheat/bg.jpg`) // Wheat END // index 5
+			.add(`${__app.TEMPLATE_URI}/images/spring/ssky.jpg`) // Spring // index 6
+			.add(`${__app.TEMPLATE_URI}/images/spring/smont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/sbirds.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/shill.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/swater.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/sbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/sfog.png`) // Spring END // index 12
+			.add(`${__app.TEMPLATE_URI}/images/note/nsky.jpg`) // Note // index 13
+			.add(`${__app.TEMPLATE_URI}/images/note/nmont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/note/nhill.png`)
+			.add(`${__app.TEMPLATE_URI}/images/note/nbott.png`) // Note END // index 16
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vsky.jpg`) // Vertex // index 17
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vmont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vfog.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vsnow.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vfrozen.png`) // Vertex // index 22
+			.add(`${__app.TEMPLATE_URI}/images/home/hmont.jpg`) // Home // index 23
+			.add(`${__app.TEMPLATE_URI}/images/home/hcity.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hbird.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hfog.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hmanson.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hlight.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hsun.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hgrass.png`) // Home End // index 31
+			.add(`${__app.TEMPLATE_URI}/images/filter.png`) // DMap // index 31
+			.add(`${__app.TEMPLATE_URI}/images/end/end.jpg`) // DMap // index 33
 			.load(handleLoadComplete);
 	});
 });
