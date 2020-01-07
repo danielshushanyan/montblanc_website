@@ -1,6 +1,8 @@
 import snowStorm from './particles-data/snow-storm';
 import snow from './particles-data/snow';
 import randomeParticles from './particles-data/randome-particles';
+import stars from './particles-data/stars';
+import shootingStars from './particles-data/shooting-stars';
 
 const canvas = document.getElementById('view');
 let _w = window.innerWidth;
@@ -96,7 +98,7 @@ function resize() {
 		resizeImages(image, app);
 	}
 
-	for (let i = 2; i < 11; i++) {
+	for (let i = 3; i < 11; i++) {
 		if (i !== 4) {
 			locationWheatItems[i].children[0].position.set(app.renderer.screen.width, app.renderer.screen.height/1.2);
 			locationWheatItems[i].children[0].pivot.set(locationWheatItems[i].children[0].width/1.9, locationWheatItems[i].children[0].height/2.4);
@@ -250,6 +252,8 @@ function handleLoadComplete(loader, resources) {
 	let snowOne = PIXI.Texture.from('../images/snow_blured.png');
 	let snowTwo = PIXI.Texture.from('../images/snow_blured-2.png');
 	let smoke = PIXI.Texture.from('../images/smoke.png');
+	let star = PIXI.Texture.from('../images/light.png');
+	let shootingStar = PIXI.Texture.from('../images/shooting_star.png');
 
 	let emitterDesign = new Emitter(
 		locationsAlphaArray[4],
@@ -269,7 +273,19 @@ function handleLoadComplete(loader, resources) {
 		randomeParticles
 	);
 
-	const effectsArray = [false ,emitterWheat, false, false,emitterDesign, emitterVertex, false];
+	let emitterEnd = new Emitter(
+		locationsAlphaArray[6],
+		[star],
+		stars
+	);
+
+	let emitterEndShoot = new Emitter(
+		locationsAlphaArray[6],
+		[shootingStar],
+		shootingStars
+	);
+
+	const effectsArray = [false, emitterWheat, false, false, emitterDesign, emitterVertex, emitterEnd];
 
 	const waveDisplacement = PIXI.Sprite.from(resources[resKeys[42]].texture);
 	const waveDisplacementFilter = new PIXI.filters.DisplacementFilter(waveDisplacement);
@@ -313,17 +329,20 @@ function handleLoadComplete(loader, resources) {
 
 		let now = Date.now();
 		effectsArray[activeLocation] ? effectsArray[activeLocation].update((now - elapsed) * 0.001): effectsArray[activeLocation];
+		emitterEndShoot.update((now - elapsed) * 0.001);
 		elapsed = now;
 	};
 	emitterDesign.emit = true;
 	emitterWheat.emit = true;
 	emitterVertex.emit = true;
+	emitterEnd.emit = true;
+	emitterEndShoot.emit = true;
+
 	update();
 	//Particles End
 
 	//Wheat Rotation
-	for (let i = 2; i < 11; i++) {
-		console.log(i);
+	for (let i = 3; i < 11; i++) {
 		if (i !== 4) {
 			locationWheatItems[i].children[0].position.set(app.renderer.screen.width, app.renderer.screen.height/1.2);
 			locationWheatItems[i].children[0].pivot.set(locationWheatItems[i].children[0].width/1.9, locationWheatItems[i].children[0].height/2.4);
