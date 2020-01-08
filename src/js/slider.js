@@ -10,37 +10,37 @@ $(function () {
 	MorphSVGPlugin.convertToPath("path");
 
 	const slideOne = new Howl({
-		src: ['../sounds/1_slide.mp3','../sounds/1_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/1_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/1_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideTwo = new Howl({
-		src: ['../sounds/2_slide.mp3','../sounds/2_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/2_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/2_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideThree = new Howl({
-		src: ['../sounds/3_slide.mp3','../sounds/3_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/3_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/3_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideFour = new Howl({
-		src: ['../sounds/4-5_slide.mp3','../sounds/4-5_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/4-5_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/4-5_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideFive = new Howl({
-		src: ['../sounds/4-5_slide.mp3','../sounds/4-5_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/4-5_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/4-5_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideSix = new Howl({
-		src: ['../sounds/6_slide.mp3','../sounds/6_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/6_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/6_slide.webm`],
 		volume: 0,
 		loop: true
 	});

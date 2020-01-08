@@ -212,9 +212,9 @@ function handleLoadComplete(loader, resources) {
 	app.stage.filters = [displacementFilter];
 	app.stage.addChild(displacementSprite);
 
-	let snowOne = PIXI.Texture.from('../images/snow_blured.png');
-	let snowTwo = PIXI.Texture.from('../images/snow_blured-2.png');
-	let smoke = PIXI.Texture.from('../images/smoke.png');
+	let snowOne = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/snow_blured.png`);
+	let snowTwo = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/snow_blured-2.png`);
+	let smoke = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/smoke.png`);
 
 	let emitterDesign = new Emitter(
 		locationsAlphaArray[4],
@@ -302,7 +302,7 @@ function handleLoadComplete(loader, resources) {
 			parallaxSpring(w, h, e);
 			parallaxNote(w, h, e);
 			parallaxVertex(w, h, e);
-			parallaxWheat(w, h, e);
+			//parallaxWheat(w, h, e);
 
 		})
 	});
