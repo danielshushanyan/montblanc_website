@@ -249,11 +249,11 @@ function handleLoadComplete(loader, resources) {
 	//Displacement End
 
 	//Particles
-	let snowOne = PIXI.Texture.from('../images/snow_blured.png');
-	let snowTwo = PIXI.Texture.from('../images/snow_blured-2.png');
-	let smoke = PIXI.Texture.from('../images/smoke.png');
-	let star = PIXI.Texture.from('../images/light.png');
-	let shootingStar = PIXI.Texture.from('../images/shooting_star.png');
+	let snowOne = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/snow_blured.png`);
+	let snowTwo = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/snow_blured-2.png`);
+	let smoke = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/smoke.png`);
+	let star = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/light.png`);
+	let shootingStar = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/shooting_star.png`);
 
 	let emitterDesign = new Emitter(
 		locationsAlphaArray[4],
