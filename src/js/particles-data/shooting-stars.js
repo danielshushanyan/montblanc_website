@@ -18,8 +18,8 @@ export default {
 		"minimumSpeedMultiplier": 1.5
 	},
 	"acceleration": {
-		"x": -0.05,
-		"y": 0.05
+		"x": 0,
+		"y": 0
 	},
 	"maxSpeed": 0,
 	"startRotation": {

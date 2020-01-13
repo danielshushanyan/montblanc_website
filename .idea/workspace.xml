@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="496f4bc2-8e11-4115-9a14-15d6eed9c63a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/js/particles-data/shooting-stars.js" afterPath="$PROJECT_DIR$/src/js/particles-data/shooting-stars.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pixi-locations.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/pixi-locations.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="284" column="16" lean-forward="false" selection-start-line="284" selection-start-column="16" selection-end-line="284" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Pug File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fn</find>
+      <find>xlink:href</find>
+      <find>index</find>
+      <find>indexOf</find>
+      <find>xlink</find>
+      <find>displa</find>
+      <find>dis</find>
+      <find>display</find>
+      <find>$downElem</find>
+      <find>drag</find>
+      <find>thisTotal</find>
+      <find>mousedown</find>
+      <find>onMouse</find>
+      <find>onKeyDown</find>
+      <find>isMouseDown</find>
+      <find>console</find>
+      <find>left</find>
+      <find>--left</find>
+      <find>action__line</find>
+      <find>Particles</find>
+      <find>container</find>
+      <find>ParticleContainer</find>
+      <find>initialIndex</find>
+      <find>fog</find>
+      <find>age</find>
+      <find>.js-catch</find>
+      <find>req</find>
+      <find>split</find>
+      <find>anim</find>
+      <find>backdrop</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>green</replace>
+      <replace>containerSky</replace>
+      <replace>displacementFilterMont</replace>
+      <replace>containerMont</replace>
+      <replace>#fff</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../Fake3DEffect/Fake3DEffect/js/src.js" />
+        <option value="$PROJECT_DIR$/../Fake3DEffect/Fake3DEffect/js/app.js" />
+        <option value="$PROJECT_DIR$/src/js/header.js" />
+        <option value="$PROJECT_DIR$/build/js/main.js" />
+        <option value="$PROJECT_DIR$/src/intro.html" />
+        <option value="$PROJECT_DIR$/src/js/loader.js" />
+        <option value="$PROJECT_DIR$/build/.htaccess" />
+        <option value="$PROJECT_DIR$/src/js/age.js" />
+        <option value="$PROJECT_DIR$/src/sass/template/_footer.sass" />
+        <option value="$PROJECT_DIR$/src/js/video-controler.js" />
+        <option value="$PROJECT_DIR$/src/js/mouse-catch.js" />
+        <option value="$USER_HOME$/Downloads/threesixtyjs-master/assets/js/jquery.threesixty.js" />
+        <option value="$PROJECT_DIR$/src/js/vendor/jquery.threesixty.min.js" />
+        <option value="$USER_HOME$/Downloads/threesixtyjs-master/assets/js/jquery.threesixty.min.js" />
+        <option value="$PROJECT_DIR$/src/js/vendor/jquery.threesixty.js" />
+        <option value="$PROJECT_DIR$/src/js/360image.js" />
+        <option value="$PROJECT_DIR$/src/pug/base.pug" />
+        <option value="$PROJECT_DIR$/src/sass/_base.sass" />
+        <option value="$PROJECT_DIR$/src/js/cursor.js" />
+        <option value="$PROJECT_DIR$/src/js/temp-slider.js" />
+        <option value="$PROJECT_DIR$/src/new-cocktail.html" />
+        <option value="$PROJECT_DIR$/src/new-cocktail-2.pug" />
+        <option value="$PROJECT_DIR$/src/new-cocktail-3.pug" />
+        <option value="$PROJECT_DIR$/src/new-cocktail.pug" />
+        <option value="$PROJECT_DIR$/src/js/popup.js" />
+        <option value="$PROJECT_DIR$/src/sass/template/_header.sass" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/snow-storm.json" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/snow-light.js" />
+        <option value="$PROJECT_DIR$/src/js/menu.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/sass/particles/popups.sass" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/snow-storm.js" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/snow.js" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/randome-particles.js" />
+        <option value="$PROJECT_DIR$/src/js/dropdown.js" />
+        <option value="$PROJECT_DIR$/src/js/intro.js" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/clouds.js" />
+        <option value="$PROJECT_DIR$/src/pug/template/header.pug" />
+        <option value="$PROJECT_DIR$/src/pug/template/footer.pug" />
+        <option value="$PROJECT_DIR$/src/main.pug" />
+        <option value="$PROJECT_DIR$/src/pug/particles/popups.pug" />
+        <option value="$PROJECT_DIR$/src/intro.pug" />
+        <option value="$PROJECT_DIR$/src/js/main.js" />
+        <option value="$PROJECT_DIR$/src/js/slider.js" />
+        <option value="$PROJECT_DIR$/src/js/sounds.js" />
+        <option value="$PROJECT_DIR$/src/js/vendor.js" />
+        <option value="$PROJECT_DIR$/src/images/birds.json" />
+        <option value="$PROJECT_DIR$/src/sass/pages/_main.sass" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/stars.js" />
+        <option value="$PROJECT_DIR$/src/js/pixi-locations.js" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/shooting-stars.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2123" />
+    <option name="y" value="32" />
+    <option name="width" value="1717" />
+    <option name="height" value="943" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="montblan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="montblan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="montblan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="montblan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../theatre-front" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value="ma&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/pages/_main.sass&#10;menu&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/menu.js&#10;vend&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/vendor.js&#10;pop&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/particles/popups.pug&#10;mai&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/main.pug&#10;foot&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;header&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;hea&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;main&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/main.pug&#10;po&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/particles/popups.pug&#10;he&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;base&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;popup&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/particles/popups.sass&#10;head&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;foo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;curs&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/cursor.js&#10;temp&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;tem&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;te&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;ba&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;age&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/age.js&#10;m&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/pages/_main.sass&#10;heade&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;header.js&#9;null&#9;null&#10;heas&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;footer&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;fo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;lo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/loader.js&#10;bas&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;h&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;ty&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/basic/_typography.sass&#10;var&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_variables.sass&#10;typ&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/basic/_typography.sass&#10;a&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/main.sass&#10;f&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_footer.sass&#10;vars&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_variables.sass" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src/images/home" />
+      <recent name="$PROJECT_DIR$/src/resources/sounds" />
+      <recent name="$PROJECT_DIR$/src/images/spring" />
+      <recent name="$PROJECT_DIR$/build/images/spring" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src/images/home" />
+      <recent name="$PROJECT_DIR$/src/images/age" />
+      <recent name="$PROJECT_DIR$/src/images/new" />
+      <recent name="$PROJECT_DIR$/src/images/temp_bg" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="496f4bc2-8e11-4115-9a14-15d6eed9c63a" name="Default" comment="" />
+      <created>1572959409291</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572959409291</updated>
+      <workItem from="1572959410405" duration="32000" />
+      <workItem from="1572959445984" duration="22640000" />
+      <workItem from="1573043416681" duration="6112000" />
+      <workItem from="1573112596367" duration="6167000" />
+      <workItem from="1573123634215" duration="1335000" />
+      <workItem from="1573127243268" duration="12527000" />
+      <workItem from="1573210469279" duration="8068000" />
+      <workItem from="1573236374522" duration="5251000" />
+      <workItem from="1573389179133" duration="1852000" />
+      <workItem from="1573456483189" duration="6239000" />
+      <workItem from="1573474371915" duration="11367000" />
+      <workItem from="1573543009885" duration="942000" />
+      <workItem from="1574005676608" duration="1710000" />
+      <workItem from="1574061153167" duration="1214000" />
+      <workItem from="1574065980241" duration="13146000" />
+      <workItem from="1574147505095" duration="55991000" />
+      <workItem from="1574334362019" duration="8561000" />
+      <workItem from="1574343233296" duration="33495000" />
+      <workItem from="1574431733750" duration="7232000" />
+      <workItem from="1574682324465" duration="36835000" />
+      <workItem from="1574792313876" duration="21079000" />
+      <workItem from="1574860939862" duration="32485000" />
+      <workItem from="1575017667138" duration="71732000" />
+      <workItem from="1575357095523" duration="25593000" />
+      <workItem from="1575387592013" duration="16730000" />
+      <workItem from="1575405260854" duration="20888000" />
+      <workItem from="1575478265876" duration="3172000" />
+      <workItem from="1575531745303" duration="39071000" />
+      <workItem from="1575622688601" duration="18257000" />
+      <workItem from="1575656455078" duration="215000" />
+      <workItem from="1575727000666" duration="40000" />
+      <workItem from="1575877578686" duration="1448000" />
+      <workItem from="1575879314521" duration="634000" />
+      <workItem from="1575880778992" duration="337000" />
+      <workItem from="1575881153335" duration="10000" />
+      <workItem from="1575881181341" duration="19000" />
+      <workItem from="1575882182755" duration="3802000" />
+      <workItem from="1575970580103" duration="21213000" />
+      <workItem from="1576049993483" duration="1417000" />
+      <workItem from="1576054376683" duration="55089000" />
+      <workItem from="1576225137255" duration="8000" />
+      <workItem from="1576241497278" duration="13000" />
+      <workItem from="1576243481254" duration="9347000" />
+      <workItem from="1576255234761" duration="11858000" />
+      <workItem from="1576480114556" duration="2257000" />
+      <workItem from="1576484090433" duration="2104000" />
+      <workItem from="1576486214204" duration="275000" />
+      <workItem from="1576486585427" duration="185000" />
+      <workItem from="1576487214886" duration="2147000" />
+      <workItem from="1576520579310" duration="693000" />
+      <workItem from="1576521606402" duration="280000" />
+      <workItem from="1576523447660" duration="2907000" />
+      <workItem from="1576571369404" duration="388000" />
+      <workItem from="1576572025361" duration="67000" />
+      <workItem from="1576579842433" duration="5973000" />
+      <workItem from="1576590998841" duration="41000" />
+      <workItem from="1576592589014" duration="1447000" />
+      <workItem from="1576606444261" duration="819000" />
+      <workItem from="1576607542172" duration="7856000" />
+      <workItem from="1576660787088" duration="8122000" />
+      <workItem from="1576678139900" duration="436000" />
+      <workItem from="1577287645018" duration="1597000" />
+      <workItem from="1577289415937" duration="7268000" />
+      <workItem from="1577346061575" duration="23399000" />
+      <workItem from="1577388848234" duration="15000" />
+      <workItem from="1577440891424" duration="618000" />
+      <workItem from="1578305034511" duration="80000" />
+      <workItem from="1578315399155" duration="8237000" />
+      <workItem from="1578334142023" duration="5000" />
+      <workItem from="1578385913868" duration="25990000" />
+      <workItem from="1578468934667" duration="879000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="699258000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="2123" y="32" width="1920" height="1048" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18661043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18766473" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/new-cocktail-2.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/particles/popups.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/new-cocktail-3.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/loader.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/bg_mobile/bg_five_767.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/bg_mobile/bg_one_767.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/bg_mobile/bg_six_767.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/bg_mobile/bg_three_767.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/bg_mobile/bg_two_767.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/snow-storm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/fog-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/fog-2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/images/fog-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/images/fog-2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/pages/_pages.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/dropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="51" lean-forward="false" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/images/age/asky.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/images/age/asky.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/age/asky.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/images/age/amont.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/clouds.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/intro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/template/header.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="72" column="50" lean-forward="true" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/template/footer.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/particles/popups.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="175" column="64" lean-forward="false" selection-start-line="175" selection-start-column="64" selection-end-line="175" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="119" column="41" lean-forward="false" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/intro.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/sound/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="320" column="53" lean-forward="true" selection-start-line="320" selection-start-column="53" selection-end-line="320" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/spring/smont.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/spring/shill.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/sounds.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="55" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/pixi-particles/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-253">
+          <caret line="1071" column="21" lean-forward="false" selection-start-line="1071" selection-start-column="21" selection-end-line="1071" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="183" column="9" lean-forward="false" selection-start-line="183" selection-start-column="5" selection-end-line="183" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/pixi.js/pixi.js.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23922" column="12" lean-forward="false" selection-start-line="23922" selection-start-column="12" selection-end-line="23922" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/home/hbott.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/home/hbird.png" />
+    <entry file="file://$PROJECT_DIR$/src/images/birds.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="1263" column="10" lean-forward="false" selection-start-line="1263" selection-start-column="5" selection-end-line="1263" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/pages/_main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="1056" column="112" lean-forward="false" selection-start-line="1056" selection-start-column="112" selection-end-line="1056" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/randome-particles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/vendor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16055">
+          <caret line="845" column="28" lean-forward="true" selection-start-line="845" selection-start-column="28" selection-end-line="845" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/stars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/shooting-stars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/pixi-locations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="284" column="16" lean-forward="false" selection-start-line="284" selection-start-column="16" selection-end-line="284" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
