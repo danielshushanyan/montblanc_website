@@ -39,7 +39,7 @@ $(function () {
 		let myDate = new Date();
 		myDate.setMonth(myDate.getMonth() + 12);
 		document.cookie = `age=true;expires=${myDate};domain=${window.location.hostname};path=/`;
-		$(location).attr('href', `http://${window.location.host}/main`)
+		$(location).attr('href', `http://${window.location.host}/`)
 	});
 });
 
