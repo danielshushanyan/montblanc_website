@@ -1,7 +1,7 @@
 $(function () {
 	//	hover sound
 	const sound = new Howl({
-		src: ['../sounds/hover.mp3','../sounds/hover.webm','../sounds/hover.wav'],
+		src: [`${__app.TEMPLATE_URI}/sounds/hover.mp3`,`${__app.TEMPLATE_URI}/sounds/hover.webm`,`${__app.TEMPLATE_URI}/sounds/hover.wav`],
 		volume: 0.5,
 		mobileAutoEnable: true
 	});
@@ -13,7 +13,7 @@ $(function () {
 	// background Sound
 
 	const bg = new Howl({
-		src: ['../sounds/bg.mp3','../sounds/bg.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/bg.mp3`,`${__app.TEMPLATE_URI}/sounds/bg.webm`],
 		volume: 0.25,
 		loop: true
 	});

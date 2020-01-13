@@ -38,8 +38,6 @@ $(function () {
 			autoResize: true,
 			autoDetectRenderer: true
 		});
-		PIXI.LoaderResource.setExtensionLoadType('gif', PIXI.LoaderResource.LOAD_TYPE.XHR);
-		PIXI.LoaderResource.setExtensionXhrType('gif', PIXI.LoaderResource.XHR_RESPONSE_TYPE.BUFFER);
 		app.loader
 			.add(`${__app.TEMPLATE_URI}/images/design/sky.jpg`) // Design nature // index 0
 			.add(`${__app.TEMPLATE_URI}/images/design/mont.png`)
@@ -97,13 +95,6 @@ function resize() {
 	for (let image of allImagesArray) {
 		resizeImages(image, app);
 	}
-
-	for (let i = 3; i < 11; i++) {
-		if (i !== 4) {
-			locationWheatItems[i].children[0].position.set(app.renderer.screen.width, app.renderer.screen.height/1.2);
-			locationWheatItems[i].children[0].pivot.set(locationWheatItems[i].children[0].width/1.9, locationWheatItems[i].children[0].height/2.4);
-		}
-	}
 }
 
 window.resizeImages = function(image, renderer) {
@@ -112,10 +103,10 @@ window.resizeImages = function(image, renderer) {
 
 	if (winProp > imageProp) {
 		image.width = $(window).width() + 100;
-		image.height = ($(window).width() / imageProp) - 50;
+		image.height = ($(window).width() / imageProp) + 30;
 	} else {
-		image.height = $(window).height() + 100;
-		image.width = ($(window).height() * imageProp) - 50;
+		image.height = $(window).height() + 30;
+		image.width = ($(window).height() * imageProp) + 100;
 	}
 
 	image.anchor.set(0.5);
@@ -249,11 +240,11 @@ function handleLoadComplete(loader, resources) {
 	//Displacement End
 
 	//Particles
-	let snowOne = PIXI.Texture.from('../images/snow_blured.png');
-	let snowTwo = PIXI.Texture.from('../images/snow_blured-2.png');
-	let smoke = PIXI.Texture.from('../images/smoke.png');
-	let star = PIXI.Texture.from('../images/light.png');
-	let shootingStar = PIXI.Texture.from('../images/shooting_star.png');
+	let snowOne = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/snow_blured.png`);
+	let snowTwo = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/snow_blured-2.png`);
+	let smoke = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/smoke.png`);
+	let star = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/light.png`);
+	let shootingStar = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/shooting_star.png`);
 
 	let emitterDesign = new Emitter(
 		locationsAlphaArray[4],
@@ -344,8 +335,6 @@ function handleLoadComplete(loader, resources) {
 	//Wheat Rotation
 	for (let i = 3; i < 11; i++) {
 		if (i !== 4) {
-			locationWheatItems[i].children[0].position.set(app.renderer.screen.width, app.renderer.screen.height/1.2);
-			locationWheatItems[i].children[0].pivot.set(locationWheatItems[i].children[0].width/1.9, locationWheatItems[i].children[0].height/2.4);
 			TweenMax.fromTo(locationWheatItems[i].children[0].skew, 5, {
 					x: -0.02,
 				},

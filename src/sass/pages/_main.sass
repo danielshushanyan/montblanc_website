@@ -448,7 +448,6 @@
 
 .three
 	@include size(100%, 100vh)
-	//background: url("../images/temp_bg/03.jpg") center no-repeat
 	background-size: cover
 	position: relative
 	
@@ -528,7 +527,7 @@
 		padding: 45px 38px 35px
 		max-width: 455px
 		width: 100%
-		background: linear-gradient(132.15deg, rgba(241, 249, 255, 0.79) 13.6%, rgba(188, 227, 255, 0.3) 97.45%)
+		background: linear-gradient(132.15deg, rgba(241, 249, 255, 0.79) 13.6%, rgba(224, 235, 243, 0.6) 97.45%)
 		border-radius: 12px
 		position: absolute
 		right: calc(-395px + -22%)
@@ -611,7 +610,6 @@
 		
 .four
 	@include size(100%, 100vh)
-	//background: url("../images/temp_bg/04.jpg") center no-repeat
 	background-size: cover
 	position: relative
 
@@ -629,7 +627,7 @@
 	&__container
 		position: absolute
 		z-index: 3
-		left: 72%
+		left: 62%
 		top: 41.1%
 		transform: translate(-50%,-50%)
 		
@@ -744,9 +742,6 @@
 		align-items: center
 		justify-content: center
 		
-		@include bp($point-7)
-			right: -3vw
-		
 		@include bp($point-5)
 			right: -90px
 			top: 0
@@ -810,7 +805,6 @@
 
 .five
 	@include size(100%, 100vh)
-	//background: url("../images/temp_bg/05.jpg") center no-repeat
 	background-size: cover
 	position: relative
 	
@@ -857,15 +851,15 @@
 			
 	&__btn-3d
 		position: absolute
-		left: 73.5%
+		left: 80%
 		top: 23%
 		transform: translate(-50%, -50%)
 		cursor: pointer
 		@include size(80px)
-		display: flex
+		//display: flex
 		align-items: center
 		justify-content: center
-		
+		display: none
 		
 		@include bp($point-6)
 			left: 61vw

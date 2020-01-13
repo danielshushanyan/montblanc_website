@@ -27,7 +27,7 @@ $(function () {
 		});
 
 		app.loader
-			.add(`${__app.TEMPLATE_URI}/images/age/asky.jpg`)
+			.add(`${__app.TEMPLATE_URI}/images/age/asky.png`)
 			.add(`${__app.TEMPLATE_URI}/images/age/amont.png`)
 			.add(`${__app.TEMPLATE_URI}/images/age/ahill.png`)
 			.add(`${__app.TEMPLATE_URI}/images/age/agrass.png`)
@@ -42,8 +42,6 @@ $(function () {
 		$(location).attr('href', `http://${window.location.host}/main`)
 	});
 });
-
-
 
 window.addEventListener('resize', resize);
 
@@ -84,9 +82,9 @@ function handleLoadComplete(loader, resources) {
 	app.stage.filters = [displacementFilter];
 	app.stage.addChild(displacementSprite);
 
-	let cloud1 = PIXI.Texture.from('../images/age/cloud_1.png');
-	let cloud2 = PIXI.Texture.from('../images/age/cloud_2.png');
-	let cloud3 = PIXI.Texture.from('../images/age/cloud_3.png');
+	let cloud1 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_1.png`);
+	let cloud2 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_2.png`);
+	let cloud3 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_3.png`);
 
 	let emitterCloud = new Emitter(
 		locationAgeItems[0],

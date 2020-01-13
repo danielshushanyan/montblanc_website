@@ -32,16 +32,16 @@ export default {
 		"max": 0
 	},
 	"lifetime": {
-		"min": 30,
-		"max": 30
+		"min": 35,
+		"max": 35
 	},
 	"blendMode": "screen",
 	"frequency": 0.3,
 	"emitterLifetime": -1,
 	"maxParticles": 80,
 	"pos": {
-		"x": -10,
-		"y": 10
+		"x": -100,
+		"y": 100
 	},
 	"addAtBack": false,
 	"spawnType": "rect",
@@ -49,6 +49,6 @@ export default {
 		"x": 0,
 		"y": 0,
 		"w": 1920,
-		"h": 600
+		"h": 500
 	}
 }

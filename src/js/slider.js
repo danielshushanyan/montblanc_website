@@ -10,37 +10,37 @@ $(function () {
 	MorphSVGPlugin.convertToPath("path");
 
 	const slideOne = new Howl({
-		src: ['../sounds/1_slide.mp3','../sounds/1_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/1_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/1_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideTwo = new Howl({
-		src: ['../sounds/2_slide.mp3','../sounds/2_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/2_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/2_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideThree = new Howl({
-		src: ['../sounds/3_slide.mp3','../sounds/3_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/3_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/3_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideFour = new Howl({
-		src: ['../sounds/4-5_slide.mp3','../sounds/4-5_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/4-5_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/4-5_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideFive = new Howl({
-		src: ['../sounds/4-5_slide.mp3','../sounds/4-5_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/4-5_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/4-5_slide.webm`],
 		volume: 0,
 		loop: true
 	});
 
 	const slideSix = new Howl({
-		src: ['../sounds/6_slide.mp3','../sounds/6_slide.webm'],
+		src: [`${__app.TEMPLATE_URI}/sounds/6_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/6_slide.webm`],
 		volume: 0,
 		loop: true
 	});
@@ -51,25 +51,25 @@ $(function () {
 		.set('.counter-circle', {transformOrigin: 'center center'})
 		.append('homeland')
 		.to('.counter-circle', 1,{x: 0, y: 0, ease: Circ.easeInOut})
-		.to('.count__num', 1,{scrambleText:{text:'99', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to('.count__num', 1,{scrambleText:{text:'24', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
 		.append('wheat')
 		.to('.counter-circle', 1,{x: 8, y: -3})
-		.to('.count__num', 1,{scrambleText:{text:'215', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to('.count__num', 1,{scrambleText:{text:'65', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
 		.append('spring')
 		.to('.counter-circle', 1,{x: 15, y: -7})
-		.to('.count__num', 1,{scrambleText:{text:'938', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to('.count__num', 1,{scrambleText:{text:'74', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
 		.append('alps')
 		.to('.counter-circle', 1,{x: 33, y: -20})
-		.to('.count__num', 1,{scrambleText:{text:'1837', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to('.count__num', 1,{scrambleText:{text:'1252', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
 		.append('design')
 		.to('.counter-circle', 1,{x: 49, y: -34})
-		.to('.count__num', 1,{scrambleText:{text:'3690', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to('.count__num', 1,{scrambleText:{text:'3842', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
 		.append('vertex')
 		.to('.counter-circle', 1,{x: 68, y: -49})
-		.to('.count__num', 1,{scrambleText:{text:'4696', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to('.count__num', 1,{scrambleText:{text:'4810', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
 		.append('story')
 		.to('.counter-circle', 1,{x: 68, y: -49})
-		.to('.count__num', 1,{scrambleText:{text:'4696', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to('.count__num', 1,{scrambleText:{text:'4810', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
 		.append('infinity')
 		.to('.counter-circle', 0.5,{opacity: 0, ease: Circ.easeInOut})
 		.to('.count__num', 0.5,{opacity: 0, ease: Circ.easeInOut},'-=0.5')
