@@ -11,16 +11,16 @@
 	transition: all .5s ease-in-out
 	overflow: hidden
 	user-select: none
-	
+
 	&__action
 		flex: 0 0 154px
-		
+
 		.action__line
 			opacity: 0.3 !important
-	
+
 	&__container
 		flex: 0 0 calc(100% - 155px)
-		
+
 	&__nav
 		position: absolute
 		background-color: $white
@@ -29,12 +29,12 @@
 		@include size(50%, auto)
 		border-top: 1px solid #F2F2F2
 		display: flex
-		
+
 		@include bp($point-3-low)
 			right: unset
 			left: 0
 			@include size(100vw, auto)
-		
+
 		&-item
 			cursor: pointer
 			padding: 41px 0
@@ -47,76 +47,76 @@
 			font-feature-settings: 'salt' on
 			color: #C4C4C4
 			transition: all .3s ease-in-out
-			
+
 			@include bp($point-3-low)
 				font-size: 12px
 				padding: 23px 0
-				
+
 			&--active
 				color: #005FAB
-				
+
 			&--prev
 				border-right: 1px solid #F2F2F2
-				
-		
+
+
 	&.js-popup-opened
 		transform: translateY(0)
-		
+
 #video
 	&.popup
 		@include bp($point-3-low)
 			height: auto
-	
+
 	.popup__container
 		@include bp($point-3-low)
 			margin: 76px 0 0
 			flex: 0 0 100%
-	
+
 #blend
 	.popup__action
 		position: absolute
 		left: 0
 		top: 0
 		height: 100%
-		
+
 		@include bp($point-3-low)
 			height: auto
-		
+
 	.popup__container
 		flex: 0 0 100%
-		
+
 		@include bp($point-3-low)
 			flex-direction: column
-		
+
 	.action__line
 		border-color: $white
-		
+
 #bottle
 	background: url("../images/bg_popup.jpg") center no-repeat
 	background-size: cover
-	
+
 	.popup__action
 		position: absolute
 		left: 0
 		top: 0
 		height: 100%
-		
+
 		@include bp($point-3-low)
 			height: auto
-			
+
 	.popup__container
 		flex: 0 0 100%
 	.action__line
 		border-color: $white
-		
+
 #cocktail
 	background-color: $white
-	
+
 	.content
 		position: absolute
 		left: 0
 		top: 0
-	
+
 	.js-link
 		cursor: default
 	.popup__action
@@ -124,10 +124,10 @@
 		left: 0
 		top: 0
 		height: 100%
-		
+
 		@include bp($point-3-low)
 			height: auto
-			
+
 	.popup__container
 		flex: 0 0 100%
 	.action__line
@@ -136,13 +136,13 @@
 .content
 	display: flex
 	@include size(100%)
-	
+
 	@include bp($point-3-low)
 		flex-direction: column
-	
+
 	&__video
 		@include size(100%, auto)
-		
+
 		&-bar
 			cursor: pointer
 			position: absolute
@@ -154,7 +154,7 @@
 			height: 3px
 			background-color: rgba(255, 255, 255, 0.2)
 			overflow: hidden
-		
+
 		&-progress
 			display: block
 			width: 100%
@@ -164,7 +164,7 @@
 			transform-origin: 0 0
 			position: relative
 			z-index: 1
-		
+
 		&-drag
 			width: 1px
 			height: 20px
@@ -172,7 +172,7 @@
 			position: absolute
 			z-index: 2
 			transform-origin: 0 0
-		
+
 	&__icon
 		position: absolute
 		left: 0
@@ -181,44 +181,44 @@
 		bottom: 0
 		margin: auto
 		cursor: pointer
-		
+
 	&__item
 		@include size(50%, 100%)
 		background-color: #fff
-		
+
 		@include bp($point-3-low)
 			width: 100%
-		
+
 		&--left
 			background-size: cover
 			background-position: center
 			background-repeat: no-repeat
-			
+
 		&--right
 			height: 100vh
 			overflow-y: auto
 			padding: 96px 175px 88px 150px
-			
+
 			@include bp($point-6)
 				padding: 50px
-				
+
 			@include bp($point-3-low)
 				padding: 30px 25px 30px 20px
-			
+
 	&__bottle
-		
+
 		&-icon
 			@include size(50px)
-			
+
 			&--left
 				margin-left: auto
-				
+
 			&--right
 				margin-right: auto
-			
+
 			@include bp($point-5, min)
 				display: none
-		
+
 		&-img
 			z-index: 1
 			position: absolute
@@ -231,14 +231,14 @@
 			width: 100%
 			display: flex
 			justify-content: center
-			
+
 			img
 				height: 80vh
 				max-width: 184px
 				position: absolute
 				transition: opacity 0.5s ease-in-out
 				pointer-events: none
-			
+
 		&-descr
 			display: flex
 			flex-direction: column
@@ -247,44 +247,44 @@
 			left: 50%
 			top: 50%
 			transform: translate(-50%,-50%)
-			
+
 			&--left
 				text-align: right
 				left: 25.7%
-				top: 17.5%
-				
+				top: 20.5%
+
 				@include bp($point-6)
 					top: 30%
 					max-width: 250px
-				
+
 				.content__bottle-title
 					text-align: right
 					margin: 0 0 21px auto
-	
+
 			&--left-two
 				display: none
 				left: 26.7%
 				top: 49.5%
-				
+
 				.content__bottle-title
 					max-width: 373px
-				
+
 				.content__bottle-line--left
 					width: 4vw
 					right: -110px
-				
+
 			&--right
 				left: 76.3%
 				top: 57.1%
-				
-				
+
+
 				.content__bottle-title
 					margin: 0 0 35px 0
-			
+
 			&--right-two
 				display: none
 				top: 76.1%
-		
+
 		&-title
 			margin: 0 0 21px 0
 			max-width: 300px
@@ -294,12 +294,12 @@
 			letter-spacing: 0.1em
 			text-transform: uppercase
 			font-feature-settings: 'salt' on
-			
+
 			display: none
-			
+
 			@include bp($point-5, min)
 				display: block
-			
+
 		&-text
 			max-width: 387px
 			font-family: $baseScndFont
@@ -307,43 +307,43 @@
 			line-height: 160%
 			letter-spacing: 0.02em
 			font-feature-settings: 'salt' on
-			
+
 			display: none
-			
+
 			@include bp($point-5, min)
 				display: block
-			
+
 			&--strong
 				font-weight: 600
-			
+
 			&:nth-child(5)
 				margin: 35px 0 0
-				
+
 		&-line
 			position: absolute
 			right: 0
 			top: 0
 			@include size(8.2vw,1px)
 			border: 1px solid $white
-			
+
 			display: none
-			
+
 			@include bp($point-5, min)
 				display: block
-			
+
 			&--left
 				top: 35px
 				right: -227px
 				@include size(10vw,1px)
-				
+
 				@include bp(1880px)
 					right: -6vw
 					width: 5vw
-				
+
 			&--right
 				left: -197px
 				top: 20px
-				
+
 				@include bp(1880px)
 					left: -6vw
 					width: 5vw
@@ -354,7 +354,7 @@
 		position: absolute
 		top: 50px
 		right: 65px
-		
+
 		&-text
 			margin-top: 25px
 			font-size: 14px
@@ -364,44 +364,44 @@
 			font-feature-settings: 'salt' on
 			opacity: 0.5
 			max-width: 144px
-		
+
 		svg
 			@include size(63px,41px)
-			
+
 .cocktail
 	padding: 0 37px 0 0
 	position: relative
 	overflow: hidden
-	
+
 	&__wrapper
 		height: calc(100vh - 101px)
 		overflow-y: auto
 		padding: 91px 131px 30px 150px
-		
+
 		@include bp($point-6)
 			padding: 50px
-			
+
 		@include bp($point-3-low)
 			padding: 30px 25px 30px 20px
 			height: calc(50vh - 62px)
 			width: 100vw
-		
+
 		&::-webkit-scrollbar-thumb
 			-webkit-border-radius: 0
 			border-radius: 11px
 			background-color: #F2F2F2
 			background-position: center
 			background-repeat: no-repeat
-		
+
 		&::-webkit-resizer
 			background-image: unset
 			background-repeat: no-repeat
 			width: 7px
 			height: 0
-		
+
 		&::-webkit-scrollbar
 			width: 6px
-	
+
 	&__title
 		max-width: 526px
 		font-size: 50px
@@ -412,11 +412,11 @@
 		color: #005FAB
 		margin: 0 0 40px
 		font-weight: 300
-		
+
 		@include bp($point-3-low)
 			font-size: 30px
 			margin: 0 0 27px
-		
+
 	&__text
 		font-family: $baseScndFont
 		font-weight: normal
@@ -425,10 +425,10 @@
 		font-feature-settings: 'salt' on
 		color: #4F5E72
 		margin: 0 0 55px
-		
+
 		@include bp($point-3-low)
 			margin: 0 0 38px
-		
+
 		&-descr
 			font-family: $baseScndFont
 			font-weight: normal
@@ -438,11 +438,11 @@
 			font-feature-settings: 'salt' on
 			color: #4F5E72
 			margin: 43px 0 0
-			
+
 			@include bp($point-3-low)
 				margin: 15px 0 0
 				font-size: 12px
-		
+
 	&__ingredinets
 		font-size: 36px
 		line-height: 110%
@@ -452,20 +452,20 @@
 		color: #4F5E72
 		margin: 0 0 20px
 		font-weight: 300
-		
+
 		@include bp($point-3-low)
 			font-size: 15px
-		
+
 	&__recipe-list
 		list-style: none
 		margin: 0 0 45px
 		padding: 0 0 0 30px
 		max-width: 520px
-		
+
 		@include bp($point-3-low)
 			padding: 0 0 0 14px
 			margin: 0 0 14px
-		
+
 	&__recipe-item
 		font-family: $baseScndFont
 		position: relative
@@ -476,11 +476,11 @@
 		letter-spacing: 0.02em
 		font-size: 18px
 		color: #4F5E72
-		
+
 		@include bp($point-3-low)
 			font-size: 12px
 			margin: 0 0 9px
-		
+
 		&:after
 			content: ''
 			position: absolute
@@ -489,15 +489,15 @@
 			@include size(6px)
 			border: 1px solid #005FAB
 			border-radius: 50%
-			
+
 			@include bp($point-3-low)
 				@include size(4px)
 				left: -14px
 				top: 5px
-	
+
 	&__images
 		display: flex
-		
+
 		&-item
 			display: flex
 			align-items: center
@@ -505,23 +505,23 @@
 			@include size(96px)
 			background-color: #F6F6F6
 			border-radius: 50%
-			
+
 			@include bp($point-3-low)
 				@include size(63px)
 				flex: 0 0 63px
-			
+
 			&:not(:last-child)
 				margin: 0 52px 0 0
-				
+
 				@include bp($point-3-low)
 					margin: 0 8px 0 0
-				
+
 			&:first-child
 				margin-left: 16px
-				
+
 				@include bp($point-3-low)
 					margin-left: 0
-		
+
 .blend
 	&__title
 		font-size: 50px
@@ -532,11 +532,11 @@
 		color: #005FAB
 		margin: 0 0 50px
 		font-weight: 300
-		
+
 		@include bp($point-3-low)
 			font-size: 30px
 			margin: 0 0 26px
-	
+
 	&__text
 		font-family: $baseScndFont
 		font-weight: 500
@@ -546,18 +546,18 @@
 		font-feature-settings: 'salt' on
 		color: #4F5E72
 		margin: 0 0 53px
-		
+
 		@include bp($point-3-low)
 			font-size: 14px
 			margin: 0 0 34px
-		
+
 	&__descr
 		&:not(:last-of-type)
 			margin: 0 0 78px
-		
+
 			@include bp($point-3-low)
 				margin: 0 0 45px
-		
+
 	&__descr-text
 		font-family: $baseScndFont
 		color: #4F5E72
@@ -566,13 +566,13 @@
 		line-height: 130%
 		letter-spacing: 0.02em
 		font-feature-settings: 'salt' on
-		
+
 		@include bp($point-3-low)
 			font-size: 11px
-		
+
 		&:not(:last-child)
 			margin: 0 0 25px
-			
+
 			@include bp($point-3-low)
 				margin: 0 0 14px
 
@@ -586,11 +586,11 @@
 		margin: 0 0 50px
 		font-weight: 300
 		position: relative
-		
+
 		@include bp($point-3-low)
 			font-size: 15px
 			margin: 0 0 37px
-		
+
 		&:before,&:after
 			content: ''
 			position: absolute
@@ -600,12 +600,12 @@
 			width: 124px
 			opacity: 0.5
 			border: 1px solid #005FAB
-			
+
 			@include bp($point-3-low)
 				width: 46px
-			
+
 		&:before
 			top: -70%
-			
+
 		&:after
 			bottom: -70%

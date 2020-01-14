@@ -369,12 +369,13 @@ function handleLoadComplete(loader, resources) {
 			parallaxNote(w, h, e);
 			parallaxVertex(w, h, e);
 			parallaxWheat(w, h, e);
+			parallaxEnd(w, h, e);
 
 		})
 	});
 
 	setTimeout(function () {
-		$('.loader').fadeOut('100');
+		// $('.loader').fadeOut('100');
 	},2000);
 	setInitialLocation();
 }
@@ -660,6 +661,14 @@ function parallaxWheat(w, h, e) {
 	TweenMax.to(locationWheatItems[8], 0.3, {
 		x: (w - e.clientX) / (amplitude + 90),
 		y: (h - e.clientY) / (amplitude + 90),
+		ease: Circ.easeOut
+	});
+}
+
+function parallaxEnd(w, h, e) {
+	TweenMax.to(locationEndItems[0], 0.3, {
+		x: (w - e.clientX) / (amplitude + 140),
+		y: (h - e.clientY) / (amplitude + 140),
 		ease: Circ.easeOut
 	});
 }
