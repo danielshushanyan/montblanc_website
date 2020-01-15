@@ -1,7 +1,20 @@
 export default {
 	"alpha": {
-		"start": 0,
-		"end": 1
+		"list": [
+			{
+				"value": 0,
+				"time": 0
+			},
+			{
+				"value": 0.7,
+				"time": 0.5
+			},
+			{
+				"value": 0,
+				"time": 1
+			}
+		],
+		"isStepped": false
 	},
 	"scale": {
 		"start": 2,
@@ -13,8 +26,8 @@ export default {
 		"end": "#ffffff"
 	},
 	"speed": {
-		"start": 20,
-		"end": 50,
+		"start": 10,
+		"end": 10,
 		"minimumSpeedMultiplier": 0.85
 	},
 	"acceleration": {
@@ -32,13 +45,13 @@ export default {
 		"max": 0
 	},
 	"lifetime": {
-		"min": 35,
-		"max": 35
+		"min": 10,
+		"max": 15
 	},
 	"blendMode": "screen",
-	"frequency": 0.3,
+	"frequency": 0.038,
 	"emitterLifetime": -1,
-	"maxParticles": 80,
+	"maxParticles": 40,
 	"pos": {
 		"x": -100,
 		"y": 100

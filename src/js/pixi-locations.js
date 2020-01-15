@@ -3,6 +3,8 @@ import snow from './particles-data/snow';
 import randomeParticles from './particles-data/randome-particles';
 import stars from './particles-data/stars';
 import shootingStars from './particles-data/shooting-stars';
+import eagleParticle from './particles-data/eagle';
+import fogParticle from './particles-data/fog';
 
 const canvas = document.getElementById('view');
 let _w = window.innerWidth;
@@ -14,6 +16,7 @@ let displacementSprite = null;
 let frameCondition = false;
 let displacementFrame = null;
 let app;
+let loadedFiles = 0;
 window.activeLocation = 0;
 window.locationsAlphaArray = [];
 
@@ -38,6 +41,7 @@ $(function () {
 			autoResize: true,
 			autoDetectRenderer: true
 		});
+
 		app.loader
 			.add(`${__app.TEMPLATE_URI}/images/design/sky.jpg`) // Design nature // index 0
 			.add(`${__app.TEMPLATE_URI}/images/design/mont.png`)
@@ -82,7 +86,7 @@ $(function () {
 			.add(`${__app.TEMPLATE_URI}/images/filter.png`) // DMap // index 31
 			.add(`${__app.TEMPLATE_URI}/images/end/end.jpg`) // End // index 33
 			.add(`${__app.TEMPLATE_URI}/images/wave_d.png`) // DMapWave // index 34
-			.add(`${__app.TEMPLATE_URI}/images/birds.json`) // Birds // index 34
+			.on('progress', loadingEnd)
 			.load(handleLoadComplete);
 	});
 });
@@ -102,11 +106,11 @@ window.resizeImages = function(image, renderer) {
 	let imageProp = 2320 / 1305;
 
 	if (winProp > imageProp) {
-		image.width = $(window).width() + 100;
-		image.height = ($(window).width() / imageProp) + 30;
+		image.width = $(window).width() + 80;
+		image.height = ($(window).width() / imageProp);
 	} else {
 		image.height = $(window).height() + 30;
-		image.width = ($(window).height() * imageProp) + 100;
+		image.width = ($(window).height() * imageProp) + 80;
 	}
 
 	image.anchor.set(0.5);
@@ -114,7 +118,6 @@ window.resizeImages = function(image, renderer) {
 };
 
 function handleLoadComplete(loader, resources) {
-	$('.header').removeClass('header--loader');
 	let resKeys = Object.keys(resources);
 
 	// all textures
@@ -197,31 +200,6 @@ function handleLoadComplete(loader, resources) {
 	end = null;
 
 	//Effects
-	//Birds
-	let sheet = resources[resKeys[43]].spritesheet;
-	let birdAnim = new PIXI.AnimatedSprite(sheet.animations['farme']);
-	let birdSpring = new PIXI.AnimatedSprite(sheet.animations['farme']);
-	let birdContainer = new PIXI.Container();
-	let birdContainerSpring = new PIXI.Container();
-
-	birdAnim.animationSpeed = 0.333333333;
-	birdSpring.animationSpeed = 0.333333333;
-	birdAnim.scale.set(1);
-	birdAnim.skew.set(0, 3);
-	birdSpring.scale.set(1, 0.8);
-	birdSpring.skew.set(0, 3);
-	birdAnim.position.set(app.renderer.screen.width/1.5, app.renderer.screen.height/6);
-	birdSpring.position.set(app.renderer.screen.width/3, app.renderer.screen.height/7);
-	birdAnim.play();
-	birdSpring.play();
-	birdContainer.addChild(birdAnim);
-	birdContainerSpring.addChild(birdSpring);
-
-	locationsAlphaArray[0].addChildAt(birdContainer, 2);
-	locationsAlphaArray[2].addChildAt(birdContainerSpring, 2);
-	locationHomeItems.splice(2, 0, birdContainer);
-	locationSpringItems.splice(2, 0, birdContainerSpring);
-	//Birds End
 
 	//Displacement
 	displacementSprite = PIXI.Sprite.from(resources[resKeys[40]].texture);
@@ -245,6 +223,8 @@ function handleLoadComplete(loader, resources) {
 	let smoke = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/smoke.png`);
 	let star = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/light.png`);
 	let shootingStar = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/shooting_star.png`);
+	let eagle = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/eagle.png`);
+	let fog = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/fog.png`);
 
 	let emitterDesign = new Emitter(
 		locationsAlphaArray[4],
@@ -276,7 +256,79 @@ function handleLoadComplete(loader, resources) {
 		shootingStars
 	);
 
-	const effectsArray = [false, emitterWheat, false, false, emitterDesign, emitterVertex, emitterEnd];
+	let emitterEagle = new Emitter(
+		locationsAlphaArray[0].children[2],
+		[
+			{
+				framerate: 30,
+				loop: true,
+				textures: [
+					`${__app.TEMPLATE_URI}/images/birds/birds1.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds2.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds3.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds4.png`
+				]
+			},
+			{
+				framerate: 30,
+				loop: true,
+				textures: [
+					`${__app.TEMPLATE_URI}/images/birds/birds_t4.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t3.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t2.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t1.png`,
+				]
+			}
+		],
+		eagleParticle
+	);
+
+	let emitterEagleSpring = new Emitter(
+		locationsAlphaArray[2].children[1],
+		[
+			{
+				framerate: 24,
+				loop: true,
+				textures: [
+					`${__app.TEMPLATE_URI}/images/birds/birds1.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds2.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds3.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds4.png`
+				]
+			},
+			{
+				framerate: 24,
+				loop: true,
+				textures: [
+					`${__app.TEMPLATE_URI}/images/birds/birds_t4.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t3.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t2.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t1.png`,
+				]
+			}
+		],
+		eagleParticle
+	);
+
+	let emitterFog = new Emitter(
+		locationsAlphaArray[3].children[1],
+		[fog],
+		fogParticle
+	);
+
+	emitterDesign.emit = true;
+	emitterWheat.emit = true;
+	emitterVertex.emit = true;
+	emitterEnd.emit = true;
+	emitterEndShoot.emit = true;
+	emitterEagle.emit = true;
+	emitterEagleSpring.emit = true;
+	emitterFog.emit = true;
+
+	emitterEagle.particleConstructor = AnimatedParticle;
+	emitterEagleSpring.particleConstructor = AnimatedParticle;
+
+	const effectsArray = [emitterEagle, emitterWheat, emitterEagleSpring, false, emitterDesign, emitterVertex, emitterEnd];
 
 	const waveDisplacement = PIXI.Sprite.from(resources[resKeys[42]].texture);
 	const waveDisplacementFilter = new PIXI.filters.DisplacementFilter(waveDisplacement);
@@ -285,8 +337,8 @@ function handleLoadComplete(loader, resources) {
 	waveDisplacementFilter.autoFit = true;
 	waveDisplacementFilter.scale.set(20);
 
-	locationSpringItems[4].addChild(waveDisplacement);
-	locationSpringItems[4].filters = [waveDisplacementFilter];
+	locationSpringItems[3].addChild(waveDisplacement);
+	locationSpringItems[3].filters = [waveDisplacementFilter];
 
 	class Vec2d {
 		constructor(x, y) {
@@ -321,13 +373,9 @@ function handleLoadComplete(loader, resources) {
 		let now = Date.now();
 		effectsArray[activeLocation] ? effectsArray[activeLocation].update((now - elapsed) * 0.001): effectsArray[activeLocation];
 		emitterEndShoot.update((now - elapsed) * 0.001);
+		emitterFog.update((now - elapsed) * 0.001);
 		elapsed = now;
 	};
-	emitterDesign.emit = true;
-	emitterWheat.emit = true;
-	emitterVertex.emit = true;
-	emitterEnd.emit = true;
-	emitterEndShoot.emit = true;
 
 	update();
 	//Particles End
@@ -373,11 +421,16 @@ function handleLoadComplete(loader, resources) {
 
 		})
 	});
+}
 
-	setTimeout(function () {
-		// $('.loader').fadeOut('100');
-	},2000);
-	setInitialLocation();
+function loadingEnd(loader, resource) {
+	let loading = Math.ceil(++loadedFiles * 100 / Object.keys(loader.resources).length);
+	$('.loader__number').text(loading);
+	if (loading === 100) {
+		setTimeout(function () {
+			loaderAnimation.play();
+		},500);
+	}
 }
 
 function requestFrame() {
@@ -497,23 +550,23 @@ function parallaxDesign(w, h, e) {
 
 function parallaxSpring(w, h, e) {
 	TweenMax.to(locationSpringItems[0], 0.3, {
-		x: (w - e.clientX) / (amplitude + 30),
-		y: (h - e.clientY) / (amplitude + 30),
+		x: (w - e.clientX) / (amplitude + 10),
+		y: (h - e.clientY) / (amplitude + 10),
 		ease: Circ.easeOut
 	});
 	TweenMax.to(locationSpringItems[1], 0.3, {
-		x: (w - e.clientX) / (amplitude + 30),
-		y: (h - e.clientY) / (amplitude + 30),
+		x: (w - e.clientX) / (amplitude + 20),
+		y: (h - e.clientY) / (amplitude + 20),
 		ease: Circ.easeOut
 	});
 	TweenMax.to(locationSpringItems[2], 0.3, {
-		y: (h - e.clientY) / (amplitude + 10),
-		x: (w - e.clientX) / (amplitude + 10),
+		y: (h - e.clientY) / (amplitude + 25),
+		x: (w - e.clientX) / (amplitude + 25),
 		ease: Circ.easeOut
 	});
 	TweenMax.to(locationSpringItems[3], 0.3, {
-		x: (w - e.clientX) / (amplitude + 25),
-		y: (h - e.clientY) / (amplitude + 25),
+		x: (w - e.clientX) / (amplitude + 20),
+		y: (h - e.clientY) / (amplitude + 20),
 		ease: Circ.easeOut
 	});
 	TweenMax.to(locationSpringItems[4], 0.3, {
@@ -522,13 +575,8 @@ function parallaxSpring(w, h, e) {
 		ease: Circ.easeOut
 	});
 	TweenMax.to(locationSpringItems[5], 0.3, {
-		x: (w - e.clientX) / (amplitude + 20),
-		y: (h - e.clientY) / (amplitude + 20),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationSpringItems[6], 0.3, {
-		x: (w - e.clientX) / (amplitude + 90),
-		y: (h - e.clientY) / (amplitude + 90),
+		x: (w - e.clientX) / (amplitude + 5),
+		y: (h - e.clientY) / (amplitude + 5),
 		ease: Circ.easeOut
 	});
 }
@@ -600,7 +648,7 @@ function parallaxHome(w, h, e) {
 		y: (h - e.clientY) / (amplitude + 20),
 		ease: Circ.easeOut
 	});
-	TweenMax.to(locationHomeItems[2], 0.3, {
+	TweenMax.to(locationHomeItems[3], 0.3, {
 		x: (w - e.clientX) / (amplitude + 30),
 		y: (h - e.clientY) / (amplitude + 30),
 		ease: Circ.easeOut
@@ -673,21 +721,28 @@ function parallaxEnd(w, h, e) {
 	});
 }
 
-function setInitialLocation() {
+window.setInitialLocation = function() {
 	const currentTitleAnim = new TimelineMax({paused: true});
 	const slide = document.querySelectorAll('.section')[initialIndex].getElementsByClassName('js-title');
 	const slideFade = document.querySelectorAll('.section')[initialIndex].getElementsByClassName('js-fade');
 	const slideText = new SplitText(slide, {type:"chars, lines"});
+	activeLocation = initialIndex;
 
 	currentTitleAnim
 		.set(slideText.lines, {overflow: "hidden"})
 		.staggerFromTo(slideText.chars, 1, {yPercent: -115},{yPercent: 0,ease: Power1.easeIn}, .015, 0)
 		.from(slideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn}, '-=1.5');
-
-	$('.header').addClass('header--top');
-	$('.hide').removeClass('hide');
 	$('.main-slide').css('opacity', 1);
 
 	currentTitleAnim.play();
-	changeLocationContainer(initialIndex);
-}
+
+	locationsAlphaArray.map(function(item, i) {
+		if(initialIndex === i) {
+			TweenMax.to(item, 1.5, { alpha: 1, ease: Power4.easeInOut });
+		} else {
+			TweenMax.to(item, 1.5, { alpha: 0, ease: Power4.easeInOut });
+		}
+	});
+
+	swiper.slideTo(initialIndex, 0);
+};

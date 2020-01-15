@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import Swiper from 'swiper';
 import * as PIXI from 'pixi.js'
-import { Emitter } from 'pixi-particles';
+import { Emitter, AnimatedParticle } from 'pixi-particles';
 import { Howl, Howler } from 'howler';
 import {TweenMax, TimelineMax, Power1, Power4, Expo, Back, Circ, Draggable, CSSPlugin, Bounce} from "gsap/all";
 import './vendor/MorphSVGPlugin.min';
@@ -18,6 +18,7 @@ window.jQuery = $;
 window.Swiper = Swiper;
 window.PIXI = PIXI;
 window.Emitter = Emitter;
+window.AnimatedParticle = AnimatedParticle;
 window.Howl = Howl;
 window.Howler = Howler;
 window.TweenMax = TweenMax;

@@ -2,17 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="496f4bc2-8e11-4115-9a14-15d6eed9c63a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/clouds/bottom_right.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/clouds/center_left.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/clouds/over_center.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/clouds/top_right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/age/asky.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/birds/birds1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/birds/birds2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/birds/birds3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/birds/birds4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/birds/birds_t1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/birds/birds_t2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/birds/birds_t3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/birds/birds_t4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/eagle.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/images/fog.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/js/particles-data/eagle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/js/particles-data/fog.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/images/age/asky.png" afterPath="$PROJECT_DIR$/src/images/age/asky.png" />
+      <change beforePath="$PROJECT_DIR$/src/images/birds.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/images/birds.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/images/fog-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/images/fog-2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/js/intro.js" afterPath="$PROJECT_DIR$/src/js/intro.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/loader.js" afterPath="$PROJECT_DIR$/src/js/loader.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/particles-data/clouds.js" afterPath="$PROJECT_DIR$/src/js/particles-data/clouds.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/particles-data/stars.js" afterPath="$PROJECT_DIR$/src/js/particles-data/stars.js" />
       <change beforePath="$PROJECT_DIR$/src/js/pixi-locations.js" afterPath="$PROJECT_DIR$/src/js/pixi-locations.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/slider.js" afterPath="$PROJECT_DIR$/src/js/slider.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/sounds.js" afterPath="$PROJECT_DIR$/src/js/sounds.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/vendor.js" afterPath="$PROJECT_DIR$/src/js/vendor.js" />
       <change beforePath="$PROJECT_DIR$/src/main.pug" afterPath="$PROJECT_DIR$/src/main.pug" />
       <change beforePath="$PROJECT_DIR$/src/sass/pages/_main.sass" afterPath="$PROJECT_DIR$/src/sass/pages/_main.sass" />
-      <change beforePath="$PROJECT_DIR$/src/sass/particles/popups.sass" afterPath="$PROJECT_DIR$/src/sass/particles/popups.sass" />
       <change beforePath="$PROJECT_DIR$/src/sass/template/_header.sass" afterPath="$PROJECT_DIR$/src/sass/template/_header.sass" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,31 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_main.sass" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sass/pages/_main.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pixi-locations.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pixi-locations.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/pixi-locations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="378" column="12" lean-forward="true" selection-start-line="378" selection-start-column="12" selection-end-line="378" selection-end-column="12" />
+            <state relative-caret-position="322">
+              <caret line="728" column="34" lean-forward="false" selection-start-line="728" selection-start-column="34" selection-end-line="728" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -61,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/loader.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+              <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -80,20 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index</find>
-      <find>indexOf</find>
-      <find>xlink</find>
-      <find>displa</find>
-      <find>dis</find>
-      <find>display</find>
-      <find>$downElem</find>
-      <find>drag</find>
-      <find>thisTotal</find>
-      <find>mousedown</find>
-      <find>onMouse</find>
-      <find>onKeyDown</find>
-      <find>isMouseDown</find>
-      <find>console</find>
       <find>left</find>
       <find>--left</find>
       <find>action__line</find>
@@ -101,7 +83,6 @@
       <find>container</find>
       <find>ParticleContainer</find>
       <find>initialIndex</find>
-      <find>fog</find>
       <find>age</find>
       <find>.js-catch</find>
       <find>req</find>
@@ -110,6 +91,21 @@
       <find>backdrop</find>
       <find>3d</find>
       <find>loader</find>
+      <find>progress</find>
+      <find>.header--top</find>
+      <find>header--top</find>
+      <find>header--</find>
+      <find>setInitialLocation</find>
+      <find>randome</find>
+      <find>random</find>
+      <find>fog</find>
+      <find>Power1</find>
+      <find>Power4</find>
+      <find>startAlpha</find>
+      <find>alphaList</find>
+      <find>alpha</find>
+      <find>hide</find>
+      <find>activeLocation</find>
     </findStrings>
     <replaceStrings>
       <replace>green</replace>
@@ -117,6 +113,7 @@
       <replace>displacementFilterMont</replace>
       <replace>containerMont</replace>
       <replace>#fff</replace>
+      <replace>Power1</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -125,10 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build/js/main.js" />
-        <option value="$PROJECT_DIR$/src/intro.html" />
-        <option value="$PROJECT_DIR$/src/js/loader.js" />
-        <option value="$PROJECT_DIR$/build/.htaccess" />
         <option value="$PROJECT_DIR$/src/js/age.js" />
         <option value="$PROJECT_DIR$/src/sass/template/_footer.sass" />
         <option value="$PROJECT_DIR$/src/js/video-controler.js" />
@@ -159,23 +152,27 @@
         <option value="$PROJECT_DIR$/src/pug/particles/popups.pug" />
         <option value="$PROJECT_DIR$/src/intro.pug" />
         <option value="$PROJECT_DIR$/src/js/main.js" />
-        <option value="$PROJECT_DIR$/src/js/vendor.js" />
         <option value="$PROJECT_DIR$/src/images/birds.json" />
         <option value="$PROJECT_DIR$/bitbucket-pipelines.yml" />
-        <option value="$PROJECT_DIR$/src/js/particles-data/stars.js" />
         <option value="$PROJECT_DIR$/src/js/particles-data/shooting-stars.js" />
         <option value="$USER_HOME$/Downloads/Слой 2.svg" />
         <option value="$PROJECT_DIR$/src/js/header.js" />
         <option value="$PROJECT_DIR$/src/pug/template/header.pug" />
-        <option value="$PROJECT_DIR$/src/js/sounds.js" />
-        <option value="$PROJECT_DIR$/src/js/intro.js" />
         <option value="$PROJECT_DIR$/src/js/slider.js" />
-        <option value="$PROJECT_DIR$/src/sass/template/_header.sass" />
         <option value="$PROJECT_DIR$/src/sass/particles/popups.sass" />
-        <option value="$PROJECT_DIR$/src/js/particles-data/clouds.js" />
-        <option value="$PROJECT_DIR$/src/js/pixi-locations.js" />
-        <option value="$PROJECT_DIR$/src/main.pug" />
         <option value="$PROJECT_DIR$/src/sass/pages/_main.sass" />
+        <option value="$PROJECT_DIR$/src/sass/template/_header.sass" />
+        <option value="$PROJECT_DIR$/build/main.html" />
+        <option value="$PROJECT_DIR$/src/main.pug" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/fog.js" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/stars.js" />
+        <option value="$PROJECT_DIR$/src/js/sounds.js" />
+        <option value="$PROJECT_DIR$/src/js/loader.js" />
+        <option value="$PROJECT_DIR$/src/js/vendor.js" />
+        <option value="$PROJECT_DIR$/src/js/intro.js" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/clouds.js" />
+        <option value="$PROJECT_DIR$/src/js/particles-data/eagle.js" />
+        <option value="$PROJECT_DIR$/src/js/pixi-locations.js" />
       </list>
     </option>
   </component>
@@ -237,20 +234,7 @@
               <item name="montblan" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="clouds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="montblan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="montblan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="montblan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="montblan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="birds" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,23 +250,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images/age" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="pop&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/particles/popups.sass&#10;head&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;ma&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/pages/_main.sass&#10;menu&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/menu.js&#10;vend&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/vendor.js&#10;mai&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/main.pug&#10;foot&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;header&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;hea&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;main&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/main.pug&#10;po&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/particles/popups.pug&#10;he&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;base&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;popup&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/particles/popups.sass&#10;foo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;curs&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/cursor.js&#10;temp&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;tem&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;te&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;ba&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;age&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/age.js&#10;m&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/pages/_main.sass&#10;heade&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;header.js&#9;null&#9;null&#10;heas&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;footer&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;fo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;lo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/loader.js&#10;bas&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;h&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;ty&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/basic/_typography.sass&#10;var&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_variables.sass&#10;typ&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/basic/_typography.sass&#10;a&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/main.sass&#10;f&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_footer.sass&#10;vars&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_variables.sass" />
+    <property name="SearchEverywhereHistoryKey" value="load&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/loader.js&#10;foo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_footer.sass&#10;ma&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/main.pug&#10;head&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/header.js&#10;heade&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;pop&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/particles/popups.sass&#10;menu&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/menu.js&#10;vend&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/vendor.js&#10;mai&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/main.pug&#10;foot&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;header&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;hea&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;main&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/main.pug&#10;po&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/particles/popups.pug&#10;he&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;base&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;popup&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/particles/popups.sass&#10;curs&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/cursor.js&#10;temp&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;tem&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;te&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/temp-slider.js&#10;ba&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;age&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/age.js&#10;m&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/pages/_main.sass&#10;header.js&#9;null&#9;null&#10;heas&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_header.sass&#10;footer&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;fo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/footer.pug&#10;lo&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/js/loader.js&#10;bas&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_base.sass&#10;h&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/pug/template/header.pug&#10;ty&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/basic/_typography.sass&#10;var&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_variables.sass&#10;typ&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/basic/_typography.sass&#10;a&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/main.sass&#10;f&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/template/_footer.sass&#10;vars&#9;FILE&#9;file:///home/daniel/Documents/montblan/src/sass/_variables.sass" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images/birds" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/images/home" />
-      <recent name="$PROJECT_DIR$/src/images/age" />
-      <recent name="$PROJECT_DIR$/src/images/new" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/images/clouds" />
-      <recent name="$PROJECT_DIR$/src/images/age" />
       <recent name="$PROJECT_DIR$/src/images" />
-      <recent name="$PROJECT_DIR$/src/images/home" />
-      <recent name="$PROJECT_DIR$/src/resources/sounds" />
+      <recent name="$PROJECT_DIR$/src/images/age" />
+      <recent name="$PROJECT_DIR$/src/images/birds" />
+      <recent name="$PROJECT_DIR$/build/images" />
+      <recent name="$PROJECT_DIR$/src/images/clouds" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -384,36 +371,36 @@
       <workItem from="1578921617404" duration="5183000" />
       <workItem from="1578927845576" duration="4958000" />
       <workItem from="1578994759604" duration="2525000" />
-      <workItem from="1579003530090" duration="3097000" />
+      <workItem from="1579003530090" duration="35710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="721296000" />
+    <option name="totallyTimeSpent" value="753909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="32" width="1920" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18555614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7096774" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18555614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -452,133 +439,119 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/images/bg_mobile/bg_three_767.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/bg_mobile/bg_two_767.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/particles-data/snow-storm.js">
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/randome-particles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/fog-1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/fog-2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/images/fog-1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/images/fog-2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/dropdown.js">
+    <entry file="file://$PROJECT_DIR$/build/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="51" lean-forward="false" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        <state relative-caret-position="818">
+          <caret line="344" column="4" lean-forward="false" selection-start-line="344" selection-start-column="4" selection-end-line="344" selection-end-column="4" />
+          <folding>
+            <element signature="n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/images/age/asky.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/images/age/asky.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/images/age/amont.png">
+    <entry file="file://$PROJECT_DIR$/build/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="991" column="4" lean-forward="false" selection-start-line="991" selection-start-column="4" selection-end-line="991" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/stars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/fog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/note/nbott.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/template/_footer.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+          <folding>
+            <element signature="e#209#302#0" expanded="false" />
+            <element signature="e#312#1010#0" expanded="false" />
+            <element signature="e#1039#1403#0" expanded="false" />
+            <element signature="e#1414#2069#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/template/header.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pug/template/footer.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/particles/popups.pug">
+    <entry file="file://$PROJECT_DIR$/src/js/sounds.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="175" column="64" lean-forward="false" selection-start-line="175" selection-start-column="64" selection-end-line="175" selection-end-column="64" />
+        <state relative-caret-position="608">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/intro.pug">
+    <entry file="file://$PROJECT_DIR$/src/js/mouse-catch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/sound/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="320" column="53" lean-forward="true" selection-start-line="320" selection-start-column="53" selection-end-line="320" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/spring/smont.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/spring/shill.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/pixi-particles/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret line="1071" column="21" lean-forward="false" selection-start-line="1071" selection-start-column="21" selection-end-line="1071" selection-end-column="21" />
+        <state relative-caret-position="-4455">
+          <caret line="301" column="21" lean-forward="false" selection-start-line="301" selection-start-column="21" selection-end-line="301" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/birds.json">
+    <entry file="file://$PROJECT_DIR$/src/js/vendor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="183" column="9" lean-forward="false" selection-start-line="183" selection-start-column="5" selection-end-line="183" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/pixi.js/pixi.js.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23922" column="12" lean-forward="false" selection-start-line="23922" selection-start-column="12" selection-end-line="23922" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/home/hbott.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/home/hbird.png" />
-    <entry file="file://$PROJECT_DIR$/src/images/birds.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="1263" column="10" lean-forward="false" selection-start-line="1263" selection-start-column="5" selection-end-line="1263" selection-end-column="10" />
+        <state relative-caret-position="171">
+          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -587,109 +560,97 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/particles-data/randome-particles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/vendor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16055">
-          <caret line="845" column="28" lean-forward="true" selection-start-line="845" selection-start-column="28" selection-end-line="845" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bitbucket-pipelines.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/particles-data/stars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/particles-data/shooting-stars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Слой 2.svg">
+    <entry file="file://$PROJECT_DIR$/src/images/cocktail_bg_3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/temp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1482">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/images/fog-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/images/loader.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pug/template/header.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="39" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/images/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/sounds.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/images/bg_popup.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/popup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="22" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/images/bottle.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/main.html">
+    <entry file="file://$PROJECT_DIR$/src/images/cocktail.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/cocktail_bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/cocktail_bg_2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/drop_bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/ripple.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/filter.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/shooting_star.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="62" />
+        <state relative-caret-position="38">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds/birds3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds/birds4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds/birds2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds/birds1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/images/age/asky.png">
@@ -697,54 +658,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/intro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="43" column="3" lean-forward="false" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="67" column="47" lean-forward="false" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/template/_header.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="63" column="14" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/particles/popups.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="253" column="26" lean-forward="false" selection-start-line="253" selection-start-column="26" selection-end-line="253" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/particles-data/clouds.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/pages/_pages.sass">
+    <entry file="file://$PROJECT_DIR$/src/js/vendor/MorphSVGPlugin.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -752,26 +666,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/intro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="59" lean-forward="false" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/clouds.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/vendor/SplitText.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/vendor/DrawSVGPlugin.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/vendor/ScrambleTextPlugin.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="62" column="22" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/temp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds/birds_t2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds/birds_t4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds/birds_t1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/birds/birds_t3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/particles-data/eagle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/pixi-locations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="378" column="12" lean-forward="true" selection-start-line="378" selection-start-column="12" selection-end-line="378" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/pages/_main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+        <state relative-caret-position="322">
+          <caret line="728" column="34" lean-forward="false" selection-start-line="728" selection-start-column="34" selection-end-line="728" selection-end-column="34" />
           <folding />
         </state>
       </provider>

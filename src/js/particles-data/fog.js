@@ -6,16 +6,8 @@ export default {
 				"time": 0
 			},
 			{
-				"value": 1,
-				"time": 0.25
-			},
-			{
-				"value": 0,
+				"value": 0.2,
 				"time": 0.5
-			},
-			{
-				"value": 1,
-				"time": 0.75
 			},
 			{
 				"value": 0,
@@ -26,50 +18,50 @@ export default {
 	},
 	"scale": {
 		"start": 1,
-		"end": 0.1,
-		"minimumScaleMultiplier": 1
+		"end": 2,
+		"minimumScaleMultiplier": 0.5
 	},
 	"color": {
 		"start": "#ffffff",
-		"end": "#fffd70"
+		"end": "#ffffff"
 	},
 	"speed": {
-		"start": 2,
-		"end": 5,
-		"minimumSpeedMultiplier": 1
+		"start": 60,
+		"end": 30,
+		"minimumSpeedMultiplier": 0.85
 	},
 	"acceleration": {
-		"x": -0.2,
-		"y": 0.3
+		"x": 0,
+		"y": 0
 	},
 	"maxSpeed": 0,
 	"startRotation": {
-		"min": 1,
-		"max": 1
+		"min": 180,
+		"max": 180
 	},
 	"noRotation": false,
 	"rotationSpeed": {
-		"min": 0,
-		"max": 0
+		"min": 1,
+		"max": 2
 	},
 	"lifetime": {
-		"min": 8,
-		"max": 9
+		"min": 10,
+		"max": 10
 	},
-	"blendMode": "normal",
-	"frequency": 0.035,
+	"blendMode": "screen",
+	"frequency": 0.07,
 	"emitterLifetime": -1,
-	"maxParticles": 150,
+	"maxParticles": 400,
 	"pos": {
-		"x": 0,
-		"y": 0
+		"x": -10,
+		"y": 10
 	},
 	"addAtBack": false,
 	"spawnType": "rect",
 	"spawnRect": {
 		"x": 0,
 		"y": 0,
-		"w": 1920,
-		"h": 700
+		"w": 2000,
+		"h": 850
 	}
 }

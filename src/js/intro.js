@@ -27,7 +27,7 @@ $(function () {
 		});
 
 		app.loader
-			.add(`${__app.TEMPLATE_URI}/images/age/asky.png`)
+			.add(`${__app.TEMPLATE_URI}/images/age/asky.jpg`)
 			.add(`${__app.TEMPLATE_URI}/images/age/amont.png`)
 			.add(`${__app.TEMPLATE_URI}/images/age/ahill.png`)
 			.add(`${__app.TEMPLATE_URI}/images/age/agrass.png`)
@@ -55,6 +55,7 @@ function resize() {
 
 function handleLoadComplete(loader, resources) {
 	$('.age').fadeIn();
+	// $('.footer .hide').removeClass('hide');
 	let resKeys = Object.keys(resources);
 
 	let age = [
