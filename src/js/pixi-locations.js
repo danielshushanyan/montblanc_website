@@ -223,7 +223,6 @@ function handleLoadComplete(loader, resources) {
 	let smoke = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/smoke.png`);
 	let star = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/light.png`);
 	let shootingStar = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/shooting_star.png`);
-	let eagle = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/eagle.png`);
 	let fog = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/fog.png`);
 
 	let emitterDesign = new Emitter(
