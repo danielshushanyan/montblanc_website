@@ -609,3 +609,144 @@
 
 		&:after
 			bottom: -70%
+			
+.product
+	overflow: hidden
+	position: relative
+	flex: 1 0 calc(100% - 155px)
+	background-color: $white
+	
+	&__bg
+		position: absolute
+		@include size(130%,100%)
+		background: url("../images/products/bg.png") 50% no-repeat
+		background-size: cover
+		will-change: transform
+		left: 0
+		top: 0
+		
+	&__wrapper
+		position: relative
+		left: 0
+		top: 0
+		@include size(100%,100vh)
+		
+	&__slide
+		display: flex
+		align-items: flex-end
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		
+		&--disable
+			.product__item
+				opacity: .3
+			
+		&--one
+			top: 45%
+			
+		&--pro
+			top: 43%
+			left: 98vw
+		
+	&__img
+		max-width: unset
+		
+		&--07
+			height: 66.1vh
+			@media all and (max-height: 820px)
+				height: 56.1vh
+		
+		&--1
+			height: 75.4vh
+			@media all and (max-height: 820px)
+				height: 65.4vh
+			
+	&__title
+		position: absolute
+		top: -10%
+		left: 50%
+		transform: translateX(-50%)
+		text-transform: uppercase
+		font-weight: 300
+		font-size: 250px
+		line-height: 110%
+		width: 842px
+		
+		@media all and (max-height: 820px)
+			font-size: 200px
+			text-align: center
+			width: 674px
+			top: 0
+		
+		@include bp($point-5)
+			width: 515px
+			font-size: 153px
+			
+	&__button
+		position: absolute
+		z-index: 10
+		top: 50%
+		transform: translateY(-50%) rotate(-90deg)
+		left: -133px
+		font-weight: 300
+		color: #4F5E72
+		letter-spacing: 0.03em
+		text-transform: uppercase
+		
+		@include bp($point-6)
+			left: -60px
+		
+		&:before
+			content: ''
+			position: absolute
+			left: 50%
+			top: 35px
+			transform: translateX(-50%) rotate(90deg)
+			background: url("../images/arrow.svg") no-repeat 50%
+			width: 10px
+			height: 15px
+			
+		&--reverse
+			opacity: 0
+			left: unset
+			right: -120px
+			
+			@include bp($point-6)
+				right: -90px
+				
+			&:before
+				top: -35px
+				transform: translateX(-50%) rotate(-90deg)
+		
+	&__item
+		position: relative
+		margin: 0 75px
+		height: 100%
+		display: flex
+		align-items: flex-end
+		
+	&__descr
+		width: 200px
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: calc(100% + 35px)
+		text-align: center
+		
+		p
+			font-family: $baseScndFont
+			line-height: 139%
+			color: #4f5e72
+			letter-spacing: -0.3px
+			
+		span
+			font-family: $baseScndFont
+			font-size: 14px
+			line-height: 130%
+			color: #4f5e72
+			display: inline-block
+			margin-top: 17px
+		
+		

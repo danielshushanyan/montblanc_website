@@ -45,6 +45,9 @@
 			background-color: $white
 			z-index: 5
 			
+		@include bp($point-7)
+			background-size: contain
+			
 	&__spinner
 		position: absolute
 		left: 50%
@@ -54,6 +57,9 @@
 		animation: spinner 1.5s infinite linear
 		will-change: transform
 		z-index: 2
+		
+		@media all and (max-height: 750px)
+			top: 60%
 		
 	&__number
 		position: absolute
@@ -67,6 +73,9 @@
 		text-align: center
 		text-transform: uppercase
 		z-index: 2
+		
+		@media all and (max-height: 750px)
+			top: 60%
 		
 @keyframes spinner
 	0%
@@ -895,13 +904,21 @@
 		transform: translate(-50%, -50%)
 		cursor: pointer
 		@include size(80px)
-		//display: flex
+		display: flex
 		align-items: center
 		justify-content: center
-		display: none
 		
 		@include bp($point-6)
-			left: 61vw
+			left: 85%
+			
+		@include bp($point-5)
+			left: 87%
+			
+		@include bp(1150px)
+			left: 70%
+			
+		@include bp($point-4)
+			left: 76%
 			
 		@include bp($point-3-low)
 			left: unset
