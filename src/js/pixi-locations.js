@@ -1,10 +1,11 @@
 import snowStorm from './particles-data/snow-storm';
 import snow from './particles-data/snow';
-import randomeParticles from './particles-data/randome-particles';
+import randomParticles from './particles-data/randome-particles';
 import stars from './particles-data/stars';
 import shootingStars from './particles-data/shooting-stars';
 import eagleParticle from './particles-data/eagle';
 import fogParticle from './particles-data/fog';
+import { Vec2d } from './vector2d'
 
 const canvas = document.getElementById('view');
 let _w = window.innerWidth;
@@ -13,8 +14,6 @@ const amplitude = 20;
 const allImagesArray = [];
 let displacementFilter = null;
 let displacementSprite = null;
-let frameCondition = false;
-let displacementFrame = null;
 let app;
 let loadedFiles = 0;
 window.activeLocation = 0;
@@ -99,18 +98,24 @@ function resize() {
 	for (let image of allImagesArray) {
 		resizeImages(image, app);
 	}
+
+	// resizeImages(locationNoteItems[2], app, true);
 }
 
-window.resizeImages = function(image, renderer) {
+window.resizeImages = function(image, renderer, isSmall) {
+	isSmall = isSmall || false;
+
 	let winProp = $(window).width() / $(window).height();
 	let imageProp = 2320 / 1305;
+	let height = 30;
+	let width = 80;
 
 	if (winProp > imageProp) {
-		image.width = $(window).width() + 80;
-		image.height = ($(window).width() / imageProp);
+		image.width = $(window).width() + (isSmall ? 0 : width);
+		image.height = ($(window).width() / imageProp) - (isSmall ? 60 : height);
 	} else {
-		image.height = $(window).height() + 30;
-		image.width = ($(window).height() * imageProp) + 80;
+		image.height = $(window).height() + (isSmall ? 0 : height);
+		image.width = ($(window).height() * imageProp) + (isSmall ? 0 : width);
 	}
 
 	image.anchor.set(0.5);
@@ -240,7 +245,7 @@ function handleLoadComplete(loader, resources) {
 	let emitterWheat = new Emitter(
 		locationsAlphaArray[1],
 		[smoke],
-		randomeParticles
+		randomParticles
 	);
 
 	let emitterEnd = new Emitter(
@@ -339,19 +344,6 @@ function handleLoadComplete(loader, resources) {
 	locationSpringItems[3].addChild(waveDisplacement);
 	locationSpringItems[3].filters = [waveDisplacementFilter];
 
-	class Vec2d {
-		constructor(x, y) {
-			this.x = x || 0;
-			this.y = y || 0;
-		}
-
-		rotate(radians) {
-			let ca = Math.cos(radians);
-			let sa = Math.sin(radians);
-			return new Vec2d(ca * this.x - sa * this.y, sa * this.x + ca * this.y);
-		}
-	}
-
 	let wind = new Vec2d(0.2, 0.2);
 
 	setInterval(() => {
@@ -359,20 +351,26 @@ function handleLoadComplete(loader, resources) {
 		wind = wind.rotate(direction);
 	}, 500);
 
-	app.ticker.add(function () {
-		waveDisplacement.x += wind.x;
-		waveDisplacement.y += wind.y;
-	});
-
 	let elapsed = Date.now();
 	const update = function(){
-
 		requestAnimationFrame(update);
 
 		let now = Date.now();
 		effectsArray[activeLocation] ? effectsArray[activeLocation].update((now - elapsed) * 0.001): effectsArray[activeLocation];
-		emitterEndShoot.update((now - elapsed) * 0.001);
-		emitterFog.update((now - elapsed) * 0.001);
+
+		if (activeLocation === 2) {
+			waveDisplacement.x += wind.x;
+			waveDisplacement.y += wind.y;
+		}
+
+		if (activeLocation === 3) {
+			emitterFog.update((now - elapsed) * 0.001);
+		}
+
+		if (activeLocation === 6) {
+			emitterEndShoot.update((now - elapsed) * 0.001);
+		}
+
 		elapsed = now;
 	};
 
@@ -400,25 +398,16 @@ function handleLoadComplete(loader, resources) {
 
 	// adding event listener for mouse move
 	window.addEventListener('mousemove',(e) => {
-		let RAF;
+		let w = app.renderer.screen.width/2;
+		let h = app.renderer.screen.height/2;
 
-		if (RAF) {
-			window.cancelAnimationFrame(RAF);
-		}
-
-		RAF = window.requestAnimationFrame(() => {
-			let w = app.renderer.screen.width/2;
-			let h = app.renderer.screen.height/2;
-
-			parallaxHome(w, h, e);
-			parallaxDesign(w, h, e);
-			parallaxSpring(w, h, e);
-			parallaxNote(w, h, e);
-			parallaxVertex(w, h, e);
-			parallaxWheat(w, h, e);
-			parallaxEnd(w, h, e);
-
-		})
+		parallaxHome(w, h, e);
+		parallaxDesign(w, h, e);
+		parallaxSpring(w, h, e);
+		parallaxNote(w, h, e);
+		parallaxVertex(w, h, e);
+		parallaxWheat(w, h, e);
+		parallaxEnd(w, h, e);
 	});
 }
 
@@ -432,22 +421,12 @@ function loadingEnd(loader, resource) {
 	}
 }
 
-function requestFrame() {
-	if (frameCondition) {
-		displacementFrame = window.requestAnimationFrame(requestFrame);
-	}
-}
-
 window.changeLocationContainer = function (activeLocationIndex) {
-	activeLocation = activeLocationIndex;
 	filterReverce();
 	const displacementAnim = {
 		x: 0,
 		spriteX: app.renderer.screen.width/2
 	};
-
-	frameCondition = true;
-	requestFrame();
 
 	const changeLocationAnim = new TimelineMax();
 	changeLocationAnim
@@ -473,11 +452,7 @@ window.changeLocationContainer = function (activeLocationIndex) {
 				changeLocationAnim.reverse();
 			}
 		});
-
-	changeLocationAnim.eventCallback('onComplete', function () {
-		frameCondition = false;
-		window.cancelAnimationFrame(displacementFrame);
-	})
+	activeLocation = activeLocationIndex;
 };
 
 function filterReverce() {

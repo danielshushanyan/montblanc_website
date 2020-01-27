@@ -7,10 +7,6 @@ let _h = window.innerHeight + 4;
 const alphaArray = [];
 const locationAgeItems = [];
 const amplitude = 20;
-let displacementFilter = null;
-let displacementSprite = null;
-let frameCondition = false;
-let displacementFrame = null;
 
 $(function () {
 	$('.age').each(function () {
@@ -33,6 +29,8 @@ $(function () {
 			.add(`${__app.TEMPLATE_URI}/images/age/agrass.png`)
 			.add(`${__app.TEMPLATE_URI}/images/filter.png`)
 			.load(handleLoadComplete);
+
+		window.addEventListener('resize', resize);
 	});
 
 	$('.js-age').on('click', function () {
@@ -42,8 +40,6 @@ $(function () {
 		$(location).attr('href', `http://${window.location.host}/`)
 	});
 });
-
-window.addEventListener('resize', resize);
 
 function resize() {
 	app.renderer.resize(window.innerWidth, window.innerHeight);
@@ -55,7 +51,6 @@ function resize() {
 
 function handleLoadComplete(loader, resources) {
 	$('.age').fadeIn();
-	// $('.footer .hide').removeClass('hide');
 	let resKeys = Object.keys(resources);
 
 	let age = [
@@ -68,20 +63,6 @@ function handleLoadComplete(loader, resources) {
 	createLoaction(age, locationAgeItems, app, alphaArray);
 
 	age = null;
-
-	displacementSprite = PIXI.Sprite.from(resources[resKeys[4]].texture);
-	displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
-	displacementSprite.anchor.set(0.5);
-	displacementSprite.position.set(app.renderer.screen.width/2, app.renderer.screen.height/2);
-	displacementSprite.renderable = false;
-
-	displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
-	displacementFilter.autoFit = true;
-	displacementFilter.scale.set(0);
-	displacementSprite.scale.x = 0.8;
-
-	app.stage.filters = [displacementFilter];
-	app.stage.addChild(displacementSprite);
 
 	let cloud1 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_1.png`);
 	let cloud2 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_2.png`);
@@ -107,76 +88,11 @@ function handleLoadComplete(loader, resources) {
 	update();
 
 	window.addEventListener('mousemove',(e) => {
-		let RAF;
+		let w = app.renderer.screen.width/2;
+		let h = app.renderer.screen.height/2;
 
-		if (RAF) {
-			window.cancelAnimationFrame(RAF);
-		}
-
-		RAF = window.requestAnimationFrame(() => {
-			let w = app.renderer.screen.width/2;
-			let h = app.renderer.screen.height/2;
-
-			parallaxAge(w, h, e);
-		})
+		parallaxAge(w, h, e);
 	});
-}
-
-function changeLocation(activeLocationIndex) {
-	filterReverce();
-	const displacementAnim = {
-		x: 0,
-		spriteX: app.renderer.screen.width/2
-	};
-
-	frameCondition = true;
-	requestFrame();
-
-	const changeLocationAnim = new TimelineMax();
-	changeLocationAnim
-		.to( displacementAnim, 1.5, {
-			x: 150,
-			spriteX: 500,
-			intensity: 4,
-			ease: Power4.easeIn,
-			onUpdate: function () {
-				displacementFilter.scale.x = displacementAnim.x;
-				displacementSprite.x = displacementAnim.spriteX;
-			},
-			onstart: function () {
-				locationsAlphaArray.map(function(item, i) {
-					if(activeLocationIndex === i) {
-						TweenMax.to(item, 1, {delay:1, alpha: 1, ease: Power4.easeInOut });
-					} else {
-						TweenMax.to(item, 1, {delay:1, alpha: 0, ease: Power4.easeInOut });
-					}
-				})
-			},
-			onComplete: function () {
-				changeLocationAnim.reverse();
-			}
-		});
-
-	changeLocationAnim.eventCallback('onComplete', function () {
-		frameCondition = false;
-		window.cancelAnimationFrame(displacementFrame);
-	})
-}
-
-function filterReverce() {
-	const displacementAnim2 = {
-		intensity: null
-	} ;
-
-	displacementAnim2.intensity = displacementFilter.scale.x;
-	TweenMax.to(displacementAnim2, 1, {
-		intensity: 0,
-		ease: Power4.easeOut,
-		onUpdate: function e() {
-			displacementFilter.scale.x = displacementAnim2.intensity;
-		}
-	});
-
 }
 
 function parallaxAge(w, h, e) {
