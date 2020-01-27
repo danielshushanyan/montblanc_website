@@ -318,7 +318,10 @@ $(function () {
 				'opacity':'0.2',
 				'cursor':'not-allowed'
 			});
-			bottom.css('opacity', '1');
+			bottom.css({
+				'opacity':'1',
+				'cursor':'pointer'
+			});
 		} else if (slideCount === index + 1) {
 			bottom.css({
 				'opacity':'0.2',
@@ -326,8 +329,14 @@ $(function () {
 			});
 			top.css('opacity', '1');
 		} else {
-			bottom.css('opacity', '1');
-			top.css('opacity', '1');
+			bottom.css({
+				'opacity':'1',
+				'cursor':'pointer'
+			});
+			top.css({
+				'opacity':'1',
+				'cursor':'pointer'
+			});
 		}
 	}
 
