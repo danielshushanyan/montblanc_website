@@ -6,10 +6,6 @@ export default {
 				"time": 0
 			},
 			{
-				"value": 1,
-				"time": 0.1
-			},
-			{
 				"value": 0.7,
 				"time": 0.5
 			},
@@ -49,11 +45,11 @@ export default {
 		"max": 0
 	},
 	"lifetime": {
-		"min": 2,
-		"max": 3
+		"min": 10,
+		"max": 15
 	},
 	"blendMode": "screen",
-	"frequency": 0.001,
+	"frequency": 0.038,
 	"emitterLifetime": -1,
 	"maxParticles": 40,
 	"pos": {

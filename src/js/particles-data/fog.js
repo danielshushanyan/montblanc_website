@@ -7,6 +7,10 @@ export default {
 			},
 			{
 				"value": 0.2,
+				"time": 0.1
+			},
+			{
+				"value": 0.2,
 				"time": 0.5
 			},
 			{
