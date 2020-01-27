@@ -143,6 +143,20 @@ $(function () {
 				}
 			}
 		});
+
+		$('.pointer__arr--bottom').on('click',function () {
+			if(!locker || swiper.realIndex === 6) return false;
+			locker = false;
+			pageContentAnimation(swiper.realIndex, swiper.realIndex+1);
+			changeLocationContainer(swiper.realIndex + 1);
+		});
+
+		$('.pointer__arr--top').on('click',function () {
+			if(!locker || swiper.realIndex === 0) return false;
+			locker = false;
+			pageContentAnimation(swiper.realIndex, swiper.realIndex-1);
+			changeLocationContainer(swiper.realIndex - 1);
+		});
 	});
 
 	// initialising slider and setting active slider depending on location hash
@@ -300,10 +314,16 @@ $(function () {
 		const bottom = $('.pointer__arr--bottom');
 
 		if (index === 0 ) {
-			top.css('opacity', '0.2');
+			top.css({
+				'opacity':'0.2',
+				'cursor':'not-allowed'
+			});
 			bottom.css('opacity', '1');
 		} else if (slideCount === index + 1) {
-			bottom.css('opacity', '0.2');
+			bottom.css({
+				'opacity':'0.2',
+				'cursor':'not-allowed'
+			});
 			top.css('opacity', '1');
 		} else {
 			bottom.css('opacity', '1');

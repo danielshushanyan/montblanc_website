@@ -48,43 +48,37 @@ $(function () {
 			.add(`${__app.TEMPLATE_URI}/images/design/tree.png`)
 			.add(`${__app.TEMPLATE_URI}/images/design/bott.png`) // Design nature END // index 4
 			.add(`${__app.TEMPLATE_URI}/images/wheat/wsky.png`) // Wheat  // index 5
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wwheat.png`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wwheat_front.png`)
 			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle_back.png`)
 			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle.png`)
 			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle_front.png`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront_left_b.png`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront_left_f.png`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront_right_b.png`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront_right_f.png`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wfog.png`) // Wheat END // index 15
-			.add(`${__app.TEMPLATE_URI}/images/spring/ssky.jpg`) // Spring // index 16
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront.png`) // Wheat END // index 9
+			.add(`${__app.TEMPLATE_URI}/images/spring/ssky.jpg`) // Spring // index 10
 			.add(`${__app.TEMPLATE_URI}/images/spring/smont.png`)
 			.add(`${__app.TEMPLATE_URI}/images/spring/shill.png`)
 			.add(`${__app.TEMPLATE_URI}/images/spring/swater.png`)
 			.add(`${__app.TEMPLATE_URI}/images/spring/sbott.png`)
-			.add(`${__app.TEMPLATE_URI}/images/spring/sfog.png`) // Spring END // index 22
-			.add(`${__app.TEMPLATE_URI}/images/note/nsky.jpg`) // Note // index 23
+			.add(`${__app.TEMPLATE_URI}/images/spring/sfog.png`) // Spring END // index 15
+			.add(`${__app.TEMPLATE_URI}/images/note/nsky.jpg`) // Note // index 16
 			.add(`${__app.TEMPLATE_URI}/images/note/nmont.png`)
 			.add(`${__app.TEMPLATE_URI}/images/note/nhill.png`)
-			.add(`${__app.TEMPLATE_URI}/images/note/nbott.png`) // Note END // index 26
-			.add(`${__app.TEMPLATE_URI}/images/vertex/vsky.jpg`) // Vertex // index 27
+			.add(`${__app.TEMPLATE_URI}/images/note/nbott.png`) // Note END // index 19
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vsky.jpg`) // Vertex // index 20
 			.add(`${__app.TEMPLATE_URI}/images/vertex/vmont.png`)
 			.add(`${__app.TEMPLATE_URI}/images/vertex/vbott.png`)
 			.add(`${__app.TEMPLATE_URI}/images/vertex/vfog.png`)
 			.add(`${__app.TEMPLATE_URI}/images/vertex/vsnow.png`)
-			.add(`${__app.TEMPLATE_URI}/images/vertex/vfrozen.png`) // Vertex // index 32
-			.add(`${__app.TEMPLATE_URI}/images/home/hmont.jpg`) // Home // index 33
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vfrozen.png`) // Vertex // index 25
+			.add(`${__app.TEMPLATE_URI}/images/home/hmont.jpg`) // Home // index 26
 			.add(`${__app.TEMPLATE_URI}/images/home/hcity.png`)
 			.add(`${__app.TEMPLATE_URI}/images/home/hfog.png`)
 			.add(`${__app.TEMPLATE_URI}/images/home/hmanson.png`)
 			.add(`${__app.TEMPLATE_URI}/images/home/hbott.png`)
 			.add(`${__app.TEMPLATE_URI}/images/home/hlight.png`)
 			.add(`${__app.TEMPLATE_URI}/images/home/hsun.png`)
-			.add(`${__app.TEMPLATE_URI}/images/home/hgrass.png`) // Home End // index 41
-			.add(`${__app.TEMPLATE_URI}/images/filter.png`) // DMap // index 31
-			.add(`${__app.TEMPLATE_URI}/images/end/end.jpg`) // End // index 33
-			.add(`${__app.TEMPLATE_URI}/images/wave_d.png`) // DMapWave // index 34
+			.add(`${__app.TEMPLATE_URI}/images/home/hgrass.png`) // Home End // index 33
+			.add(`${__app.TEMPLATE_URI}/images/filter.png`) // DMap // index 34
+			.add(`${__app.TEMPLATE_URI}/images/end/end.jpg`) // End // index 35
+			.add(`${__app.TEMPLATE_URI}/images/wave_d.png`) // DMapWave // index 36
 			.on('progress', loadingEnd)
 			.load(handleLoadComplete);
 	});
@@ -99,7 +93,7 @@ function resize() {
 		resizeImages(image, app);
 	}
 
-	// resizeImages(locationNoteItems[2], app, true);
+	resizeImages(locationNoteItems[2], app, true);
 }
 
 window.resizeImages = function(image, renderer, isSmall) {
@@ -140,52 +134,46 @@ function handleLoadComplete(loader, resources) {
 		new PIXI.Sprite(resources[resKeys[7]].texture),
 		new PIXI.Sprite(resources[resKeys[8]].texture),
 		new PIXI.Sprite(resources[resKeys[9]].texture),
+	];
+
+	let spring = [
 		new PIXI.Sprite(resources[resKeys[10]].texture),
 		new PIXI.Sprite(resources[resKeys[11]].texture),
 		new PIXI.Sprite(resources[resKeys[12]].texture),
 		new PIXI.Sprite(resources[resKeys[13]].texture),
 		new PIXI.Sprite(resources[resKeys[14]].texture),
-		new PIXI.Sprite(resources[resKeys[15]].texture),
-	];
-
-	let spring = [
-		new PIXI.Sprite(resources[resKeys[16]].texture),
-		new PIXI.Sprite(resources[resKeys[17]].texture),
-		new PIXI.Sprite(resources[resKeys[18]].texture),
-		new PIXI.Sprite(resources[resKeys[19]].texture),
-		new PIXI.Sprite(resources[resKeys[20]].texture),
-		new PIXI.Sprite(resources[resKeys[21]].texture)
+		new PIXI.Sprite(resources[resKeys[15]].texture)
 	];
 
 	let note = [
+		new PIXI.Sprite(resources[resKeys[16]].texture),
+		new PIXI.Sprite(resources[resKeys[17]].texture),
+		new PIXI.Sprite(resources[resKeys[18]].texture),
+		new PIXI.Sprite(resources[resKeys[19]].texture)
+	];
+
+	let vertex = [
+		new PIXI.Sprite(resources[resKeys[20]].texture),
+		new PIXI.Sprite(resources[resKeys[21]].texture),
 		new PIXI.Sprite(resources[resKeys[22]].texture),
 		new PIXI.Sprite(resources[resKeys[23]].texture),
 		new PIXI.Sprite(resources[resKeys[24]].texture),
 		new PIXI.Sprite(resources[resKeys[25]].texture)
 	];
 
-	let vertex = [
+	let home = [
 		new PIXI.Sprite(resources[resKeys[26]].texture),
 		new PIXI.Sprite(resources[resKeys[27]].texture),
 		new PIXI.Sprite(resources[resKeys[28]].texture),
 		new PIXI.Sprite(resources[resKeys[29]].texture),
 		new PIXI.Sprite(resources[resKeys[30]].texture),
-		new PIXI.Sprite(resources[resKeys[31]].texture)
-	];
-
-	let home = [
+		new PIXI.Sprite(resources[resKeys[31]].texture),
 		new PIXI.Sprite(resources[resKeys[32]].texture),
 		new PIXI.Sprite(resources[resKeys[33]].texture),
-		new PIXI.Sprite(resources[resKeys[34]].texture),
-		new PIXI.Sprite(resources[resKeys[35]].texture),
-		new PIXI.Sprite(resources[resKeys[36]].texture),
-		new PIXI.Sprite(resources[resKeys[37]].texture),
-		new PIXI.Sprite(resources[resKeys[38]].texture),
-		new PIXI.Sprite(resources[resKeys[39]].texture),
 	];
 
 	let end = [
-		new PIXI.Sprite(resources[resKeys[41]].texture)
+		new PIXI.Sprite(resources[resKeys[35]].texture)
 	];
 
 	createLoaction(home, locationHomeItems, app, locationsAlphaArray); // Location Home
@@ -207,7 +195,7 @@ function handleLoadComplete(loader, resources) {
 	//Effects
 
 	//Displacement
-	displacementSprite = PIXI.Sprite.from(resources[resKeys[40]].texture);
+	displacementSprite = PIXI.Sprite.from(resources[resKeys[34]].texture);
 	displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
 	displacementSprite.anchor.set(0.5);
 	displacementSprite.position.set(app.renderer.screen.width/2, app.renderer.screen.height/2);
@@ -334,7 +322,7 @@ function handleLoadComplete(loader, resources) {
 
 	const effectsArray = [emitterEagle, emitterWheat, emitterEagleSpring, false, emitterDesign, emitterVertex, emitterEnd];
 
-	const waveDisplacement = PIXI.Sprite.from(resources[resKeys[42]].texture);
+	const waveDisplacement = PIXI.Sprite.from(resources[resKeys[36]].texture);
 	const waveDisplacementFilter = new PIXI.filters.DisplacementFilter(waveDisplacement);
 	waveDisplacement.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
 	waveDisplacement.scale.set(0.8);
@@ -378,8 +366,8 @@ function handleLoadComplete(loader, resources) {
 	//Particles End
 
 	//Wheat Rotation
-	for (let i = 3; i < 11; i++) {
-		if (i !== 4) {
+	for (let i = 1; i < 4; i++) {
+		if (i !== 2) {
 			TweenMax.fromTo(locationWheatItems[i].children[0].skew, 5, {
 					x: -0.02,
 				},
@@ -663,26 +651,6 @@ function parallaxWheat(w, h, e) {
 	TweenMax.to(locationWheatItems[4], 0.3, {
 		x: (w - e.clientX) / (amplitude + 40),
 		y: (h - e.clientY) / (amplitude + 40),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[5], 0.3, {
-		x: (w - e.clientX) / (amplitude + 80),
-		y: (h - e.clientY) / (amplitude + 80),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[6], 0.3, {
-		x: (w - e.clientX) / (amplitude + 90),
-		y: (h - e.clientY) / (amplitude + 90),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[7], 0.3, {
-		x: (w - e.clientX) / (amplitude + 90),
-		y: (h - e.clientY) / (amplitude + 90),
-		ease: Circ.easeOut
-	});
-	TweenMax.to(locationWheatItems[8], 0.3, {
-		x: (w - e.clientX) / (amplitude + 90),
-		y: (h - e.clientY) / (amplitude + 90),
 		ease: Circ.easeOut
 	});
 }

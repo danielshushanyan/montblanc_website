@@ -6,8 +6,8 @@ export default {
 				"time": 0
 			},
 			{
-				"value": 0.7,
-				"time": 0.05
+				"value": 1,
+				"time": 0.1
 			},
 			{
 				"value": 0.7,
@@ -49,11 +49,11 @@ export default {
 		"max": 0
 	},
 	"lifetime": {
-		"min": 5,
-		"max": 7
+		"min": 2,
+		"max": 3
 	},
 	"blendMode": "screen",
-	"frequency": 0.028,
+	"frequency": 0.001,
 	"emitterLifetime": -1,
 	"maxParticles": 40,
 	"pos": {

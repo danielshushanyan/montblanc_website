@@ -42,7 +42,7 @@ $(function () {
 	});
 
 	const menuSlide = new Swiper('.menu-slide', {
-		slidesPerView: 'auto',
+		slidesPerView: 2.5,
 		centeredSlides: true,
 		direction: 'vertical',
 		spaceBetween: 120,
