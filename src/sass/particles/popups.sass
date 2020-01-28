@@ -497,30 +497,30 @@
 
 	&__images
 		display: flex
+		flex-wrap: wrap
+		padding-left: 16px
+		
+		@include bp($point-3)
+			padding-left: 0
 
 		&-item
 			display: flex
 			align-items: center
 			justify-content: center
-			@include size(96px)
+			@include size(80px)
+			flex: 0 0 80px
 			background-color: #F6F6F6
 			border-radius: 50%
 
 			@include bp($point-3-low)
-				@include size(63px)
-				flex: 0 0 63px
+				@include size(60px)
+				flex: 0 0 60px
 
 			&:not(:last-child)
-				margin: 0 52px 0 0
+				margin: 0 10px 10px 0
 
 				@include bp($point-3-low)
-					margin: 0 8px 0 0
-
-			&:first-child
-				margin-left: 16px
-
-				@include bp($point-3-low)
-					margin-left: 0
+					margin: 0 8px 8px 0
 
 .blend
 	&__title
