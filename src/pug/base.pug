@@ -71,6 +71,11 @@ html(class=html.classList)&attributes(html.attrs)
 			window.__app = {"TEMPLATE_URI": ".."};
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
+		script.
+			var isIE = /*@cc_on!@*/false || !!document.documentMode;
+			if (isIE) {
+				window.location.href = "ie.html";
+			}
 		.page
 			block header
 				include template/header
