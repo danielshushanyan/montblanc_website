@@ -245,6 +245,7 @@
 		transform: translate(17.5%, -33%)
 		display: flex
 		flex-direction: column
+		max-width: 550px
 		
 		&:after
 			content: ''
@@ -1043,6 +1044,12 @@
 			left: 30px
 			top: 20%
 			transform: translate(0, 0)
+			
+		@media all and (max-height: 850px)
+			top: 40vh
+			
+		@media all and (max-height: 700px)
+			top: 20vh
 		
 		@include bp($point-3)
 			max-width: 350px
@@ -1107,9 +1114,9 @@
 		background: linear-gradient(132.15deg, rgba(241, 249, 255, 0.79) 13.6%, rgba(188, 227, 255, 0.3) 97.45%)
 		border-radius: 12px
 		position: absolute
-		right: -21%
-		bottom: -250px
-		transform: translate(0)
+		right: -18%
+		bottom: 0
+		transform: translate(0,105%)
 		z-index: 13
 		
 		@include bp($point-3-low)
@@ -1160,7 +1167,7 @@
 	&__cocktail
 		position: absolute
 		left: 85.7%
-		top: 66%
+		bottom: -5%
 		transform: translate(-50%, -50%)
 		display: flex
 		flex-direction: column
@@ -1169,11 +1176,6 @@
 		padding: 18px 14px 28px
 		text-align: center
 		
-		@include bp($point-5)
-			left: 30px
-			top: 41%
-			transform: translate(0, 0)
-			
 		@include bp($point-3-low)
 			width: 260px
 			margin: 0 30px 50px
