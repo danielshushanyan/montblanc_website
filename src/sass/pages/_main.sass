@@ -216,11 +216,6 @@
 	background-size: cover
 	position: relative
 	
-
-	@include bp($point-4)
-		background: url("../images/temp_bg/01.jpg") 42% no-repeat
-		background-size: cover
-		
 	@include bp($point-3-low)
 		background: url("../images/bg_mobile/bg_one_767.jpg") top center no-repeat
 		background-size: cover
@@ -368,10 +363,6 @@
 	background-size: cover
 	position: relative
 	
-	@include bp($point-3)
-		background: url("../images/temp_bg/02.jpg") 80% no-repeat
-		background-size: cover
-		
 	@include bp($point-3-low)
 		background: url("../images/bg_mobile/bg_two_767.jpg") top center no-repeat
 		background-size: cover
@@ -491,19 +482,14 @@
 		@include bp($point-4)
 			right: -7%
 			
-		@include bp($point-3-low)
-			position: unset
-			margin: 30px 0 0
+		@include bp($point-3)
+			right: -35%
 
 .three
 	@include size(100%, 100vh)
 	background-size: cover
 	position: relative
 	
-	@include bp($point-3)
-		background: url("../images/temp_bg/03.jpg") 58% no-repeat
-		background-size: cover
-		
 	@include bp($point-3-low)
 		background: url("../images/bg_mobile/bg_three_767.jpg") top center no-repeat
 		background-size: cover
@@ -546,19 +532,14 @@
 		@include bp($point-4)
 			left: 40%
 			
+		@include bp(1024px)
+			top: 63%
+			
 		@include bp($point-3)
 			left: 30px
 			top: 53%
 			transform: translate(0, 0)
 			max-width: 400px
-			
-		@include bp($point-3-low)
-			transform: translate(0, 0)
-			position: unset
-			justify-content: flex-start
-			align-items: flex-start
-			padding: 0 30px 100px
-			text-align: left
 		
 		&:after
 			content: ''
@@ -662,10 +643,7 @@
 	background-size: cover
 	position: relative
 
-	@include bp($point-3)
-		background: url("../images/temp_bg/04.jpg") 40% no-repeat
-		background-size: cover
-		
+	
 	@include bp($point-3-low)
 		background: url("../images/bg_mobile/bg_two_767.jpg") top center no-repeat
 		background-size: cover
@@ -798,11 +776,7 @@
 			
 		@include bp($point-3)
 			right: unset
-			left: 0
-			
-		@include bp($point-3-low)
-			position: unset
-			margin: 30px 0 0
+			left: -40%
 			
 	&__fog
 		@include size(100%)
@@ -857,10 +831,6 @@
 	background-size: cover
 	position: relative
 	
-	@include bp($point-3)
-		background: url("../images/temp_bg/05.jpg") 56% no-repeat
-		background-size: cover
-		
 	@include bp($point-3-low)
 		background: url("../images/bg_mobile/bg_five_767.jpg") top center no-repeat
 		background-size: cover
@@ -1006,11 +976,7 @@
 		justify-content: center
 		
 		@include bp($point-3)
-			right: 0
-			
-		@include bp($point-3-low)
-			position: unset
-			margin: 30px 0 0
+			right: -40%
 	
 .six
 	@include size(100%, 100vh)
@@ -1158,11 +1124,7 @@
 		justify-content: center
 		
 		@include bp($point-3)
-			right: 0
-			
-		@include bp($point-3-low)
-			position: unset
-			margin: 30px 0 0
+			right: -40%
 		
 	&__cocktail
 		position: absolute

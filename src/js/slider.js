@@ -144,6 +144,35 @@ $(function () {
 			}
 		});
 
+		$('.section').swipe({
+			swipe: function (event, direction) {
+				if(lockLocationsTransition) {
+					if (direction === 'left' || direction === 'up') {
+						if(!locker) {
+							return false
+						}
+						if (swiper.slides.length > swiper.realIndex + 1) {
+							locker = false;
+							pageContentAnimation(swiper.realIndex, swiper.realIndex+1);
+							changeLocationContainer(swiper.realIndex + 1);
+						}
+					}
+					else if (direction === 'right' || direction === 'down') {
+						if(!locker) {
+							return false
+						}
+						if (swiper.realIndex > 0) {
+							locker = false;
+							pageContentAnimation(swiper.realIndex, swiper.realIndex-1);
+							changeLocationContainer(swiper.realIndex - 1);
+						}
+					}
+				}
+			},
+			threshold:0,
+			excludedElements: '.one__btn,.two__btn,.three__btn,.four__btn,.five__btn,.six__btn,.end__btn,.five__btn-3d,.six__cocktail'
+		});
+
 		$('.pointer__arr--bottom').on('click',function () {
 			if(!locker || swiper.realIndex === 6) return false;
 			locker = false;

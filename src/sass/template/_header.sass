@@ -131,8 +131,8 @@
 			justify-content: center
 			height: 100%
 			
-			@include bp($point-3-low)
-				margin: 0 0 0 48px
+			@include bp(1024px)
+				margin: 0
 		
 		&-item
 			overflow: hidden
@@ -148,7 +148,7 @@
 			font-feature-settings: 'pnum' on, 'lnum' on, 'salt' on
 			margin: 0 60px 0 0
 			
-			@include bp($point-3-low)
+			@include bp(1024px)
 				font-size: 14px
 				margin: 0 20px 0 0
 			
@@ -165,8 +165,9 @@
 			padding: 22px 0
 			cursor: pointer
 			
-			@include bp($point-3-low)
+			@include bp(1024px)
 				padding: 13px
+				font-size: 14px
 			
 			&--active
 				opacity: 0.4
@@ -180,6 +181,9 @@
 				content: ''
 				background-color: #005FAB
 				will-change: transform
+				
+				@include bp(1024px)
+					bottom: 14px
 		
 			&:after
 				transition: transform .8s cubic-bezier(.165,.84,.44,1)
@@ -231,6 +235,9 @@
 		
 	&__empty
 		flex: 0 0 800px
+		
+		@include bp(1024px)
+			flex: 0 0 500px
 		
 .hide
 	opacity: 0

@@ -2,7 +2,9 @@ $(function () {
 	const timeLineMenu = new TimelineMax({paused: true});
 	const selectItem = new TimelineMax({paused: true});
 	const menu = $('.header__nav').innerWidth();
-	let backDrop = -(100 - (800/menu)*100);
+	let windowWidth = $(window).width();
+	let backdropSize = windowWidth <= 1025 ? 500: 800;
+	let backDrop = -(100 - (backdropSize/menu)*100);
 	let index = prevIndex;
 	let locker = true;
 	let selectFromMenu = false;

@@ -8,8 +8,9 @@ import fogParticle from './particles-data/fog';
 import { Vec2d } from './vector2d'
 
 const canvas = document.getElementById('view');
-let _w = window.innerWidth;
-let _h = window.innerHeight + 4;
+let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+let _w = (iOS) ? screen.availWidth : window.innerWidth;
+let _h = (iOS) ? screen.availHeight + 4 : window.innerHeight + 4;
 const amplitude = 20;
 const allImagesArray = [];
 let displacementFilter = null;
@@ -87,7 +88,9 @@ $(function () {
 window.addEventListener('resize', resize);
 
 function resize() {
-	app.renderer.resize(window.innerWidth, window.innerHeight);
+	_w = (iOS) ? screen.availWidth : window.innerWidth;
+	_h = (iOS) ? screen.availHeight + 4 : window.innerHeight + 4;
+	app.renderer.resize(_w, _h);
 
 	for (let image of allImagesArray) {
 		resizeImages(image, app);
@@ -98,20 +101,21 @@ function resize() {
 
 window.resizeImages = function(image, renderer, isSmall) {
 	isSmall = isSmall || false;
+	_w = (iOS) ? screen.availWidth : window.innerWidth;
+	_h = (iOS) ? screen.availHeight + 4 : window.innerHeight + 4;
 
-	let winProp = $(window).width() / $(window).height();
+	let winProp = _w / _h;
 	let imageProp = 2320 / 1305;
 	let height = 30;
 	let width = 80;
 
 	if (winProp > imageProp) {
-		image.width = $(window).width() + (isSmall ? 0 : width);
-		image.height = ($(window).width() / imageProp) - (isSmall ? 60 : height);
+		image.width = _w + (isSmall ? 0 : width);
+		image.height = (_w / imageProp) - (isSmall ? 60 : height);
 	} else {
-		image.height = $(window).height() + (isSmall ? 0 : height);
-		image.width = ($(window).height() * imageProp) + (isSmall ? 0 : width);
+		image.height = _h + (isSmall ? 0 : height);
+		image.width = (_h * imageProp) + (isSmall ? 0 : width);
 	}
-
 	image.anchor.set(0.5);
 	image.position.set(renderer.renderer.screen.width/2, renderer.renderer.screen.height/2);
 };

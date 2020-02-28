@@ -88,7 +88,7 @@ section
 	z-index: 1
 	will-change: transform
 	
-	@media screen and (max-device-width: 768px)
+	@media screen and (max-device-width: 1024px)
 		display: none
 	
 	&--outer
@@ -119,6 +119,9 @@ section
 		transition: all 0.3s ease-out
 		will-change: transition
 		opacity: 0.5
+		
+		@include bp(1024px)
+			padding: 0 50px
 		
 		&-active
 			transform: scale(1)

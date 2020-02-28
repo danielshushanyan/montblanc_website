@@ -61,6 +61,15 @@
 
 	&.js-popup-opened
 		transform: translateY(0)
+		
+#blend,
+#bottle,
+#cocktail
+	.js-follower
+		background-color: $white
+		border-radius: 50%
+		line
+			stroke: #4F5E72
 
 #video
 	&.popup
@@ -209,15 +218,13 @@
 
 		&-icon
 			@include size(50px)
+			display: none
 
 			&--left
 				margin-left: auto
 
 			&--right
 				margin-right: auto
-
-			@include bp($point-5, min)
-				display: none
 
 		&-img
 			z-index: 1
@@ -272,6 +279,9 @@
 				.content__bottle-line--left
 					width: 4vw
 					right: -110px
+					
+					@include bp(1024px)
+						right: -51px
 
 			&--right
 				left: 76.3%
@@ -294,11 +304,9 @@
 			letter-spacing: 0.1em
 			text-transform: uppercase
 			font-feature-settings: 'salt' on
-
-			display: none
-
-			@include bp($point-5, min)
-				display: block
+			
+			@include bp(1024px)
+				font-size: 22px
 
 		&-text
 			max-width: 387px
@@ -307,11 +315,9 @@
 			line-height: 160%
 			letter-spacing: 0.02em
 			font-feature-settings: 'salt' on
-
-			display: none
-
-			@include bp($point-5, min)
-				display: block
+			
+			@include bp(1024px)
+				font-size: 14px
 
 			&--strong
 				font-weight: 600
@@ -325,11 +331,6 @@
 			top: 0
 			@include size(8.2vw,1px)
 			border: 1px solid $white
-
-			display: none
-
-			@include bp($point-5, min)
-				display: block
 
 			&--left
 				top: 35px
