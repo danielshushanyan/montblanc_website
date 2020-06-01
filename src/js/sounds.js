@@ -40,7 +40,6 @@ $(function () {
 			soundIsMuted = false;
 			sound.volume(0);
 			bg.volume(0);
-			soundArray[prevIndex].volume(0);
 		}
 	}
 });
