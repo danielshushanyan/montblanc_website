@@ -46,30 +46,30 @@ $(function () {
 	});
 
 	window.soundArray = [slideOne,slideTwo,slideThree,slideFour,slideFive,slideSix];
-
+	const count = {val:24};
 	counterAnimation
 		.set('.counter-circle', {transformOrigin: 'center center'})
 		.append('homeland')
 		.to('.counter-circle', 1,{x: 0, y: 0, ease: Circ.easeInOut})
-		.to('.count__num', 1,{scrambleText:{text:'24', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to(count,1,{val:24,roundProps:"val",onUpdate:setNumeberOnUpdate},'-=1')
 		.append('wheat')
 		.to('.counter-circle', 1,{x: 8, y: -3})
-		.to('.count__num', 1,{scrambleText:{text:'65', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to(count,1,{val:65,roundProps:"val",onUpdate:setNumeberOnUpdate},'-=1')
 		.append('spring')
 		.to('.counter-circle', 1,{x: 15, y: -7})
-		.to('.count__num', 1,{scrambleText:{text:'74', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to(count,1,{val:74,roundProps:"val",onUpdate:setNumeberOnUpdate},'-=1')
 		.append('alps')
 		.to('.counter-circle', 1,{x: 33, y: -20})
-		.to('.count__num', 1,{scrambleText:{text:'1252', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to(count,1.5,{val:1252,roundProps:"val",onUpdate:setNumeberOnUpdate},'-=1')
 		.append('design')
 		.to('.counter-circle', 1,{x: 49, y: -34})
-		.to('.count__num', 1,{scrambleText:{text:'3842', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to(count,1.5,{val:3842,roundProps:"val",onUpdate:setNumeberOnUpdate},'-=1')
 		.append('vertex')
 		.to('.counter-circle', 1,{x: 71, y: -49})
-		.to('.count__num', 1,{scrambleText:{text:'4810', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to(count,1.5,{val:4810,roundProps:"val",onUpdate:setNumeberOnUpdate},'-=1')
 		.append('story')
 		.to('.counter-circle', 1,{x: 71, y: -49})
-		.to('.count__num', 1,{scrambleText:{text:'4810', chars: newChars, revealDelay:0.2, speed:0.5}},'-=1')
+		.to(count,1.5,{val:4810,roundProps:"val",onUpdate:setNumeberOnUpdate},'-=1')
 		.append('infinity')
 		.to('.counter-circle', 0.5,{opacity: 0, ease: Circ.easeInOut})
 		.to('.count__num', 0.5,{opacity: 0, ease: Circ.easeInOut},'-=0.5')
@@ -96,6 +96,10 @@ $(function () {
 			ease: Circ.easeInOut
 		},'-=1')
 		.append('end');
+
+	function setNumeberOnUpdate() {
+		$('.count__num').text(count.val)
+	}
 
 	function initSwiper() {
 		if(screenWidth >= 768 && swiper === undefined) {

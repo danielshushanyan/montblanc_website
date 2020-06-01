@@ -61,44 +61,40 @@
 
 	&.js-popup-opened
 		transform: translateY(0)
-		
-#blend,
-#bottle,
+
+#video,
 #cocktail
-	.js-follower
-		background-color: $white
-		border-radius: 50%
 		line
 			stroke: #4F5E72
+			
+#video,
+#cocktail,
+#bottle,
+#products,
+#blend
+	.action
+		&__icon
+			display: none
+		
+		&__close
+			position: fixed
+			top: 20px
+			right: 20px
+		
+		&__line
+			display: none
+	
+	.popup
+		&__action
+			flex: unset
+			padding: 0
 
+#blend,
 #video
-	&.popup
-		@include bp($point-3-low)
-			height: auto
-
-	.popup__container
-		@include bp($point-3-low)
-			margin: 76px 0 0
+	.popup
+		&__container
 			flex: 0 0 100%
 
-#blend
-	.popup__action
-		position: absolute
-		left: 0
-		top: 0
-		height: 100%
-
-		@include bp($point-3-low)
-			height: auto
-
-	.popup__container
-		flex: 0 0 100%
-
-		@include bp($point-3-low)
-			flex-direction: column
-
-	.action__line
-		border-color: $white
 
 #bottle
 	background: url("../images/bg_popup.jpg") center no-repeat
@@ -150,7 +146,7 @@
 		flex-direction: column
 
 	&__video
-		@include size(100%, auto)
+		width: 100vw
 
 		&-bar
 			cursor: pointer
@@ -353,8 +349,8 @@
 		flex-direction: column
 		align-items: center
 		position: absolute
-		top: 50px
-		right: 65px
+		top: 40px
+		left: 20px
 
 		&-text
 			margin-top: 25px
@@ -370,14 +366,14 @@
 			@include size(63px,41px)
 
 .cocktail
-	padding: 0 37px 0 0
+	padding: 91px 37px 0 0
 	position: relative
 	overflow: hidden
 
 	&__wrapper
-		height: calc(100vh - 101px)
+		height: calc(100vh - 192px)
 		overflow-y: auto
-		padding: 91px 131px 30px 150px
+		padding: 0 131px 30px 150px
 
 		@include bp($point-6)
 			padding: 50px
@@ -614,7 +610,7 @@
 .product
 	overflow: hidden
 	position: relative
-	flex: 1 0 calc(100% - 155px)
+	flex: 1
 	background-color: $white
 	
 	&__bg

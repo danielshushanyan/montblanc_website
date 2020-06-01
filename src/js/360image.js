@@ -32,23 +32,26 @@ $(function () {
 		}
 	});
 
-	$('.js-drag').swipe({
-		swipe: function (event, direction) {
-			if (direction === 'left') {
-				index = index === 1 ? 4 : index - 1;
-				lockMovment();
-				setCurrentImage(index);
-			}
-			else if (direction === 'right') {
-				index = index === quantityOfSlideImages ? 1 : index + 1;
-				lockMovment();
-				setCurrentImage(index);
-			}
-			$('.content__bottle-descr').fadeOut();
-			$(`.content__bottle-descr[data-slide-text='${index}']`).fadeIn();
-		},
-		threshold:0
-	});
+	if (window.innerWidth <= 768) {
+		$('.js-drag').swipe({
+			swipe: function (event, direction) {
+				if (direction === 'left') {
+					index = index === 1 ? 4 : index - 1;
+					lockMovment();
+					setCurrentImage(index);
+				}
+				else if (direction === 'right') {
+					index = index === quantityOfSlideImages ? 1 : index + 1;
+					lockMovment();
+					setCurrentImage(index);
+				}
+				$('.content__bottle-descr').fadeOut();
+				$(`.content__bottle-descr[data-slide-text='${index}']`).fadeIn();
+			},
+			threshold:0
+		});
+	}
+
 
 	function setCurrentImage(index) {
 		$('.content__bottle-img img').css('opacity', 0);

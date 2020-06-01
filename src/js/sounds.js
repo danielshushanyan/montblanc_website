@@ -24,9 +24,23 @@ $(function () {
 
 	$('.footer__sound').on('click', function () {
 		bg.fade(bgFadeState ?0.25:0,bgFadeState?0:0.25,500);
+		sound.fade(bgFadeState ?0.25:0,bgFadeState?0:0.25,500);
 		if(!soundIsMuted && prevIndex) soundArray[prevIndex].play();
 		if (prevIndex) soundArray[prevIndex].fade(bgFadeState ?0.25:0,bgFadeState?0:0.25,500);
 		bgFadeState = !bgFadeState;
 		soundIsMuted = bgFadeState;
+		localStorage.setItem('sound', bgFadeState ? '':'muted');
 	});
+
+	if (localStorage) {
+		const soundState = localStorage.getItem('sound');
+
+		if (soundState === 'muted') {
+			bgFadeState = false;
+			soundIsMuted = false;
+			sound.volume(0);
+			bg.volume(0);
+			soundArray[prevIndex].volume(0);
+		}
+	}
 });
