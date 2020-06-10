@@ -21,4 +21,12 @@ $(function () {
 	$('.circle-cursor--inner').css('z-index','11000');
 	$('.circle-cursor--outer').css('z-index','12000');
 	$('.circle-cursor--drag').css('z-index','12000');
+
+
+	$('.js-cookie').on('click',function () {
+		let myDate = new Date();
+		myDate.setMonth(myDate.getMonth() + 12);
+		document.cookie = 'cookie=true;expires=' + myDate + ';domain=' + window.location.hostname + ';path=/';
+		$('#cookie').fadeOut();
+	});
 });
