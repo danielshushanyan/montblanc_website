@@ -9,12 +9,13 @@ import './vendor/DrawSVGPlugin.min';
 import './vendor/ScrambleTextPlugin.min';
 import './vendor/SplitText.min';
 import svg4everybody from 'svg4everybody';
+import select2 from '../../node_modules/select2/dist/js/select2.full';
 import $ from 'jquery';
-
 const plugins = [DrawSVGPlugin, Draggable, CSSPlugin, SplitText, MorphSVGPlugin];
 
 window.$ = $;
 window.jQuery = $;
+window.select2 = select2;
 window.Swiper = Swiper;
 window.PIXI = PIXI;
 window.Emitter = Emitter;

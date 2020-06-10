@@ -1,0 +1,149 @@
+.form-select
+	position: relative
+	&__label
+		position: absolute
+		left: 20px
+		top: 11px
+		z-index: 20
+		font-size: 11px
+		line-height: 18px
+		color: #2A4C5F
+	
+	&[disabled]
+		opacity: .5
+		pointer-events: none
+
+.select2-container
+	*
+		outline: none!important
+		cursor: pointer
+	.no-input
+		.select2-search
+			display: none
+	
+	.input
+		.select2-search
+			font-size: 11px
+			color: #2A4C5F
+			padding: 20px 20px 0
+			
+			&__field
+				border-radius: 10px
+				border-color:  transparent
+				height: 48px
+				padding-left: 20px
+	.select
+		height: 60px
+		display: flex
+		align-items: center
+		
+		&.select2-selection--single
+			border-radius: 10px
+			border: 1px solid transparent
+			background-color: $white
+			
+			.select2-selection__rendered
+				margin: 13px 0 0
+				padding-left: 20px
+				color: #2A4C5F
+				font-size: 16px
+			
+			.select2-selection__arrow
+				top: 0
+				bottom: 0
+				right: 20px
+				margin: auto
+				height: 6px
+				width: 11px
+				b
+					width: 100%
+					height: 100%
+					background: url('../images/arrow.svg') 50% no-repeat
+					background-size: contain
+					border: unset
+					transition: .3s linear
+	
+	&--open
+		.select
+		border-bottom-color: transparent!important
+		position: relative
+		
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			margin: 0 auto
+			width: calc(100% - 40px)
+			height: 1px
+			background-color: $white
+		
+		.select2-dropdown
+			
+			&--below
+				border-color: transparent
+				border-bottom-left-radius: 10px
+				border-bottom-right-radius: 10px
+			
+			&--above
+				border-bottom-color: transparent
+				border-top-left-radius: 10px
+				border-top-right-radius: 10px
+		
+		.select2-selection--single
+			.select2-selection__arrow
+				b
+					transform: scaleY(-1)
+					transform-origin: 50%
+		
+		&.select2-container--above
+			.select
+				border-top-color: transparent!important
+				border-bottom-color: transparent!important
+				
+				&:after
+					bottom: unset
+					top: 0
+	
+	.select2-results
+		.select2-results__options
+			padding: 22px 0
+			
+			&::-webkit-scrollbar
+				width: 5px
+			
+			&::-webkit-scrollbar-track
+				background: transparent
+				border-radius: 10px
+			
+			&::-webkit-scrollbar-thumb
+				background: #888
+				border-radius: 10px
+			
+			&::-webkit-scrollbar-thumb:hover
+				background: #555
+			
+			.select2-results__option
+				margin: 22px 0!important
+				padding: 0 20px
+				font-size: 16px
+				line-height: 23px
+				background-color: transparent
+				color: $menuBg
+				
+				&:first-child
+					margin-top: 0!important
+				
+				&:last-child
+					margin-bottom: 0!important
+				
+				&:after
+					display: none
+				
+				&--highlighted
+					color: #2A4C5F
+
+
+.js-select + .select2-container, .js-select-input + .select2-container
+	width: 100%!important

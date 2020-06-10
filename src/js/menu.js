@@ -81,16 +81,23 @@ $(function () {
 	function backDropRevereDone() {
 		if(!selectFromMenu) return false;
 		locker = true;
-
+		let slideText;
 		const currentTitleAnim = new TimelineMax({paused: true});
 		const slide = document.querySelectorAll('.section')[index].getElementsByClassName('js-title');
 		const slideFade = document.querySelectorAll('.section')[index].getElementsByClassName('js-fade');
-		const slideText = new SplitText(slide, {type:"chars, lines"});
+		if (slide.length) slideText = new SplitText(slide, {type:"chars, lines"});
 
-		currentTitleAnim
-			.set(slideText.lines, {overflow: "hidden"})
-			.staggerFromTo(slideText.chars, 1, {yPercent: -115},{yPercent: 0,ease: Power1.easeIn}, .015, 0)
-			.from(slideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn}, '-=1.5');
+		if (slide.length) {
+			currentTitleAnim
+				.set(slideText.lines, {overflow: "hidden"})
+				.staggerFromTo(slideText.chars, 1, {yPercent: -115},{yPercent: 0,ease: Power1.easeIn}, .015, 0)
+				.from(slideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn}, '-=1.5');
+		}
+		else {
+			currentTitleAnim
+				.from(slideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn});
+		}
+
 
 		currentTitleAnim.play();
 

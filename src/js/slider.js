@@ -121,6 +121,11 @@ $(function () {
 		initSwiper();
 	});
 
+	$('.select2, .end__form').on('mouseenter',function () {
+		locker = false;
+	}).on('mouseleave',function () {
+		locker = true;
+	});
 
 	$('.main-slide').each(function () {
 		$(window).on('mousewheel DOMMouseScroll keydown', function(e){
@@ -221,8 +226,13 @@ $(function () {
 				window.initialIndex = 0;
 		}
 
+		$('textarea').on('touchstart mousedown', function(e){
+			e.stopPropagation()
+		});
+
 		swiper = new Swiper('.main-slide', {
 			effect: 'fade',
+			noSwipingClass:'end__form',
 			slidesPerView: 1,
 			touchRatio: 0,
 			initialSlide: window.initialIndex,
@@ -374,6 +384,7 @@ $(function () {
 	}
 
 	window.pageContentAnimation = function(index, nextIndex) {
+		let nextSlideText;
 		const currentTitleAnim = new TimelineMax({paused: true});
 		const nextTitleAnim = new TimelineMax({paused: true});
 		const slide = document.querySelectorAll('.section')[index].getElementsByClassName('js-title');
@@ -381,14 +392,19 @@ $(function () {
 		const nextSlide = document.querySelectorAll('.section')[nextIndex].getElementsByClassName('js-title');
 		const nextSlideFade = document.querySelectorAll('.section')[nextIndex].getElementsByClassName('js-fade');
 		const slideText = new SplitText(slide, {type:"chars, lines"});
-		const nextSlideText = new SplitText(nextSlide, {type:"chars, lines"});
+		if (nextSlide.length) nextSlideText = new SplitText(nextSlide, {type:"chars, lines"});
 
 		currentTitleAnim.play();
 
-		nextTitleAnim
-			.set(nextSlideText.lines, {overflow: "hidden"})
-			.staggerFrom(nextSlideText.chars, 1, {yPercent: -115,ease: Power1.easeIn}, .010, 0)
-			.from(nextSlideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn}, '-=1');
+		if (nextSlide.length) {
+			nextTitleAnim
+				.set(nextSlideText.lines, {overflow: "hidden"})
+				.staggerFrom(nextSlideText.chars, 1, {yPercent: -115,ease: Power1.easeIn}, .010, 0)
+				.from(nextSlideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn}, '-=1');
+		} else {
+			nextTitleAnim
+				.from(nextSlideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn});
+		}
 
 		currentTitleAnim
 			.set(slideText.lines, {overflow: "hidden"})

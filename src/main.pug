@@ -110,17 +110,44 @@ block content
 					.six__cocktail-text Авторские коктейли
 					svg.six__cocktail-svg(width='11', height='18', viewBox='0 0 11 18', fill='none', xmlns='http://www.w3.org/2000/svg')
 						path(d='M2.38379 2.46155L8.38379 9.00001L2.38379 15.5385', stroke='white', stroke-width='3.53846', stroke-linecap='round')
+			//section.end.swiper-slide.section
+			//	.end__container
+			//		h2.h1.end__title.js-title  РАССКАЖИ СВОЮ ИСТОРИЮ ВОСХОЖДЕНИЯ
+			//		p.end__text.js-fade Авторизуйся и напиши нам короткую историю своего восхождения в жизни (карьера, семья, успех). Опубликуй в фейсбуке под хэштегом и выиграй ценный приз!
+			//		.end__btn.js-fade
+			//			.end__btn-circle.js-catch.hover-s
+			//				svg.js-square.js-follower(width='51', height='51', viewBox='0 0 51 51', fill='none', xmlns='http://www.w3.org/2000/svg')
+			//					rect.circle(opacity='0.5', x='1.39746', y='1.22464', width='47.7728', height='47.7728', rx='23.8864', stroke='white', stroke-width='2')
+			//					path(d='M26.1126 36.4827L26.1126 25.7926H29.7008L30.2381 21.6265H26.1126V18.9665C26.1126 17.7604 26.4476 16.9383 28.1774 16.9383L30.3835 16.9373V13.2112C30.0018 13.1606 28.6923 13.0472 27.1688 13.0472C23.988 13.0472 21.8104 14.9886 21.8104 18.5541V21.6266H18.2129L18.2129 25.7927H21.8103V36.4829L26.1126 36.4827Z', fill='white')
+			//			.js-catch.hover-s
+			//				.js-follower
+			//					.end__btn-square.js-square
+			//					.end__btn-text.js-link Войти через Facebook
 			section.end.swiper-slide.section
-				.end__container
-					h2.h1.end__title.js-title  РАССКАЖИ СВОЮ ИСТОРИЮ ВОСХОЖДЕНИЯ
-					p.end__text.js-fade Авторизуйся и напиши нам короткую историю своего восхождения в жизни (карьера, семья, успех). Опубликуй в фейсбуке под хэштегом и выиграй ценный приз!
-					.end__btn.js-fade
-						.end__btn-circle.js-catch.hover-s
-							svg.js-square.js-follower(width='51', height='51', viewBox='0 0 51 51', fill='none', xmlns='http://www.w3.org/2000/svg')
-								rect.circle(opacity='0.5', x='1.39746', y='1.22464', width='47.7728', height='47.7728', rx='23.8864', stroke='white', stroke-width='2')
-								path(d='M26.1126 36.4827L26.1126 25.7926H29.7008L30.2381 21.6265H26.1126V18.9665C26.1126 17.7604 26.4476 16.9383 28.1774 16.9383L30.3835 16.9373V13.2112C30.0018 13.1606 28.6923 13.0472 27.1688 13.0472C23.988 13.0472 21.8104 14.9886 21.8104 18.5541V21.6266H18.2129L18.2129 25.7927H21.8103V36.4829L26.1126 36.4827Z', fill='white')
-						.js-catch.hover-s
-							.js-follower
-								.end__btn-square.js-square
-								.end__btn-text.js-link Войти через Facebook
+				.js-fade.js-title
+				form.end__form.js-link.js-form(action='www.imma.ru/vakansii')
+					.end__form-text.js-success Ваше сообщение отпарвлено
+					.form-select
+						span.form-select__label Тема обращения
+						select.js-select(name='state')
+							option(value='0') Пожелание/комплимент
+							option(value='1') Gravity
+					.end__input-wrapper
+						label.form-field.js-input
+							input.form-field__input(type='text', data-msg='Введите ваше имя' , name='name' ,placeholder='Введите ваше имя', required)
+							span.form-field__label Ваше имя
+						label.form-field.js-input
+							input.form-field__input(type='email', data-msg='Введите почту', name='email' ,placeholder='Введите вашу почту', required)
+							span.form-field__label Электронная почта
+					.form-textarea
+						span.form-textarea__label Сообщение
+						textarea(placeholder='Введите текст сообщения')
+					.form-action
+						label.form-checkbox
+							input.form-checkbox__input.js-agreement(type='checkbox')
+							span.form-checkbox__checkmark
+							span.form-checkbox__text
+								span Соглашаюсь с условиями
+								a(href='#') пользовательского соглашения
+						button.form-action__btn(disabled='disabled') Отправить
 

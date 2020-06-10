@@ -1,0 +1,115 @@
+.form-field
+	position: relative
+	display: block
+	width: 100%
+	height: 100%
+	
+	&[disabled]
+		opacity: .5
+		pointer-events: none
+		
+	.error
+		position: absolute
+		font-size: 12px
+		line-height: 1
+		color: red
+	
+	&__input
+		font-family: $baseFont
+		display: block
+		width: 100%
+		padding: 29px 20px 9px
+		border-radius: 10px
+		border: 1px solid white
+		color: $menuBg
+		font-size: 16px
+		line-height: 23px
+		transition: .3s linear
+		background-color: $white
+		
+		::placeholder
+			font-size: 16px
+			line-height: 23px
+			letter-spacing: -0.02em
+			font-feature-settings: 'ss01' on, 'ss06' on
+			color: #788084
+			opacity: 0.36
+		
+		&:focus
+			border-color: white
+			box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1)
+	
+	&__label
+		font-family: $baseScndFont
+		position: absolute
+		top: -15px
+		right: 0
+		bottom: 0
+		left: 0
+		padding: 0 20px
+		display: flex
+		align-items: center
+		width: 100%
+		height: 63px
+		font-size: 11px
+		line-height: 18px
+		color: #2A4C5F
+	
+	
+	&--error
+		.form-field__input
+			border-color: red
+			box-shadow: 0 1px 1px rgba(240, 61, 62, 0.1)
+		
+.form-textarea
+	position: relative
+	width: 100%
+	border-radius: 10px
+	overflow: hidden
+	
+	&__label
+		font-family: $baseScndFont
+		position: absolute
+		top: 10px
+		left: 0
+		padding: 0 20px
+		display: flex
+		align-items: center
+		font-size: 11px
+		line-height: 18px
+		color: #2A4C5F
+		width: 100%
+	
+	textarea
+		padding: 30px 20px 20px
+		width: 100%
+		height: 120px
+		border: unset
+		resize: none
+		
+		&:focus
+			outline: none
+		
+.form-action
+	margin: 15px 0 0
+	&__btn
+		background: #005FAB
+		border-radius: 10px
+		font-family: $baseScndFont
+		font-size: 16px
+		text-transform: uppercase
+		font-feature-settings: 'ss01' on, 'ss06' on
+		color: $white
+		font-weight: 500
+		line-height: 52px
+		height: 48px
+		min-width: 166px
+		padding: 0 10px
+		transition: .3s ease-in-out
+		
+		&:hover
+			background: rgba(0, 95, 171, 0.5)
+			
+		&[disabled]
+			pointer-events: none
+			background-color: #8EB2CC

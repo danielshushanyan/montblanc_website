@@ -13,6 +13,8 @@ import './video-controler';
 import './mouse-catch';
 import './360image';
 import './move-products';
+import './select';
+import './validation';
 
 $(function () {
 	if(window.innerWidth > 1024) new Cursor();

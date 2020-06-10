@@ -28,6 +28,7 @@ const locationNoteItems = [];
 const locationVertexItems = [];
 const locationHomeItems = [];
 const locationEndItems = [];
+// const locationEndItem = [];
 
 $(function () {
 	$('.main-slide').each(function () {
@@ -180,6 +181,10 @@ function handleLoadComplete(loader, resources) {
 		new PIXI.Sprite(resources[resKeys[35]].texture)
 	];
 
+	// let end2 = [
+	// 	new PIXI.Sprite(resources[resKeys[35]].texture)
+	// ];
+
 	createLoaction(home, locationHomeItems, app, locationsAlphaArray); // Location Home
 	createLoaction(wheat, locationWheatItems, app, locationsAlphaArray); // Location Wheat
 	createLoaction(spring, locationSpringItems, app, locationsAlphaArray); // Location Spring
@@ -187,6 +192,7 @@ function handleLoadComplete(loader, resources) {
 	createLoaction(natureDesign, locationDesignItems, app, locationsAlphaArray); // Location Design
 	createLoaction(vertex, locationVertexItems, app, locationsAlphaArray); // Location Vertex
 	createLoaction(end, locationEndItems, app, locationsAlphaArray); // Location End
+	// createLoaction(end2, locationEndItem, app, locationsAlphaArray); // Location End
 
 	natureDesign = null;
 	wheat = null;
@@ -399,7 +405,6 @@ function handleLoadComplete(loader, resources) {
 		parallaxNote(w, h, e);
 		parallaxVertex(w, h, e);
 		parallaxWheat(w, h, e);
-		parallaxEnd(w, h, e);
 	});
 }
 
@@ -659,32 +664,32 @@ function parallaxWheat(w, h, e) {
 	});
 }
 
-function parallaxEnd(w, h, e) {
-	TweenMax.to(locationEndItems[0], 0.3, {
-		x: (w - e.clientX) / (amplitude + 140),
-		y: (h - e.clientY) / (amplitude + 140),
-		ease: Circ.easeOut
-	});
-}
-
 window.setInitialLocation = function() {
+	let slideText;
 	const currentTitleAnim = new TimelineMax({paused: true});
 	const slide = document.querySelectorAll('.section')[initialIndex].getElementsByClassName('js-title');
 	const slideFade = document.querySelectorAll('.section')[initialIndex].getElementsByClassName('js-fade');
-	const slideText = new SplitText(slide, {type:"chars, lines"});
+	if (slide.length) slideText = new SplitText(slide, {type:"chars, lines"});
 	activeLocation = initialIndex;
 
-	currentTitleAnim
-		.set(slideText.lines, {overflow: "hidden"})
-		.staggerFromTo(slideText.chars, 1, {yPercent: -115},{yPercent: 0,ease: Power1.easeIn}, .015, 0)
-		.from(slideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn}, '-=1.5');
+	if (slide.length) {
+		currentTitleAnim
+			.set(slideText.lines, {overflow: "hidden"})
+			.staggerFromTo(slideText.chars, 1, {yPercent: -115},{yPercent: 0,ease: Power1.easeIn}, .015, 0)
+			.from(slideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn}, '-=1.5');
+	}
+	else {
+		currentTitleAnim
+			.from(slideFade, 1, {yPercent: -10, opacity: 0,ease: Power4.easeIn});
+	}
+
 	$('.main-slide').css('opacity', 1);
 
 	currentTitleAnim.play();
 
 	locationsAlphaArray.map(function(item, i) {
 		if(initialIndex === i) {
-			TweenMax.to(item, 1.5, { alpha: 1, ease: Power4.easeInOut });
+			TweenMax.to(item, 0.5, { alpha: 1, ease: Power4.easeInOut });
 		} else {
 			TweenMax.to(item, 1.5, { alpha: 0, ease: Power4.easeInOut });
 		}
