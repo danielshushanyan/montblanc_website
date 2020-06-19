@@ -14,6 +14,7 @@ $(function () {
 		.to('.header__nav',0.1,{xPercent:'100%'})
 		.fromTo('.header__nav-bg',0.7,{xPercent: '-100%'},{xPercent:'0',ease: Circ.easeInOut})
 		.from('.menu-slide',0.7,{opacity: 0, ease: Circ.easeInOut},'-=0.5')
+		.from('.header-lang',0.7,{opacity: 0, ease: Circ.easeInOut},'-=0.5')
 		.to('.header__nav-blur',0.7,{backdropFilter: 'blur(5px)', ease: Circ.easeInOut},'-=0.7')
 		.to('.header__nav-bg',0.7,{xPercent: backDrop, ease: Circ.easeInOut,onReverseComplete: backDropRevereDone})
 		.staggerTo('.action__path',0.7,{opacity: 1, ease: Power4.easeOut, stagger:{amount:0.3, from: 'center'}}, 0.1, '-=0.7')
