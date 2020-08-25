@@ -23,11 +23,11 @@ $(function () {
 		});
 
 		app.loader
-			.add(`${__app.TEMPLATE_URI}/images/age/asky.jpg`)
-			.add(`${__app.TEMPLATE_URI}/images/age/amont.png`)
-			.add(`${__app.TEMPLATE_URI}/images/age/ahill.png`)
-			.add(`${__app.TEMPLATE_URI}/images/age/agrass.png`)
-			.add(`${__app.TEMPLATE_URI}/images/filter.png`)
+			.add(`${__app.TEMPLATE_URI}/images/age/asky.jpg?v=${__app.TEMPLATE_VERSION}`)
+			.add(`${__app.TEMPLATE_URI}/images/age/amont.png?v=${__app.TEMPLATE_VERSION}`)
+			.add(`${__app.TEMPLATE_URI}/images/age/ahill.png?v=${__app.TEMPLATE_VERSION}`)
+			.add(`${__app.TEMPLATE_URI}/images/age/agrass.png?v=${__app.TEMPLATE_VERSION}`)
+			.add(`${__app.TEMPLATE_URI}/images/filter.png?v=${__app.TEMPLATE_VERSION}`)
 			.load(handleLoadComplete);
 
 		window.addEventListener('resize', resize);
@@ -64,9 +64,9 @@ function handleLoadComplete(loader, resources) {
 
 	age = null;
 
-	let cloud1 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_1.png`);
-	let cloud2 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_2.png`);
-	let cloud3 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_3.png`);
+	let cloud1 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_1.png?v=${__app.TEMPLATE_VERSION}`);
+	let cloud2 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_2.png?v=${__app.TEMPLATE_VERSION}`);
+	let cloud3 = PIXI.Texture.from(`${__app.TEMPLATE_URI}/images/age/cloud_3.png?v=${__app.TEMPLATE_VERSION}`);
 
 	let emitterCloud = new Emitter(
 		locationAgeItems[0],
