@@ -399,12 +399,26 @@ function handleLoadComplete(loader, resources) {
 		let w = app.renderer.screen.width/2;
 		let h = app.renderer.screen.height/2;
 
-		parallaxHome(w, h, e);
-		parallaxDesign(w, h, e);
-		parallaxSpring(w, h, e);
-		parallaxNote(w, h, e);
-		parallaxVertex(w, h, e);
-		parallaxWheat(w, h, e);
+		switch (activeLocation) {
+			case 0:
+				parallaxHome(w, h, e);
+				break;
+			case 1:
+				parallaxWheat(w, h, e);
+				break;
+			case 2:
+				parallaxSpring(w, h, e);
+				break;
+			case 3:
+				parallaxNote(w, h, e);
+				break;
+			case 4:
+				parallaxDesign(w, h, e);
+				break;
+			case 5:
+				parallaxVertex(w, h, e);
+				break;
+		}
 	});
 }
 
