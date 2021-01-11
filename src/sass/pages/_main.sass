@@ -85,12 +85,17 @@
 
 .gold_award
 	position: fixed
-	top: 70px
+	top: 50%
+	transform: translateY(-50%)
 	right: 0
 	z-index: 10
 	cursor: pointer
 	img
-		max-height: 160px
+		max-height: 305px
+
+	+bp(1200px)
+		img
+			max-height: 160px
 
 .age
 	@include size(100%, 100vh)
