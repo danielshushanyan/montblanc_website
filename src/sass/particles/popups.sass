@@ -692,7 +692,13 @@
 			
 		&--pro
 			top: 43%
-			left: 98vw
+			left: 102vw
+			
+			.product__item
+				padding: 0 4vw
+				
+			@include bp(1440px)
+				left: 115vw
 		
 	&__img
 		max-width: unset
@@ -714,9 +720,13 @@
 		transform: translateX(-50%)
 		text-transform: uppercase
 		font-weight: 300
-		font-size: 250px
+		font-size: 13vw
 		line-height: 110%
 		width: 842px
+		text-align: center
+		
+		@include bp(2000px, min)
+			font-size: 250px
 		
 		@media all and (max-height: 820px)
 			font-size: 200px
@@ -732,15 +742,12 @@
 		position: absolute
 		z-index: 10
 		top: 50%
-		transform: translateY(-50%) rotate(-90deg)
-		left: -133px
+		transform: translateY(calc(-50% + 85px)) rotate(-90deg)
+		left: -6%
 		font-weight: 300
 		color: #4F5E72
 		letter-spacing: 0.03em
 		text-transform: uppercase
-		
-		@include bp($point-6)
-			left: -60px
 		
 		&:before
 			content: ''
@@ -755,18 +762,15 @@
 		&--reverse
 			opacity: 0
 			left: unset
-			right: -120px
+			right: -12%
 			
-			@include bp($point-6)
-				right: -90px
-				
 			&:before
 				top: -35px
 				transform: translateX(-50%) rotate(-90deg)
 		
 	&__item
 		position: relative
-		margin: 0 75px
+		margin: 0 4vw
 		height: 100%
 		display: flex
 		align-items: flex-end
