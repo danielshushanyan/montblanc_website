@@ -685,19 +685,23 @@
 
 		&--disable
 			.product__item
-			opacity: .08
+				opacity: .08
 
 		&--one
 			top: 45%
 
 		&--pro
 			top: 43%
-			left: 98vw
+			left: 102vw
 
 			.product__item
 				margin: 0 130px
 			.product__descr
 				width: 350px
+
+			+bp(1440px)
+				left: 115vw
+				margin-left: 5vw
 
 	&__img
 		max-width: unset
@@ -737,8 +741,8 @@
 		position: absolute
 		z-index: 10
 		top: 50%
-		transform: translateY(-50%) rotate(-90deg)
-		left: -133px
+		transform: translateY(calc(-50% + 85px)) rotate(-90deg)
+		left: -6%
 		font-weight: 300
 		color: #4F5E72
 		letter-spacing: 0.03em
