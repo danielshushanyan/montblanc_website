@@ -11,26 +11,26 @@
 	transition: all .5s ease-in-out
 	overflow: hidden
 	user-select: none
-	
+
 	&--small
 		background: transparent
 		.popup__action
 			height: auto
 			flex: 0 0 80px
 			padding: 0
-			
+
 		.action__icon
 			display: none
-			
+
 		.action__line
 			border-color: #C4C4C4
 			&:nth-child(2)
 				height: 40%
-			
+
 		svg
 			line
 				stroke: #4F5E72
-	
+
 	&__wrapper
 		display: flex
 		align-self: center
@@ -42,7 +42,7 @@
 		background-color: #fff
 		max-height: 100vh
 		overflow-y: auto
-	
+
 	&__overlay
 		position: absolute
 		top: 0
@@ -112,7 +112,7 @@
 		border-radius: 50%
 		line
 			stroke: #4F5E72
-		
+
 #video,
 #cocktail,
 #bottle,
@@ -121,15 +121,15 @@
 	.action
 		&__icon
 			display: none
-		
+
 		&__close
 			position: fixed
 			top: 20px
 			right: 20px
-		
+
 		&__line
 			display: none
-	
+
 	.popup
 		&__action
 			flex: unset
@@ -322,7 +322,7 @@
 				.content__bottle-line--left
 					width: 4vw
 					right: -110px
-					
+
 					@include bp(1024px)
 						right: -51px
 
@@ -347,7 +347,7 @@
 			letter-spacing: 0.1em
 			text-transform: uppercase
 			font-feature-settings: 'salt' on
-			
+
 			@include bp(1024px)
 				font-size: 22px
 
@@ -358,7 +358,7 @@
 			line-height: 160%
 			letter-spacing: 0.02em
 			font-feature-settings: 'salt' on
-			
+
 			@include bp(1024px)
 				font-size: 14px
 
@@ -543,7 +543,7 @@
 		display: flex
 		flex-wrap: wrap
 		padding-left: 16px
-		
+
 		@include bp($point-3)
 			padding-left: 0
 
@@ -653,13 +653,13 @@
 
 		&:after
 			bottom: -33px
-			
+
 .product
 	overflow: hidden
 	position: relative
 	flex: 1
 	background-color: $white
-	
+
 	&__bg
 		position: absolute
 		@include size(130%,100%)
@@ -668,13 +668,13 @@
 		will-change: transform
 		left: 0
 		top: 0
-		
+
 	&__wrapper
 		position: relative
 		left: 0
 		top: 0
 		@include size(100%,100vh)
-		
+
 	&__slide
 		display: flex
 		align-items: flex-end
@@ -682,37 +682,36 @@
 		left: 50%
 		top: 50%
 		transform: translate(-50%,-50%)
-		
+
 		&--disable
 			.product__item
-				opacity: .08
-			
+			opacity: .08
+
 		&--one
 			top: 45%
-			
+
 		&--pro
 			top: 43%
-			left: 102vw
-			
+			left: 98vw
+
 			.product__item
-				padding: 0 4vw
-				
-			@include bp(1440px)
-				left: 115vw
-		
+				margin: 0 130px
+			.product__descr
+				width: 350px
+
 	&__img
 		max-width: unset
-		
+
 		&--07
 			height: 66.1vh
 			@media all and (max-height: 820px)
 				height: 56.1vh
-		
+
 		&--1
 			height: 75.4vh
 			@media all and (max-height: 820px)
 				height: 65.4vh
-			
+
 	&__title
 		position: absolute
 		top: -10%
@@ -720,35 +719,34 @@
 		transform: translateX(-50%)
 		text-transform: uppercase
 		font-weight: 300
-		font-size: 13vw
+		font-size: 250px
 		line-height: 110%
 		width: 842px
-		text-align: center
-		
-		@include bp(2000px, min)
-			font-size: 250px
-		
+
 		@media all and (max-height: 820px)
 			font-size: 200px
 			text-align: center
 			width: 674px
 			top: 0
-		
+
 		@include bp($point-5)
 			width: 515px
 			font-size: 153px
-			
+
 	&__button
 		position: absolute
 		z-index: 10
 		top: 50%
-		transform: translateY(calc(-50% + 85px)) rotate(-90deg)
-		left: -6%
+		transform: translateY(-50%) rotate(-90deg)
+		left: -133px
 		font-weight: 300
 		color: #4F5E72
 		letter-spacing: 0.03em
 		text-transform: uppercase
-		
+
+		@include bp($point-6)
+			left: -60px
+
 		&:before
 			content: ''
 			position: absolute
@@ -758,23 +756,26 @@
 			background: url("../images/arrow.svg") no-repeat 50%
 			width: 10px
 			height: 15px
-			
+
 		&--reverse
 			opacity: 0
 			left: unset
-			right: -12%
-			
+			right: -120px
+
+			@include bp($point-6)
+				right: -90px
+
 			&:before
 				top: -35px
 				transform: translateX(-50%) rotate(-90deg)
-		
+
 	&__item
 		position: relative
-		margin: 0 4vw
+		margin: 0 75px
 		height: 100%
 		display: flex
 		align-items: flex-end
-		
+
 	&__descr
 		width: 200px
 		position: absolute
@@ -782,13 +783,13 @@
 		transform: translateX(-50%)
 		top: calc(100% + 35px)
 		text-align: center
-		
+
 		p
 			font-family: $baseScndFont
 			line-height: 139%
 			color: #4f5e72
 			letter-spacing: -0.3px
-			
+
 		span
 			font-family: $baseScndFont
 			font-size: 14px
@@ -797,7 +798,7 @@
 			display: inline-block
 			margin-top: 17px
 
-			
+
 .gold-award
 	display: flex
 	flex: 1 1 auto
@@ -805,7 +806,7 @@
 	&__contnet
 		flex: 1
 		padding: 0 66px 0 0
-		
+
 		h1,h2,h3,h4,h5,h6
 			font-weight: 300
 			line-height: 110%
@@ -814,23 +815,21 @@
 			font-feature-settings: 'salt' on
 			color: #005FAB
 			margin: 43px 0 33px
-			
+
 			&:first-child
 				margin: 0 0 33px
-				
+
 		h2
 			font-size: 30px
-			
+
 		p
 			font-size: 18px
 			line-height: 130%
 			letter-spacing: 0.02em
 			font-feature-settings: 'salt' on
 			color: #4F5E72
-			
+
 			&:not(:last-child)
 				margin: 0 0 23px
 	&__img
 		flex: 0 0 277px
-		
-
