@@ -327,6 +327,8 @@ function handleLoadComplete(loader, resources) {
 	emitterEagleSpring.emit = true;
 	emitterFog.emit = true;
 
+	window.emitterVertex = emitterVertex;
+
 	emitterEagle.particleConstructor = AnimatedParticle;
 	emitterEagleSpring.particleConstructor = AnimatedParticle;
 

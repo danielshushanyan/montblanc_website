@@ -9,6 +9,9 @@ $(function () {
 
 	$popupOpenBtn.click(function(){
 		let id = $(this).data('href');
+		if (activeLocation=== 5) {
+			window.emitterVertex.emit = false;
+		}
 
 		if(id === '#video'){
 			$(id).find('.content__icon').click();
@@ -30,6 +33,13 @@ $(function () {
 		$(this).parents('.popup').removeClass('js-popup-opened');
 		$(window).scrollTop(scrollPosition);
 		scrollPosition = undefined;
+
+
+		if (activeLocation=== 5) {
+			window.emitterVertex.emit = true;
+
+			$('#cocktail .content__item--left').empty();
+		}
 
 		if (window.videoPlaing) {
 			window.videoPlaing.pause();
