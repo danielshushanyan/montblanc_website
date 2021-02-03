@@ -48,6 +48,29 @@ $(function () {
 		lockLocationsTransition = true;
 	});
 
+	function openPopup(target, url) {
+		let id = target;
+		if (activeLocation=== 5) {
+			window.emitterVertex.emit = false;
+		}
+
+		if(id === '#video'){
+			$(id).find('.content__icon').click();
+		} else if (id === '#cocktail') {
+			getCocktail(url);
+		}
+
+		$(id).addClass('js-popup-opened');
+		scrollPosition = $(window).scrollTop();
+		window.scrollTo(0, 0);
+
+		lockLocationsTransition = false;
+		id = null;
+		return false
+	}
+
+	window.openPopup = openPopup;
+
 	function getCocktail(url) {
 		$.ajax({
 			url: url,
