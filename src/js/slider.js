@@ -8,6 +8,15 @@ $(function () {
 	window.lockLocationsTransition = true;
 	window.prevIndex = null;
 	MorphSVGPlugin.convertToPath("path");
+	const locations = [
+		'#homeland',
+		'#wheat',
+		'#spring',
+		'#alps',
+		'#design',
+		'#vertex',
+		'#yourStory'
+	];
 
 	const slideOne = new Howl({
 		src: [`${__app.TEMPLATE_URI}/sounds/1_slide.mp3`,`${__app.TEMPLATE_URI}/sounds/1_slide.webm`],
@@ -224,6 +233,10 @@ $(function () {
 				break;
 			default:
 				window.initialIndex = 0;
+
+				if (!!location.hash && !locations.includes(location.hash)) {
+					window.initialIndex = 5;
+				}
 		}
 
 		$('textarea').on('touchstart mousedown', function(e){
@@ -317,7 +330,9 @@ $(function () {
 
 				headerMountainAnimationTimer('vertex', 'story', 'end', index, 3);
 
-				location.hash = '#vertex';
+				if (locations.includes(location.hash)) {
+					location.hash = '#vertex';
+				}
 				prevIndex = index;
 			} break;
 			case 6: {

@@ -6,6 +6,19 @@ $(function () {
 	let inProgress = false;
 	let first = false;
 	let animationDirection = null;
+	const locations = [
+		'#homeland',
+		'#wheat',
+		'#spring',
+		'#alps',
+		'#design',
+		'#vertex',
+		'#yourStory'
+	];
+
+	if (!!location.hash && !locations.includes(location.hash)) {
+		openPopup();
+	}
 
 	$popupOpenBtn.click(function(){
 		let id = $(this).data('href');
@@ -17,6 +30,7 @@ $(function () {
 			$(id).find('.content__icon').click();
 		} else if (id === '#cocktail') {
 			let url = $(this).data('url');
+			location.hash = url;
 			getCocktail(url);
 		}
 
@@ -39,6 +53,7 @@ $(function () {
 			window.emitterVertex.emit = true;
 
 			$('#cocktail .content__item--left').empty();
+			location.hash = '#vertex';
 		}
 
 		if (window.videoPlaing) {
@@ -48,24 +63,18 @@ $(function () {
 		lockLocationsTransition = true;
 	});
 
-	function openPopup(target, url) {
-		let id = target;
+	function openPopup() {
 		if (activeLocation=== 5) {
 			window.emitterVertex.emit = false;
 		}
+		const { hash } = location;
 
-		if(id === '#video'){
-			$(id).find('.content__icon').click();
-		} else if (id === '#cocktail') {
-			getCocktail(url);
-		}
+		const cocktailUrl = hash.substring(1);
 
-		$(id).addClass('js-popup-opened');
-		scrollPosition = $(window).scrollTop();
-		window.scrollTo(0, 0);
+		$('#cocktail').addClass('js-popup-opened');
+		getCocktail(`${cocktailUrl}`);
 
-		lockLocationsTransition = false;
-		id = null;
+		lockLocationsTransition = true;
 		return false
 	}
 
@@ -121,12 +130,14 @@ $(function () {
 	$(document).on('click', '.popup__nav-item--prev', function () {
 		const url = $('#cocktail .content').data('url-prev');
 		animationDirection = false;
+		location.hash = url;
 		if (url !== '') getCocktail(url);
 	});
 
 	$(document).on('click', '.popup__nav-item--next', function () {
 		const url = $('#cocktail .content').data('url-next');
 		animationDirection = true;
+		location.hash = url;
 		if (url !== '') getCocktail(url);
 	});
 
