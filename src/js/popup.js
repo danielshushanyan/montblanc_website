@@ -63,22 +63,22 @@ $(function () {
 		lockLocationsTransition = true;
 	});
 
-	function openPopup() {
-		if (activeLocation=== 5) {
+	function openCocktail(cocktailName) {
+		if (activeLocation === 5) {
 			window.emitterVertex.emit = false;
 		}
-		const { hash } = location;
 
-		const cocktailUrl = hash.substring(1);
+		window.initialIndex = 5;
+		location.hash = '#vertex';
 
 		$('#cocktail').addClass('js-popup-opened');
-		getCocktail(`${cocktailUrl}`);
+		getCocktail(cocktailName);
 
 		lockLocationsTransition = true;
 		return false
 	}
 
-	window.openPopup = openPopup;
+	window.openCocktail = openCocktail;
 
 	function getCocktail(url) {
 		$.ajax({

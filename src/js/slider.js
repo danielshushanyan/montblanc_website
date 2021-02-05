@@ -234,9 +234,6 @@ $(function () {
 			default:
 				window.initialIndex = 0;
 
-				if (!!location.hash && !locations.includes(location.hash)) {
-					window.initialIndex = 5;
-				}
 		}
 
 		$('textarea').on('touchstart mousedown', function(e){
@@ -330,9 +327,6 @@ $(function () {
 
 				headerMountainAnimationTimer('vertex', 'story', 'end', index, 3);
 
-				if (locations.includes(location.hash)) {
-					location.hash = '#vertex';
-				}
 				prevIndex = index;
 			} break;
 			case 6: {
