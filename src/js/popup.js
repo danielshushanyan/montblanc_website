@@ -121,6 +121,7 @@ $(function () {
 						first = true;
 					});
 					inProgress = false;
+					videoControls();
 				}
 			}
 		});
