@@ -42,45 +42,48 @@ $(function () {
 			autoResize: true,
 			autoDetectRenderer: true
 		});
+		console.log(__app.TEMPLATE_URI);
+
+		console.log(app.loader);
 
 		app.loader
-			.add(`${__app.TEMPLATE_URI}/images/design/sky.jpg?v=${__app.TEMPLATE_VERSION}`) // Design nature // index 0
-			.add(`${__app.TEMPLATE_URI}/images/design/mont.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/design/midl.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/design/tree.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/design/bott.png?v=${__app.TEMPLATE_VERSION}`) // Design nature END // index 4
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wsky.png?v=${__app.TEMPLATE_VERSION}`) // Wheat  // index 5
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle_back.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle_front.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront.png?v=${__app.TEMPLATE_VERSION}`) // Wheat END // index 9
-			.add(`${__app.TEMPLATE_URI}/images/spring/ssky.jpg?v=${__app.TEMPLATE_VERSION}`) // Spring // index 10
-			.add(`${__app.TEMPLATE_URI}/images/spring/smont.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/spring/shill.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/spring/swater.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/spring/sbott.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/spring/sfog.png?v=${__app.TEMPLATE_VERSION}`) // Spring END // index 15
-			.add(`${__app.TEMPLATE_URI}/images/note/nsky.jpg?v=${__app.TEMPLATE_VERSION}`) // Note // index 16
-			.add(`${__app.TEMPLATE_URI}/images/note/nmont.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/note/nhill.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/note/nbott.png?v=${__app.TEMPLATE_VERSION}`) // Note END // index 19
-			.add(`${__app.TEMPLATE_URI}/images/vertex/vsky.jpg?v=${__app.TEMPLATE_VERSION}`) // Vertex // index 20
-			.add(`${__app.TEMPLATE_URI}/images/vertex/vmont.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/vertex/vbott.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/vertex/vfog.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/vertex/vsnow.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/vertex/vfrozen.png?v=${__app.TEMPLATE_VERSION}`) // Vertex // index 25
-			.add(`${__app.TEMPLATE_URI}/images/home/hmont.jpg?v=${__app.TEMPLATE_VERSION}`) // Home // index 26
-			.add(`${__app.TEMPLATE_URI}/images/home/hcity.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/home/hfog.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/home/hmanson.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/home/hbott.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/home/hlight.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/home/hsun.png?v=${__app.TEMPLATE_VERSION}`)
-			.add(`${__app.TEMPLATE_URI}/images/home/hgrass.png?v=${__app.TEMPLATE_VERSION}`) // Home End // index 33
-			.add(`${__app.TEMPLATE_URI}/images/filter.png?v=${__app.TEMPLATE_VERSION}`) // DMap // index 34
-			.add(`${__app.TEMPLATE_URI}/images/end/end.jpg?v=${__app.TEMPLATE_VERSION}`) // End // index 35
-			.add(`${__app.TEMPLATE_URI}/images/wave_d.png?v=${__app.TEMPLATE_VERSION}`) // DMapWave // index 36
+			.add(`${__app.TEMPLATE_URI}/images/design/sky.jpg`) // Design nature // index 0
+			.add(`${__app.TEMPLATE_URI}/images/design/mont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/midl.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/tree.png`)
+			.add(`${__app.TEMPLATE_URI}/images/design/bott.png`) // Design nature END // index 4
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wsky.png`) // Wheat  // index 5
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle_back.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wbottle_front.png`)
+			.add(`${__app.TEMPLATE_URI}/images/wheat/wfront.png`) // Wheat END // index 9
+			.add(`${__app.TEMPLATE_URI}/images/spring/ssky.jpg`) // Spring // index 10
+			.add(`${__app.TEMPLATE_URI}/images/spring/smont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/shill.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/swater.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/sbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/spring/sfog.png`) // Spring END // index 15
+			.add(`${__app.TEMPLATE_URI}/images/note/nsky.jpg`) // Note // index 16
+			.add(`${__app.TEMPLATE_URI}/images/note/nmont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/note/nhill.png`)
+			.add(`${__app.TEMPLATE_URI}/images/note/nbott.png`) // Note END // index 19
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vsky.jpg`) // Vertex // index 20
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vmont.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vfog.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vsnow.png`)
+			.add(`${__app.TEMPLATE_URI}/images/vertex/vfrozen.png`) // Vertex // index 25
+			.add(`${__app.TEMPLATE_URI}/images/home/hmont.jpg`) // Home // index 26
+			.add(`${__app.TEMPLATE_URI}/images/home/hcity.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hfog.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hmanson.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hbott.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hlight.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hsun.png`)
+			.add(`${__app.TEMPLATE_URI}/images/home/hgrass.png`) // Home End // index 33
+			.add(`${__app.TEMPLATE_URI}/images/filter.png`) // DMap // index 34
+			.add(`${__app.TEMPLATE_URI}/images/end/end.jpg`) // End // index 35
+			.add(`${__app.TEMPLATE_URI}/images/wave_d.png`) // DMapWave // index 36
 			.on('progress', loadingEnd)
 			.load(handleLoadComplete);
 	});
@@ -265,20 +268,20 @@ function handleLoadComplete(loader, resources) {
 				framerate: 30,
 				loop: true,
 				textures: [
-					`${__app.TEMPLATE_URI}/images/birds/birds1.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds2.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds3.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds4.png?v=${__app.TEMPLATE_VERSION}`
+					`${__app.TEMPLATE_URI}/images/birds/birds1.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds2.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds3.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds4.png`
 				]
 			},
 			{
 				framerate: 30,
 				loop: true,
 				textures: [
-					`${__app.TEMPLATE_URI}/images/birds/birds_t4.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds_t3.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds_t2.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds_t1.png?v=${__app.TEMPLATE_VERSION}`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t4.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t3.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t2.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t1.png`,
 				]
 			}
 		],
@@ -292,20 +295,20 @@ function handleLoadComplete(loader, resources) {
 				framerate: 24,
 				loop: true,
 				textures: [
-					`${__app.TEMPLATE_URI}/images/birds/birds1.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds2.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds3.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds4.png?v=${__app.TEMPLATE_VERSION}`
+					`${__app.TEMPLATE_URI}/images/birds/birds1.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds2.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds3.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds4.png`
 				]
 			},
 			{
 				framerate: 24,
 				loop: true,
 				textures: [
-					`${__app.TEMPLATE_URI}/images/birds/birds_t4.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds_t3.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds_t2.png?v=${__app.TEMPLATE_VERSION}`,
-					`${__app.TEMPLATE_URI}/images/birds/birds_t1.png?v=${__app.TEMPLATE_VERSION}`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t4.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t3.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t2.png`,
+					`${__app.TEMPLATE_URI}/images/birds/birds_t1.png`,
 				]
 			}
 		],
@@ -424,7 +427,7 @@ function handleLoadComplete(loader, resources) {
 	});
 }
 
-function loadingEnd(loader, resource) {
+function loadingEnd(loader) {
 	let loading = Math.ceil(++loadedFiles * 100 / Object.keys(loader.resources).length);
 	$('.loader__number').text(loading);
 	if (loading === 100) {
