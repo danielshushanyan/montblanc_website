@@ -142,9 +142,9 @@ gulp.task('copy', () => {
 		base: 'src/resources',
 		dot: true,
 	})
-		.pipe($.if(argv.cache, $.newer('build')))
+		.pipe($.if(argv.cache, $.newer('docs')))
 		.pipe($.if(argv.debug, $.debug()))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('docs'));
 });
 
 gulp.task('images', () => {
@@ -242,7 +242,7 @@ gulp.task('pug', () => {
 			.pipe($.pug({
 				pretty: argv.minify ? false : '\t',
 			}))
-			.pipe(gulp.dest('build'));
+			.pipe(gulp.dest('docs'));
 	}
 
 	return new Promise((resolve, reject) => {
@@ -256,7 +256,7 @@ gulp.task('pug', () => {
 				.pipe($.pug({
 					pretty: argv.minify ? false : '\t',
 				}))
-				.pipe(gulp.dest('build'))
+				.pipe(gulp.dest('docs'))
 				.on('end', resolve)
 				.on('error', reject);
 		});
