@@ -152,7 +152,7 @@ gulp.task('images', () => {
 		.pipe($.plumber({
 			errorHandler,
 		}))
-		.pipe($.if(argv.cache, $.newer('build/images')))
+		.pipe($.if(argv.cache, $.newer('docs/images')))
 		.pipe($.if(argv.debug, $.debug()))
 		.pipe($.imagemin([
 			$.imagemin.gifsicle({
@@ -166,7 +166,7 @@ gulp.task('images', () => {
 			}),
 			$.imagemin.svgo(svgoConfig()),
 		]))
-		.pipe(gulp.dest('build/images'));
+		.pipe(gulp.dest('docs/images'));
 });
 
 gulp.task('pngSprites', () => {
@@ -189,7 +189,7 @@ gulp.task('pngSprites', () => {
 			}))
 			.pipe($.vinylBuffer())
 			.pipe($.imagemin())
-			.pipe(gulp.dest('build/images')),
+			.pipe(gulp.dest('docs/images')),
 		spritesData.css
 			.pipe(gulp.dest('src/sass'))
 	);
@@ -211,7 +211,7 @@ gulp.task('svgSprites', () => {
 		.pipe($.if(!argv.minify, $.replace('><symbol', '>\n<symbol')))
 		.pipe($.if(!argv.minify, $.replace('></svg', '>\n</svg')))
 		.pipe($.rename('sprites.svg'))
-		.pipe(gulp.dest('build/images'));
+		.pipe(gulp.dest('docs/images'));
 });
 
 gulp.task('svgOptimize', () => {
@@ -294,15 +294,15 @@ gulp.task('sass', () => {
 				}),
 		]))
 		.pipe($.sourcemaps.write('.'))
-		.pipe(gulp.dest('build/css'));
+		.pipe(gulp.dest('docs/css'));
 });
 
 gulp.task('jsMain', () => {
-	return rollup('src/js/main.js', 'build/js/main.js');
+	return rollup('src/js/main.js', 'docs/js/main.js');
 });
 
 gulp.task('jsVendor', () => {
-	return rollup('src/js/vendor.js', 'build/js/vendor.js');
+	return rollup('src/js/vendor.js', 'docs/js/vendor.js');
 });
 
 gulp.task('lintPug', () => {
@@ -407,10 +407,10 @@ gulp.task('serve', () => {
 			open: argv.open,
 			port: argv.port,
 			files: [
-				'./build/**/*',
+				'./docs/**/*',
 			],
 			server: {
-				baseDir: './build',
+				baseDir: './docs',
 				middleware,
 			},
 		});
@@ -427,7 +427,7 @@ gulp.task('zip', () => {
 	let minutes = now.getMinutes().toString().padStart(2, '0');
 
 	return gulp.src([
-		'build/**',
+		'docs/**',
 		'docs/**',
 		'src/**',
 		'.babelrc',
