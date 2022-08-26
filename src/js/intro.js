@@ -44,7 +44,7 @@ $(function () {
 		if (returnUrl) {
 			$(location).attr('href', returnUrl);
 		} else {
-			$(location).attr('href', `http://${window.location.host}/`);
+			$(location).attr('href', `http://${window.location.host}/montblanc_website/`);
 		}
 	});
 });
