@@ -1,7 +1,6 @@
 .idea/
 node_modules/
 zip/
-docs/*
 .DS_Store
 aero-debug.log
 aero-deploy.tar.gz
