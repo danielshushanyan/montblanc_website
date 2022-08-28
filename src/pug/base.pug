@@ -36,18 +36,6 @@ block vars
 
 doctype html
 html(class=html.classList)&attributes(html.attrs)
-	.circle-cursor.circle-cursor--inner
-	.circle-cursor.circle-cursor--outer
-	svg.circle-cursor.circle-cursor--drag(width='85' height='50' viewbox='0 0 85 50' fill='none' xmlns='http://www.w3.org/2000/svg')
-		circle(cx='42.5' cy='25' r='24' stroke='white' stroke-width='2')
-		path(d='M7.5 20L2 25.5L7.5 31' stroke='white' stroke-width='2' stroke-linecap='round')
-		path(d='M77.5 20L83 25.5L77.5 31' stroke='white' stroke-width='2' stroke-linecap='round')
-
-	svg(width='0', height='0', viewBox='0 0 0 0', fill='none', xmlns='http://www.w3.org/2000/svg' style='position: absolute')
-		defs
-			lineargradient#paint0_linear(x1='30', y1='0', x2='30', y2='60', gradientUnits='userSpaceOnUse')
-				stop(stop-color='white')
-				stop(offset='1', stop-color='white', stop-opacity='0.3')
 	head
 		block head-start
 		block meta
@@ -84,6 +72,18 @@ html(class=html.classList)&attributes(html.attrs)
 			window.__app = {"TEMPLATE_URI": "https://danielshushanyan.github.io/montblanc_website/"};
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
+		.circle-cursor.circle-cursor--inner
+		.circle-cursor.circle-cursor--outer
+		svg.circle-cursor.circle-cursor--drag(width='85' height='50' viewbox='0 0 85 50' fill='none' xmlns='http://www.w3.org/2000/svg')
+			circle(cx='42.5' cy='25' r='24' stroke='white' stroke-width='2')
+			path(d='M7.5 20L2 25.5L7.5 31' stroke='white' stroke-width='2' stroke-linecap='round')
+			path(d='M77.5 20L83 25.5L77.5 31' stroke='white' stroke-width='2' stroke-linecap='round')
+
+		svg(width='0', height='0', viewBox='0 0 0 0', fill='none', xmlns='http://www.w3.org/2000/svg' style='position: absolute')
+			defs
+				lineargradient#paint0_linear(x1='30', y1='0', x2='30', y2='60', gradientUnits='userSpaceOnUse')
+					stop(stop-color='white')
+					stop(offset='1', stop-color='white', stop-opacity='0.3')
 		script.
 			var isIE = /*@cc_on!@*/false || !!document.documentMode;
 			if (isIE) {
