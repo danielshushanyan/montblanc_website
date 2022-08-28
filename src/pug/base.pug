@@ -3,8 +3,8 @@ include mixins/blocks
 
 block vars
 	-
-		var title = title || ''
-		var description = description || ''
+		var title = title || 'Vodka | Mont Blanc'
+		var description = description || 'Ultra premium vodka from France'
 		var image = image || ''
 	-
 		var html = {
@@ -59,6 +59,19 @@ html(class=html.classList)&attributes(html.attrs)
 				meta(name="viewport" content=meta.viewport)
 			if meta.description
 				meta(name="description" content=meta.description)
+			meta(property='og:type' content='article')
+			meta(property='og:title' content='Vodka | Mont Blanc')
+			meta(property='og:description' content='Ultra premium vodka from France')
+			meta(property='og:url' content='https://danielshushanyan.github.io/montblanc_website/')
+			meta(property='og:site_name' content='Vodka MontBlanc')
+			meta(property='og:image' content='./images/mb-tizer.png')
+			meta(property='article:published_time' content='2020-01-07T17:32:25Z')
+			meta(property='article:modified_time' content='2022-08-02T04:58:54Z')
+			meta(name='twitter:card' content='summary')
+			meta(name='twitter:title' content='Vodka | Mont Blanc')
+			meta(name='twitter:description' content='Ultra premium vodka from France')
+			meta(name='twitter:image' content='./images/mb-tizer.png')
+
 		title
 			= title
 		block links
